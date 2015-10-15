@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348B1BD05B38007C3ABB /* AppDelegate.swift */; };
+		3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348D1BD05B38007C3ABB /* FirstViewController.swift */; };
+		301234901BD05B38007C3ABB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348F1BD05B38007C3ABB /* SecondViewController.swift */; };
+		301234931BD05B39007C3ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234911BD05B39007C3ABB /* Main.storyboard */; };
+		301234951BD05B39007C3ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301234941BD05B39007C3ABB /* Assets.xcassets */; };
+		301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234961BD05B39007C3ABB /* LaunchScreen.storyboard */; };
+		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
+		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3012349F1BD05B39007C3ABB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301234801BD05B38007C3ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 301234871BD05B38007C3ABB;
+			remoteInfo = "Crowd Control";
+		};
+		301234AA1BD05B39007C3ABB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301234801BD05B38007C3ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 301234871BD05B38007C3ABB;
+			remoteInfo = "Crowd Control";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		301234881BD05B38007C3ABB /* Crowd Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crowd Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3012348B1BD05B38007C3ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3012348D1BD05B38007C3ABB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		3012348F1BD05B38007C3ABB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		301234921BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		301234941BD05B39007C3ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		301234971BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		301234991BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3012349E1BD05B39007C3ABB /* Crowd ControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crowd ControlTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlTests.swift; sourceTree = "<group>"; };
+		301234A41BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		301234A91BD05B39007C3ABB /* Crowd ControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crowd ControlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlUITests.swift; sourceTree = "<group>"; };
+		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		301234851BD05B38007C3ABB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012349B1BD05B39007C3ABB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301234A61BD05B39007C3ABB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3012347F1BD05B38007C3ABB = {
+			isa = PBXGroup;
+			children = (
+				3012348A1BD05B38007C3ABB /* Crowd Control */,
+				301234A11BD05B39007C3ABB /* Crowd ControlTests */,
+				301234AC1BD05B39007C3ABB /* Crowd ControlUITests */,
+				301234891BD05B38007C3ABB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		301234891BD05B38007C3ABB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				301234881BD05B38007C3ABB /* Crowd Control.app */,
+				3012349E1BD05B39007C3ABB /* Crowd ControlTests.xctest */,
+				301234A91BD05B39007C3ABB /* Crowd ControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3012348A1BD05B38007C3ABB /* Crowd Control */ = {
+			isa = PBXGroup;
+			children = (
+				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
+				3012348D1BD05B38007C3ABB /* FirstViewController.swift */,
+				3012348F1BD05B38007C3ABB /* SecondViewController.swift */,
+				301234911BD05B39007C3ABB /* Main.storyboard */,
+				301234941BD05B39007C3ABB /* Assets.xcassets */,
+				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
+				301234991BD05B39007C3ABB /* Info.plist */,
+			);
+			path = "Crowd Control";
+			sourceTree = "<group>";
+		};
+		301234A11BD05B39007C3ABB /* Crowd ControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */,
+				301234A41BD05B39007C3ABB /* Info.plist */,
+			);
+			path = "Crowd ControlTests";
+			sourceTree = "<group>";
+		};
+		301234AC1BD05B39007C3ABB /* Crowd ControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */,
+				301234AF1BD05B39007C3ABB /* Info.plist */,
+			);
+			path = "Crowd ControlUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		301234871BD05B38007C3ABB /* Crowd Control */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301234B21BD05B39007C3ABB /* Build configuration list for PBXNativeTarget "Crowd Control" */;
+			buildPhases = (
+				301234841BD05B38007C3ABB /* Sources */,
+				301234851BD05B38007C3ABB /* Frameworks */,
+				301234861BD05B38007C3ABB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Crowd Control";
+			productName = "Crowd Control";
+			productReference = 301234881BD05B38007C3ABB /* Crowd Control.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3012349D1BD05B39007C3ABB /* Crowd ControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301234B51BD05B39007C3ABB /* Build configuration list for PBXNativeTarget "Crowd ControlTests" */;
+			buildPhases = (
+				3012349A1BD05B39007C3ABB /* Sources */,
+				3012349B1BD05B39007C3ABB /* Frameworks */,
+				3012349C1BD05B39007C3ABB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301234A01BD05B39007C3ABB /* PBXTargetDependency */,
+			);
+			name = "Crowd ControlTests";
+			productName = "Crowd ControlTests";
+			productReference = 3012349E1BD05B39007C3ABB /* Crowd ControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		301234A81BD05B39007C3ABB /* Crowd ControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301234B81BD05B39007C3ABB /* Build configuration list for PBXNativeTarget "Crowd ControlUITests" */;
+			buildPhases = (
+				301234A51BD05B39007C3ABB /* Sources */,
+				301234A61BD05B39007C3ABB /* Frameworks */,
+				301234A71BD05B39007C3ABB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301234AB1BD05B39007C3ABB /* PBXTargetDependency */,
+			);
+			name = "Crowd ControlUITests";
+			productName = "Crowd ControlUITests";
+			productReference = 301234A91BD05B39007C3ABB /* Crowd ControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		301234801BD05B38007C3ABB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Bowtaps;
+				TargetAttributes = {
+					301234871BD05B38007C3ABB = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = MBDJ3UEK93;
+					};
+					3012349D1BD05B39007C3ABB = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 301234871BD05B38007C3ABB;
+					};
+					301234A81BD05B39007C3ABB = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 301234871BD05B38007C3ABB;
+					};
+				};
+			};
+			buildConfigurationList = 301234831BD05B38007C3ABB /* Build configuration list for PBXProject "Crowd Control" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3012347F1BD05B38007C3ABB;
+			productRefGroup = 301234891BD05B38007C3ABB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				301234871BD05B38007C3ABB /* Crowd Control */,
+				3012349D1BD05B39007C3ABB /* Crowd ControlTests */,
+				301234A81BD05B39007C3ABB /* Crowd ControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		301234861BD05B38007C3ABB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */,
+				301234951BD05B39007C3ABB /* Assets.xcassets in Resources */,
+				301234931BD05B39007C3ABB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012349C1BD05B39007C3ABB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301234A71BD05B39007C3ABB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		301234841BD05B38007C3ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301234901BD05B38007C3ABB /* SecondViewController.swift in Sources */,
+				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
+				3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3012349A1BD05B39007C3ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301234A51BD05B39007C3ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		301234A01BD05B39007C3ABB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 301234871BD05B38007C3ABB /* Crowd Control */;
+			targetProxy = 3012349F1BD05B39007C3ABB /* PBXContainerItemProxy */;
+		};
+		301234AB1BD05B39007C3ABB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 301234871BD05B38007C3ABB /* Crowd Control */;
+			targetProxy = 301234AA1BD05B39007C3ABB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		301234911BD05B39007C3ABB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				301234921BD05B39007C3ABB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		301234961BD05B39007C3ABB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				301234971BD05B39007C3ABB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		301234B01BD05B39007C3ABB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		301234B11BD05B39007C3ABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		301234B31BD05B39007C3ABB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Crowd Control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-Control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		301234B41BD05B39007C3ABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Crowd Control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-Control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		301234B61BD05B39007C3ABB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Crowd ControlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-ControlTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crowd Control.app/Crowd Control";
+			};
+			name = Debug;
+		};
+		301234B71BD05B39007C3ABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Crowd ControlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-ControlTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crowd Control.app/Crowd Control";
+			};
+			name = Release;
+		};
+		301234B91BD05B39007C3ABB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Crowd ControlUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-ControlUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Crowd Control";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		301234BA1BD05B39007C3ABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Crowd ControlUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-ControlUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Crowd Control";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		301234831BD05B38007C3ABB /* Build configuration list for PBXProject "Crowd Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301234B01BD05B39007C3ABB /* Debug */,
+				301234B11BD05B39007C3ABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		301234B21BD05B39007C3ABB /* Build configuration list for PBXNativeTarget "Crowd Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301234B31BD05B39007C3ABB /* Debug */,
+				301234B41BD05B39007C3ABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		301234B51BD05B39007C3ABB /* Build configuration list for PBXNativeTarget "Crowd ControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301234B61BD05B39007C3ABB /* Debug */,
+				301234B71BD05B39007C3ABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		301234B81BD05B39007C3ABB /* Build configuration list for PBXNativeTarget "Crowd ControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301234B91BD05B39007C3ABB /* Debug */,
+				301234BA1BD05B39007C3ABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 301234801BD05B38007C3ABB /* Project object */;
+}
