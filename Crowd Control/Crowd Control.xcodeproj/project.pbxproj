@@ -99,12 +99,10 @@
 		3012348A1BD05B38007C3ABB /* Crowd Control */ = {
 			isa = PBXGroup;
 			children = (
-				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
-				3012348D1BD05B38007C3ABB /* FirstViewController.swift */,
-				3012348F1BD05B38007C3ABB /* SecondViewController.swift */,
-				301234911BD05B39007C3ABB /* Main.storyboard */,
+				308ECFA21BD72E25000E4F21 /* Model */,
+				308ECFA01BD72E17000E4F21 /* Controller */,
+				308ECFA11BD72E20000E4F21 /* View */,
 				301234941BD05B39007C3ABB /* Assets.xcassets */,
-				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
 				301234991BD05B39007C3ABB /* Info.plist */,
 			);
 			path = "Crowd Control";
@@ -126,6 +124,32 @@
 				301234AF1BD05B39007C3ABB /* Info.plist */,
 			);
 			path = "Crowd ControlUITests";
+			sourceTree = "<group>";
+		};
+		308ECFA01BD72E17000E4F21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
+				3012348D1BD05B38007C3ABB /* FirstViewController.swift */,
+				3012348F1BD05B38007C3ABB /* SecondViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		308ECFA11BD72E20000E4F21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				301234911BD05B39007C3ABB /* Main.storyboard */,
+				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		308ECFA21BD72E25000E4F21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
