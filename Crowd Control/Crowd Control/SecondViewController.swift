@@ -11,14 +11,16 @@ import MapKit
 
 class SecondViewController: UIViewController {
 
-	@IBOutlet weak var mNavBar: UINavigationBar!
-	@IBOutlet weak var mMap: MKMapView!
+	@IBOutlet weak var map: MKMapView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		let userTrackingButton = MKUserTrackingBarButtonItem(mapView: mMap)
+		let userTrackingButton = MKUserTrackingBarButtonItem(mapView: map)
+		self.navigationItem.leftBarButtonItem = userTrackingButton
+		self.navigationItem.title = "Map"
+		
 	}
 
 	override func didReceiveMemoryWarning() {
