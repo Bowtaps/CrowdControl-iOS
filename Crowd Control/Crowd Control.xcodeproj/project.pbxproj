@@ -15,6 +15,8 @@
 		301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234961BD05B39007C3ABB /* LaunchScreen.storyboard */; };
 		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
 		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
+		C202381B1BD9A02E008D458A /* CCUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C202381A1BD9A02E008D458A /* CCUserModel.swift */; settings = {ASSET_TAGS = (); }; };
+		C202381D1BD9A2D1008D458A /* CCUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C202381C1BD9A2D1008D458A /* CCUserModel.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		301234A91BD05B39007C3ABB /* Crowd ControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crowd ControlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlUITests.swift; sourceTree = "<group>"; };
 		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C202381A1BD9A02E008D458A /* CCUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserModel.swift; sourceTree = "<group>"; };
+		C202381C1BD9A2D1008D458A /* CCUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 		308ECFA21BD72E25000E4F21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C202381C1BD9A2D1008D458A /* CCUserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -284,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				301234901BD05B38007C3ABB /* SecondViewController.swift in Sources */,
+				C202381D1BD9A2D1008D458A /* CCUserModel.swift in Sources */,
 				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
+				C202381B1BD9A02E008D458A /* CCUserModel.swift in Sources */,
 				3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
