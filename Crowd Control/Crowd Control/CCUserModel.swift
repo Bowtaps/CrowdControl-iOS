@@ -41,12 +41,17 @@ extension CCUserModel {
         return self.status
     }
     func setLocation(long: Double, lat: Double){
+        //save location to parse
         self.location = (long, lat)
     }
     func setPreferences(pref: String){
+        //save preferences to parse
         self.preferences = pref
     }
     func setStatus(status: String){
         self.status = status
+    }
+    func onUpdate(){
+        //send all the updated information to parse
     }
 }
