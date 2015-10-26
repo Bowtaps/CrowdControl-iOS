@@ -89,5 +89,8 @@ extension CCUserModel {
     }
     func onUpdate(){
         //send all the updated information to parse
+        /* 
+        
+        */
     }
 }
