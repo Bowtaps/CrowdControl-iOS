@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348B1BD05B38007C3ABB /* AppDelegate.swift */; };
-		3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348D1BD05B38007C3ABB /* FirstViewController.swift */; };
 		301234901BD05B38007C3ABB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348F1BD05B38007C3ABB /* MapViewController.swift */; };
 		301234931BD05B39007C3ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234911BD05B39007C3ABB /* Main.storyboard */; settings = {ASSET_TAGS = (100, ); }; };
 		301234951BD05B39007C3ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301234941BD05B39007C3ABB /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
 		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
 		30D427821BE038E300DE4D2D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D427811BE038E200DE4D2D /* ChatViewController.swift */; };
+		30D427841BE0AC4F00DE4D2D /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D427831BE0AC4F00DE4D2D /* GroupInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		301234881BD05B38007C3ABB /* Crowd Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crowd Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3012348B1BD05B38007C3ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3012348D1BD05B38007C3ABB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		3012348F1BD05B38007C3ABB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		301234921BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		301234941BD05B39007C3ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30D427811BE038E200DE4D2D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		30D427831BE0AC4F00DE4D2D /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +135,8 @@
 		308ECFA01BD72E17000E4F21 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				30D427831BE0AC4F00DE4D2D /* GroupInfoViewController.swift */,
 				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
-				3012348D1BD05B38007C3ABB /* FirstViewController.swift */,
 				3012348F1BD05B38007C3ABB /* MapViewController.swift */,
 				30D427811BE038E200DE4D2D /* ChatViewController.swift */,
 			);
@@ -298,10 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D427841BE0AC4F00DE4D2D /* GroupInfoViewController.swift in Sources */,
 				301234901BD05B38007C3ABB /* MapViewController.swift in Sources */,
 				30D427821BE038E300DE4D2D /* ChatViewController.swift in Sources */,
 				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
-				3012348E1BD05B38007C3ABB /* GroupInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
