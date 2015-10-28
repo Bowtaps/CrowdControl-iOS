@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  MapViewController.swift
 //  Crowd Control
 //
 //  Created by Daniel Andrus on 2015-10-15.
@@ -9,10 +9,16 @@
 import UIKit
 import MapKit
 
-class SecondViewController: UIViewController, CLLocationManagerDelegate {
+/// Controller for the map view, which displays an interactive map that displays the user's
+/// current location and the location of others in the group.
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 	
+	/// The location manager that handles automatic location tracking and display on the map.
+	/// - SeeAlso: CLLocationManager
 	let manager = CLLocationManager()
 	
+	/// Outlet to Interface Builder for the map view
+	/// - SeeAlso: MKMapView
 	@IBOutlet weak var map: MKMapView!
 	
 	override func viewDidLoad() {
