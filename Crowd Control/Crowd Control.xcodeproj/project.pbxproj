@@ -301,7 +301,7 @@
 				301234901BD05B38007C3ABB /* MapViewController.swift in Sources */,
 				30D427821BE038E300DE4D2D /* ChatViewController.swift in Sources */,
 				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
-				3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */,
+				3012348E1BD05B38007C3ABB /* GroupInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
