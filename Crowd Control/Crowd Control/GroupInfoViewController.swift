@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  GroupInfoViewController.swift
 //  Crowd Control
 //
 //  Created by Daniel Andrus on 2015-10-15.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+/// Controller for manipulating the group info view, which displays basic group information and
+/// lists of members and group leaders.
+class GroupInfoViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
