@@ -8,61 +8,52 @@
 
 import Foundation
 
-class GroupModel{
-    var groupLeader: String
-    var groupName: String
-    //Itinerary is currently set to string to use as a place holder until we know
-    //what the data type looks like
-    var itinerary: String?
-    var status: String?
-    var waypoints: [(Double, Double)]?
-    var groupMembers: [String]
-    
-    init(groupLeader: String, groupName: String, itinerary: String,status: String, waypoints: [(Double, Double)], groupMembers: [String]){
-        self.groupLeader = groupLeader
-        self.groupName = groupName
-        self.itinerary = itinerary
-        self.status = status
-        self.waypoints = waypoints
-        self.groupMembers = groupMembers
-    }
+//Structure to hold the waypoint object for location and a message
+struct Waypoint {
+    var waypointId: Int
+    var longitude: Double
+    var latitude: Double
+    var message: String
 }
 
-extension GroupModel {
-    func addItineraryItem(itineraryItem: String){
-        self.itinerary! += itineraryItem
+protocol GroupModel {
+    var groupLeader: String {get set}
+    var groupName: String {get set}
+    //Itinerary is currently set to string to use as a place holder until we know
+    //what the data type looks like
+    var itinerary: [String]? {get set}
+    var status: String? {get set}
+    var waypoints: [Waypoint]? {get set}
+    var groupMembers: [String] {get set}
+    
+    func addGroupMember(member: String)
+    func addItineraryItem(itineraryItem: String)
+    func addWaypoint(waypoint: Waypoint)
+    func removeGroupMember(member: String)
+}
+
+extension GroupModel{
+    mutating func addGroupMember(member: String){
+        self.groupMembers += [member]
     }
-    func addWaypoint(waypoint: (Double, Double)){
-        self.waypoints!.append(waypoint)
+    mutating func addItineraryItem(itineraryItem: String){
+        if self.itinerary == nil {
+            self.itinerary = [itineraryItem]
+        }
+        else {
+            self.itinerary! += [itineraryItem]
+        }
     }
-    func getGroupModel() -> GroupModel {
-        return self
+    mutating func addWaypoint(waypoint: Waypoint){
+        if self.waypoints == nil {
+            self.waypoints! = [waypoint]
+        }else{
+            self.waypoints! += [waypoint]
+        }
     }
-    func getGroupName() -> String {
-        return self.groupName
-    }
-    func getItinerary() -> String {
-        return self.itinerary!
-    }
-    func getStatus() -> String {
-        return self.status!
-    }
-    func getWaypoints() -> [(Double, Double)]{
-        return self.waypoints!
-    }
-    func getMemberLocations() -> [(Double, Double)]{
-        return [(0.0,0.0)]
-    }
-    func getGroupMembers() -> [String] {
-        return self.groupMembers
-    }
-    func setGroupName(name: String){
-        self.groupName = name
-    }
-    func setStatus(status: String){
-        self.status = status
-    }
-    func setGroupMembers(members: [String]){
-        self.groupMembers = members
+    mutating func removeGroupMember(member: String){
+        //remove the item(member) from the groupMember list by getting the index of the element
+        //and removing the item at that index
+        self.groupMembers.removeAtIndex(self.groupMembers.indexOf(member)!)
     }
 }
