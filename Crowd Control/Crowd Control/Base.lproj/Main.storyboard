@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Conversations-->
+        <!--Chat View Controller-->
         <scene sceneID="vde-tS-lgI">
             <objects>
-                <tableViewController id="EuT-v3-GYL" customClass="ConversationViewController" customModule="Crowd_Control" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="EuT-v3-GYL" userLabel="Chat View Controller" customClass="ChatViewController" customModule="Crowd_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="oS1-YL-36h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,7 +179,7 @@
                             <outlet property="delegate" destination="EuT-v3-GYL" id="fFK-IQ-zVa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Conversations" id="Ioe-mj-jeR"/>
+                    <navigationItem key="navigationItem" title="Chat" id="Ioe-mj-jeR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdg-BX-yVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,11 +205,11 @@
             </objects>
             <point key="canvasLocation" x="579" y="0.0"/>
         </scene>
-        <!--Third-->
+        <!--Chat-->
         <scene sceneID="F5o-e5-RSh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qQT-fq-Lvj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Third" image="third" id="K7w-a1-ph2" userLabel="Third"/>
+                    <tabBarItem key="tabBarItem" title="Chat" image="third" id="K7w-a1-ph2" userLabel="Third"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VUI-RG-eAN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

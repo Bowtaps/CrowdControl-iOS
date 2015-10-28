@@ -16,8 +16,7 @@
 		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
 		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
 		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
-		308ECFA61BD73F20000E4F21 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308ECFA51BD73F20000E4F21 /* ThirdViewController.swift */; };
-		30D427821BE038E300DE4D2D /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D427811BE038E200DE4D2D /* ConversationsViewController.swift */; };
+		30D427821BE038E300DE4D2D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D427811BE038E200DE4D2D /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +52,7 @@
 		301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlUITests.swift; sourceTree = "<group>"; };
 		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		308ECFA51BD73F20000E4F21 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		30D427811BE038E200DE4D2D /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		30D427811BE038E200DE4D2D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +138,7 @@
 				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
 				3012348D1BD05B38007C3ABB /* FirstViewController.swift */,
 				3012348F1BD05B38007C3ABB /* SecondViewController.swift */,
-				308ECFA51BD73F20000E4F21 /* ThirdViewController.swift */,
-				30D427811BE038E200DE4D2D /* ConversationsViewController.swift */,
+				30D427811BE038E200DE4D2D /* ChatViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -302,9 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				301234901BD05B38007C3ABB /* SecondViewController.swift in Sources */,
-				30D427821BE038E300DE4D2D /* ConversationsViewController.swift in Sources */,
+				30D427821BE038E300DE4D2D /* ChatViewController.swift in Sources */,
 				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
-				308ECFA61BD73F20000E4F21 /* ThirdViewController.swift in Sources */,
 				3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
