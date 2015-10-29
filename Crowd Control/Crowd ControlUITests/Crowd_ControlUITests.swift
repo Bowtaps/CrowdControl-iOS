@@ -8,29 +8,31 @@
 
 import XCTest
 
+@available(iOS 9.0, *)
 class Crowd_ControlUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+	
+	/// Test for navigating to map screen and activating the location tracking button
+    func testMapTracking() {
+		let app = XCUIApplication()
+		app.tabBars.buttons["Second"].tap()
+		XCTAssertEqual(app.maps.count, 1)
+		
+		let navBar = app.navigationBars["Map"]
+		XCTAssertEqual(navBar.exists, true)
+		
+		let trackingButton = app.navigationBars["Map"].buttons["Tracking"]
+		trackingButton.tap()
     }
     
 }
