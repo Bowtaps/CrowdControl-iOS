@@ -10,9 +10,9 @@ import Foundation
 
 protocol CCUserModel {
     //CCUser Table in Parse
-    var status: String {get set}
+    var status: String? {get set}
     var location: (Double, Double) {get set}
-    var preferences: String {get set}
+    var preferences: String? {get set}
     
     //ParseUser Table in Parse
     var objectId: String {get}

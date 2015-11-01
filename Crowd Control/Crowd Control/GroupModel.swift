@@ -30,30 +30,10 @@ protocol GroupModel {
     func addItineraryItem(itineraryItem: String)
     func addWaypoint(waypoint: Waypoint)
     func removeGroupMember(member: String)
-}
-
-extension GroupModel{
-    mutating func addGroupMember(member: String){
-        self.groupMembers += [member]
-    }
-    mutating func addItineraryItem(itineraryItem: String){
-        if self.itinerary == nil {
-            self.itinerary = [itineraryItem]
-        }
-        else {
-            self.itinerary! += [itineraryItem]
-        }
-    }
-    mutating func addWaypoint(waypoint: Waypoint){
-        if self.waypoints == nil {
-            self.waypoints! = [waypoint]
-        }else{
-            self.waypoints! += [waypoint]
-        }
-    }
-    mutating func removeGroupMember(member: String){
-        //remove the item(member) from the groupMember list by getting the index of the element
-        //and removing the item at that index
-        self.groupMembers.removeAtIndex(self.groupMembers.indexOf(member)!)
-    }
+    func load()
+    func loadAsync()
+    func save()
+    func saveAsync()
+    //Possible other functions
+    //func bcastLocation
 }

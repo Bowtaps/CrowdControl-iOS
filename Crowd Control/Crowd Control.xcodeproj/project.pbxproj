@@ -24,6 +24,10 @@
 		C2D186C21BDE994E00C27167 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186BB1BDE994E00C27167 /* ParseFacebookUtilsV4.framework */; };
 		C2D186C31BDE994E00C27167 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186BC1BDE994E00C27167 /* ParseTwitterUtils.framework */; };
 		C2D186C41BDE994E00C27167 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186BD1BDE994E00C27167 /* ParseUI.framework */; };
+		C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C51BE1BBD800C27167 /* CCUserTest.swift */; };
+		C2D186C81BE1BC5400C27167 /* ParseUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */; };
+		C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */; };
+		C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		C2D186BB1BDE994E00C27167 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "parse-library-1.9.0/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
 		C2D186BC1BDE994E00C27167 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1.9.0/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
 		C2D186BD1BDE994E00C27167 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.9.0/ParseUI.framework"; sourceTree = "<group>"; };
+		C2D186C51BE1BBD800C27167 /* CCUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserTest.swift; sourceTree = "<group>"; };
+		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUserModel.swift; sourceTree = "<group>"; };
+		C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModelTests.swift; sourceTree = "<group>"; };
+		C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseGroupModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,8 @@
 			children = (
 				301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */,
 				301234A41BD05B39007C3ABB /* Info.plist */,
+				C2D186C51BE1BBD800C27167 /* CCUserTest.swift */,
+				C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */,
 			);
 			path = "Crowd ControlTests";
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 			children = (
 				C2D186B01BDC127200C27167 /* CCUserModel.swift */,
 				C2D186B21BDC361800C27167 /* GroupModel.swift */,
+				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
+				C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,10 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D186C81BE1BC5400C27167 /* ParseUserModel.swift in Sources */,
 				301234901BD05B38007C3ABB /* SecondViewController.swift in Sources */,
 				C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */,
 				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
 				C2D186B11BDC127200C27167 /* CCUserModel.swift in Sources */,
+				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
 				3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */,
+				C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */,
 				301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
