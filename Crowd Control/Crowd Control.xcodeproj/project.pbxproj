@@ -15,7 +15,19 @@
 		301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234961BD05B39007C3ABB /* LaunchScreen.storyboard */; };
 		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
 		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
-		C202381B1BD9A02E008D458A /* CCUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C202381A1BD9A02E008D458A /* CCUserModel.swift */; settings = {ASSET_TAGS = (); }; };
+		C2D186B11BDC127200C27167 /* CCUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B01BDC127200C27167 /* CCUserModel.swift */; };
+		C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B21BDC361800C27167 /* GroupModel.swift */; };
+		C2D186BE1BDE994E00C27167 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186B71BDE994E00C27167 /* Bolts.framework */; };
+		C2D186BF1BDE994E00C27167 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186B81BDE994E00C27167 /* Parse.framework */; };
+		C2D186C01BDE994E00C27167 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186B91BDE994E00C27167 /* ParseCrashReporting.framework */; };
+		C2D186C11BDE994E00C27167 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186BA1BDE994E00C27167 /* ParseFacebookUtils.framework */; };
+		C2D186C21BDE994E00C27167 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186BB1BDE994E00C27167 /* ParseFacebookUtilsV4.framework */; };
+		C2D186C31BDE994E00C27167 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186BC1BDE994E00C27167 /* ParseTwitterUtils.framework */; };
+		C2D186C41BDE994E00C27167 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186BD1BDE994E00C27167 /* ParseUI.framework */; };
+		C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C51BE1BBD800C27167 /* CCUserTest.swift */; };
+		C2D186C81BE1BC5400C27167 /* ParseUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */; };
+		C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */; };
+		C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +62,19 @@
 		301234A91BD05B39007C3ABB /* Crowd ControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crowd ControlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlUITests.swift; sourceTree = "<group>"; };
 		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C202381A1BD9A02E008D458A /* CCUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserModel.swift; sourceTree = "<group>"; };
+		C2D186B01BDC127200C27167 /* CCUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserModel.swift; sourceTree = "<group>"; };
+		C2D186B21BDC361800C27167 /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		C2D186B71BDE994E00C27167 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.9.0/Bolts.framework"; sourceTree = "<group>"; };
+		C2D186B81BDE994E00C27167 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.9.0/Parse.framework"; sourceTree = "<group>"; };
+		C2D186B91BDE994E00C27167 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.9.0/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		C2D186BA1BDE994E00C27167 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1.9.0/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		C2D186BB1BDE994E00C27167 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "parse-library-1.9.0/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		C2D186BC1BDE994E00C27167 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1.9.0/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		C2D186BD1BDE994E00C27167 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.9.0/ParseUI.framework"; sourceTree = "<group>"; };
+		C2D186C51BE1BBD800C27167 /* CCUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserTest.swift; sourceTree = "<group>"; };
+		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUserModel.swift; sourceTree = "<group>"; };
+		C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModelTests.swift; sourceTree = "<group>"; };
+		C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseGroupModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D186BF1BDE994E00C27167 /* Parse.framework in Frameworks */,
+				C2D186C01BDE994E00C27167 /* ParseCrashReporting.framework in Frameworks */,
+				C2D186C41BDE994E00C27167 /* ParseUI.framework in Frameworks */,
+				C2D186C11BDE994E00C27167 /* ParseFacebookUtils.framework in Frameworks */,
+				C2D186BE1BDE994E00C27167 /* Bolts.framework in Frameworks */,
+				C2D186C31BDE994E00C27167 /* ParseTwitterUtils.framework in Frameworks */,
+				C2D186C21BDE994E00C27167 /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +112,7 @@
 		3012347F1BD05B38007C3ABB = {
 			isa = PBXGroup;
 			children = (
+				C2D186B61BDE98BB00C27167 /* Frameworks */,
 				3012348A1BD05B38007C3ABB /* Crowd Control */,
 				301234A11BD05B39007C3ABB /* Crowd ControlTests */,
 				301234AC1BD05B39007C3ABB /* Crowd ControlUITests */,
@@ -115,6 +147,8 @@
 			children = (
 				301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */,
 				301234A41BD05B39007C3ABB /* Info.plist */,
+				C2D186C51BE1BBD800C27167 /* CCUserTest.swift */,
+				C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */,
 			);
 			path = "Crowd ControlTests";
 			sourceTree = "<group>";
@@ -150,9 +184,26 @@
 		308ECFA21BD72E25000E4F21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C202381C1BD9A2D1008D458A /* CCUserModel.swift */,
+				C2D186B01BDC127200C27167 /* CCUserModel.swift */,
+				C2D186B21BDC361800C27167 /* GroupModel.swift */,
+				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
+				C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C2D186B61BDE98BB00C27167 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2D186B71BDE994E00C27167 /* Bolts.framework */,
+				C2D186B81BDE994E00C27167 /* Parse.framework */,
+				C2D186B91BDE994E00C27167 /* ParseCrashReporting.framework */,
+				C2D186BA1BDE994E00C27167 /* ParseFacebookUtils.framework */,
+				C2D186BB1BDE994E00C27167 /* ParseFacebookUtilsV4.framework */,
+				C2D186BC1BDE994E00C27167 /* ParseTwitterUtils.framework */,
+				C2D186BD1BDE994E00C27167 /* ParseUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,9 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D186C81BE1BC5400C27167 /* ParseUserModel.swift in Sources */,
 				301234901BD05B38007C3ABB /* SecondViewController.swift in Sources */,
-				C202381D1BD9A2D1008D458A /* CCUserModel.swift in Sources */,
+				C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */,
 				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
+				C2D186B11BDC127200C27167 /* CCUserModel.swift in Sources */,
+				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
 				3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */,
+				C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */,
 				301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +487,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.9.0",
+				);
 				INFOPLIST_FILE = "Crowd Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-Control";
@@ -445,6 +505,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.9.0",
+				);
 				INFOPLIST_FILE = "Crowd Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-Control";
