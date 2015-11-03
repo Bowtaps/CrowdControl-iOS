@@ -8,29 +8,116 @@
 
 import XCTest
 
+@available(iOS 9.0, *)
 class Crowd_ControlUITests: XCTestCase {
-        
+	
+	/// Sets up each test by executing these pre-test actions. Launches the app and configures test
+	/// settings.
     override func setUp() {
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
-    
+	
+	/// Cleans up after each test. Closes the app and performs any post-test cleanup and releasing
+	/// of dynamically allocated memory.
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+	
+	/// Test for navigating to map screen and activating the location tracking button
+    func testMapTracking() {
+		
+		// Launch app and go to maps tab
+		let app = XCUIApplication()
+		app.tabBars.buttons["Second"].tap()
+		XCTAssertEqual(app.maps.count, 1)
+		
+		// Make sure navigation bar is correct
+		let navBar = app.navigationBars["Map"]
+		XCTAssertEqual(navBar.exists, true)
+		
+		// Tap the trackingn button
+		let trackingButton = app.navigationBars["Map"].buttons["Tracking"]
+		trackingButton.tap()
     }
     
+	/// Test for navigating between tabs while in an event. Simply taps each of the different tabs
+	/// using different patterns. The tests pass as long as the navigation bar's identifier (title)
+	/// matches the expected page.
+	func testTabSwitching() {
+		
+		// jump between each button
+		let app = XCUIApplication()
+		let tabBarsQuery = app.tabBars
+		let secondButton = tabBarsQuery.buttons["Second"]
+		let chatButton = tabBarsQuery.buttons["Chat"]
+		let groupInfoButton = tabBarsQuery.buttons["Group Info"]
+		
+		// visit each tab once
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		
+		// repeated taps
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		
+		// back-and-forth taps
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+	}
+	
 }
