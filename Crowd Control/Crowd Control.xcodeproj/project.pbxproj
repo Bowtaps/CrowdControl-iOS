@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348B1BD05B38007C3ABB /* AppDelegate.swift */; };
-		3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348D1BD05B38007C3ABB /* FirstViewController.swift */; };
-		301234901BD05B38007C3ABB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348F1BD05B38007C3ABB /* SecondViewController.swift */; };
-		301234931BD05B39007C3ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234911BD05B39007C3ABB /* Main.storyboard */; };
+		301234931BD05B39007C3ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234911BD05B39007C3ABB /* Main.storyboard */; settings = {ASSET_TAGS = (100, ); }; };
 		301234951BD05B39007C3ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301234941BD05B39007C3ABB /* Assets.xcassets */; };
 		301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234961BD05B39007C3ABB /* LaunchScreen.storyboard */; };
 		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
 		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
+<<<<<<< HEAD
 		C2D186B11BDC127200C27167 /* CCUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B01BDC127200C27167 /* CCUserModel.swift */; };
 		C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B21BDC361800C27167 /* GroupModel.swift */; };
 		C2D186BE1BDE994E00C27167 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D186B71BDE994E00C27167 /* Bolts.framework */; };
@@ -28,6 +27,15 @@
 		C2D186C81BE1BC5400C27167 /* ParseUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */; };
 		C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */; };
 		C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */; };
+=======
+		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
+		30F9F3A61BE8A76C00D03B6A /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */; };
+		30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */; };
+		30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */; };
+		30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A91BE8A78400D03B6A /* MapViewController.swift */; };
+		30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */; };
+		30F9F3B01BE8A7A300D03B6A /* CCUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3AF1BE8A7A300D03B6A /* CCUserModel.swift */; };
+>>>>>>> e27f9d242aba05a2b872cc5773bdc089e8f51fd7
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +58,6 @@
 /* Begin PBXFileReference section */
 		301234881BD05B38007C3ABB /* Crowd Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crowd Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3012348B1BD05B38007C3ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3012348D1BD05B38007C3ABB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		3012348F1BD05B38007C3ABB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		301234921BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		301234941BD05B39007C3ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301234971BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 		301234A91BD05B39007C3ABB /* Crowd ControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crowd ControlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlUITests.swift; sourceTree = "<group>"; };
 		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		C2D186B01BDC127200C27167 /* CCUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserModel.swift; sourceTree = "<group>"; };
 		C2D186B21BDC361800C27167 /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		C2D186B71BDE994E00C27167 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.9.0/Bolts.framework"; sourceTree = "<group>"; };
@@ -75,6 +82,15 @@
 		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUserModel.swift; sourceTree = "<group>"; };
 		C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModelTests.swift; sourceTree = "<group>"; };
 		C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseGroupModel.swift; sourceTree = "<group>"; };
+=======
+		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		30F9F3A51BE8A76C00D03B6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WelcomeScreen.storyboard; sourceTree = "<group>"; };
+		30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = Controller/ChatViewController.swift; sourceTree = "<group>"; };
+		30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupInfoViewController.swift; path = Controller/GroupInfoViewController.swift; sourceTree = "<group>"; };
+		30F9F3A91BE8A78400D03B6A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controller/MapViewController.swift; sourceTree = "<group>"; };
+		30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controller/WelcomeViewController.swift; sourceTree = "<group>"; };
+		30F9F3AF1BE8A7A300D03B6A /* CCUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCUserModel.swift; path = Model/CCUserModel.swift; sourceTree = "<group>"; };
+>>>>>>> e27f9d242aba05a2b872cc5773bdc089e8f51fd7
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				C2D186BF1BDE994E00C27167 /* Parse.framework in Frameworks */,
 				C2D186C01BDE994E00C27167 /* ParseCrashReporting.framework in Frameworks */,
 				C2D186C41BDE994E00C27167 /* ParseUI.framework in Frameworks */,
@@ -89,6 +106,9 @@
 				C2D186BE1BDE994E00C27167 /* Bolts.framework in Frameworks */,
 				C2D186C31BDE994E00C27167 /* ParseTwitterUtils.framework in Frameworks */,
 				C2D186C21BDE994E00C27167 /* ParseFacebookUtilsV4.framework in Frameworks */,
+=======
+				306628311BD8A11600524739 /* MapKit.framework in Frameworks */,
+>>>>>>> e27f9d242aba05a2b872cc5773bdc089e8f51fd7
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +132,11 @@
 		3012347F1BD05B38007C3ABB = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				C2D186B61BDE98BB00C27167 /* Frameworks */,
+=======
+				306628301BD8A11600524739 /* MapKit.framework */,
+>>>>>>> e27f9d242aba05a2b872cc5773bdc089e8f51fd7
 				3012348A1BD05B38007C3ABB /* Crowd Control */,
 				301234A11BD05B39007C3ABB /* Crowd ControlTests */,
 				301234AC1BD05B39007C3ABB /* Crowd ControlUITests */,
@@ -133,6 +157,7 @@
 		3012348A1BD05B38007C3ABB /* Crowd Control */ = {
 			isa = PBXGroup;
 			children = (
+				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
 				308ECFA21BD72E25000E4F21 /* Model */,
 				308ECFA01BD72E17000E4F21 /* Controller */,
 				308ECFA11BD72E20000E4F21 /* View */,
@@ -165,9 +190,10 @@
 		308ECFA01BD72E17000E4F21 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
-				3012348D1BD05B38007C3ABB /* FirstViewController.swift */,
-				3012348F1BD05B38007C3ABB /* SecondViewController.swift */,
+				30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */,
+				30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */,
+				30F9F3A91BE8A78400D03B6A /* MapViewController.swift */,
+				30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -177,6 +203,7 @@
 			children = (
 				301234911BD05B39007C3ABB /* Main.storyboard */,
 				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
+				30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -184,10 +211,14 @@
 		308ECFA21BD72E25000E4F21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				C2D186B01BDC127200C27167 /* CCUserModel.swift */,
 				C2D186B21BDC361800C27167 /* GroupModel.swift */,
 				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
 				C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */,
+=======
+				30F9F3AF1BE8A7A300D03B6A /* CCUserModel.swift */,
+>>>>>>> e27f9d242aba05a2b872cc5773bdc089e8f51fd7
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -268,12 +299,20 @@
 		301234801BD05B38007C3ABB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					100,
+				);
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Bowtaps;
 				TargetAttributes = {
 					301234871BD05B38007C3ABB = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = MBDJ3UEK93;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3012349D1BD05B39007C3ABB = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -312,6 +351,7 @@
 			files = (
 				301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */,
 				301234951BD05B39007C3ABB /* Assets.xcassets in Resources */,
+				30F9F3A61BE8A76C00D03B6A /* WelcomeScreen.storyboard in Resources */,
 				301234931BD05B39007C3ABB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				C2D186C81BE1BC5400C27167 /* ParseUserModel.swift in Sources */,
 				301234901BD05B38007C3ABB /* SecondViewController.swift in Sources */,
 				C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */,
@@ -344,6 +385,14 @@
 				C2D186B11BDC127200C27167 /* CCUserModel.swift in Sources */,
 				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
 				3012348E1BD05B38007C3ABB /* FirstViewController.swift in Sources */,
+=======
+				30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */,
+				30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */,
+				30F9F3B01BE8A7A300D03B6A /* CCUserModel.swift in Sources */,
+				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
+				30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */,
+				30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */,
+>>>>>>> e27f9d242aba05a2b872cc5773bdc089e8f51fd7
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +444,14 @@
 				301234971BD05B39007C3ABB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30F9F3A51BE8A76C00D03B6A /* Base */,
+			);
+			name = WelcomeScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -487,10 +544,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+<<<<<<< HEAD
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parse-library-1.9.0",
 				);
+=======
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_WARNINGS = YES;
+>>>>>>> e27f9d242aba05a2b872cc5773bdc089e8f51fd7
 				INFOPLIST_FILE = "Crowd Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-Control";
@@ -505,10 +567,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+<<<<<<< HEAD
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parse-library-1.9.0",
 				);
+=======
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_WARNINGS = YES;
+>>>>>>> e27f9d242aba05a2b872cc5773bdc089e8f51fd7
 				INFOPLIST_FILE = "Crowd Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bowtaps.Crowd-Control";
