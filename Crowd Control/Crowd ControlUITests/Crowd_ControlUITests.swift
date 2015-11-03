@@ -10,19 +10,42 @@ import XCTest
 
 @available(iOS 9.0, *)
 class Crowd_ControlUITests: XCTestCase {
-        
+	
+	/// Sets up each test by executing these pre-test actions. Launches the app and configures test
+	/// settings.
     override func setUp() {
         super.setUp()
         
         continueAfterFailure = false
         XCUIApplication().launch()
     }
-    
+	
+	/// Cleans up after each test. Closes the app and performs any post-test cleanup and releasing
+	/// of dynamically allocated memory.
     override func tearDown() {
         super.tearDown()
     }
 	
-	/// Test for navigating between tabs while in an event
+	/// Test for navigating to map screen and activating the location tracking button
+    func testMapTracking() {
+		
+		// Launch app and go to maps tab
+		let app = XCUIApplication()
+		app.tabBars.buttons["Second"].tap()
+		XCTAssertEqual(app.maps.count, 1)
+		
+		// Make sure navigation bar is correct
+		let navBar = app.navigationBars["Map"]
+		XCTAssertEqual(navBar.exists, true)
+		
+		// Tap the trackingn button
+		let trackingButton = app.navigationBars["Map"].buttons["Tracking"]
+		trackingButton.tap()
+    }
+    
+	/// Test for navigating between tabs while in an event. Simply taps each of the different tabs
+	/// using different patterns. The tests pass as long as the navigation bar's identifier (title)
+	/// matches the expected page.
 	func testTabSwitching() {
 		
 		// jump between each button
@@ -79,8 +102,6 @@ class Crowd_ControlUITests: XCTestCase {
 		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
 		chatButton.tap()
 		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
-		groupInfoButton.tap()
-		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
 		secondButton.tap()
 		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
 		groupInfoButton.tap()
@@ -95,23 +116,8 @@ class Crowd_ControlUITests: XCTestCase {
 		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
 		chatButton.tap()
 		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
 	}
 	
-	/// Test for navigating to map screen and activating the location tracking button
-    func testMapTracking() {
-		
-		// Launch app and go to maps tab
-		let app = XCUIApplication()
-		app.tabBars.buttons["Second"].tap()
-		XCTAssertEqual(app.maps.count, 1)
-		
-		// Make sure navigation bar is correct
-		let navBar = app.navigationBars["Map"]
-		XCTAssertEqual(navBar.exists, true)
-		
-		// Tap the trackingn button
-		let trackingButton = app.navigationBars["Map"].buttons["Tracking"]
-		trackingButton.tap()
-    }
-    
 }
