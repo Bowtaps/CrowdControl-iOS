@@ -148,6 +148,7 @@
 			children = (
 				301234911BD05B39007C3ABB /* Main.storyboard */,
 				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
+				309620941BE86811008647C6 /* WelcomeScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -274,6 +275,7 @@
 				301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */,
 				301234951BD05B39007C3ABB /* Assets.xcassets in Resources */,
 				301234931BD05B39007C3ABB /* Main.storyboard in Resources */,
+				309620951BE86811008647C6 /* WelcomeScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
