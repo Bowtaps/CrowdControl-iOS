@@ -17,6 +17,8 @@
 		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
 		30D427821BE038E300DE4D2D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D427811BE038E200DE4D2D /* ChatViewController.swift */; };
 		30D427841BE0AC4F00DE4D2D /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D427831BE0AC4F00DE4D2D /* GroupInfoViewController.swift */; };
+		309620951BE86811008647C6 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309620941BE86811008647C6 /* WelcomeScreen.storyboard */; };
+		309620971BE88542008647C6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309620961BE88542008647C6 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30D427811BE038E200DE4D2D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		30D427831BE0AC4F00DE4D2D /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupInfoViewController.swift; sourceTree = "<group>"; };
+		309620941BE86811008647C6 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WelcomeScreen.storyboard; path = View/WelcomeScreen.storyboard; sourceTree = "<group>"; };
+		309620961BE88542008647C6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
 				3012348F1BD05B38007C3ABB /* MapViewController.swift */,
 				30D427811BE038E200DE4D2D /* ChatViewController.swift */,
+				309620961BE88542008647C6 /* WelcomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				30D427841BE0AC4F00DE4D2D /* GroupInfoViewController.swift in Sources */,
 				301234901BD05B38007C3ABB /* MapViewController.swift in Sources */,
 				30D427821BE038E300DE4D2D /* ChatViewController.swift in Sources */,
+				309620971BE88542008647C6 /* WelcomeViewController.swift in Sources */,
 				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
