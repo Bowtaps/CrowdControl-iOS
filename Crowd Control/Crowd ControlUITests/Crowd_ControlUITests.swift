@@ -22,6 +22,81 @@ class Crowd_ControlUITests: XCTestCase {
         super.tearDown()
     }
 	
+	/// Test for navigating between tabs while in an event
+	func testTabSwitching() {
+		
+		// jump between each button
+		let app = XCUIApplication()
+		let tabBarsQuery = app.tabBars
+		let secondButton = tabBarsQuery.buttons["Second"]
+		let chatButton = tabBarsQuery.buttons["Chat"]
+		let groupInfoButton = tabBarsQuery.buttons["Group Info"]
+		
+		// visit each tab once
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		
+		// repeated taps
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		
+		// back-and-forth taps
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		secondButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Map")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+		groupInfoButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Group Info")
+		chatButton.tap()
+		XCTAssertEqual(app.navigationBars.elementAtIndex(0).identifier, "Chat")
+	}
+	
 	/// Test for navigating to map screen and activating the location tracking button
     func testMapTracking() {
 		
