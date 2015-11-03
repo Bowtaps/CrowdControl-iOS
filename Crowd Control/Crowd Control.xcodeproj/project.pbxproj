@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348B1BD05B38007C3ABB /* AppDelegate.swift */; };
-		301234901BD05B38007C3ABB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012348F1BD05B38007C3ABB /* MapViewController.swift */; };
 		301234931BD05B39007C3ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234911BD05B39007C3ABB /* Main.storyboard */; settings = {ASSET_TAGS = (100, ); }; };
 		301234951BD05B39007C3ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301234941BD05B39007C3ABB /* Assets.xcassets */; };
 		301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234961BD05B39007C3ABB /* LaunchScreen.storyboard */; };
 		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
 		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
 		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
-		30D427821BE038E300DE4D2D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D427811BE038E200DE4D2D /* ChatViewController.swift */; };
-		30D427841BE0AC4F00DE4D2D /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D427831BE0AC4F00DE4D2D /* GroupInfoViewController.swift */; };
-		309620951BE86811008647C6 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309620941BE86811008647C6 /* WelcomeScreen.storyboard */; };
-		309620971BE88542008647C6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309620961BE88542008647C6 /* WelcomeViewController.swift */; };
+		30F9F3A61BE8A76C00D03B6A /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */; };
+		30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */; };
+		30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */; };
+		30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A91BE8A78400D03B6A /* MapViewController.swift */; };
+		30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */; };
+		30F9F3B01BE8A7A300D03B6A /* CCUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3AF1BE8A7A300D03B6A /* CCUserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,6 @@
 /* Begin PBXFileReference section */
 		301234881BD05B38007C3ABB /* Crowd Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crowd Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3012348B1BD05B38007C3ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3012348F1BD05B38007C3ABB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		301234921BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		301234941BD05B39007C3ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301234971BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,10 +53,12 @@
 		301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlUITests.swift; sourceTree = "<group>"; };
 		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		30D427811BE038E200DE4D2D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		30D427831BE0AC4F00DE4D2D /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupInfoViewController.swift; sourceTree = "<group>"; };
-		309620941BE86811008647C6 /* WelcomeScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WelcomeScreen.storyboard; path = View/WelcomeScreen.storyboard; sourceTree = "<group>"; };
-		309620961BE88542008647C6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		30F9F3A51BE8A76C00D03B6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WelcomeScreen.storyboard; sourceTree = "<group>"; };
+		30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = Controller/ChatViewController.swift; sourceTree = "<group>"; };
+		30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupInfoViewController.swift; path = Controller/GroupInfoViewController.swift; sourceTree = "<group>"; };
+		30F9F3A91BE8A78400D03B6A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controller/MapViewController.swift; sourceTree = "<group>"; };
+		30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controller/WelcomeViewController.swift; sourceTree = "<group>"; };
+		30F9F3AF1BE8A7A300D03B6A /* CCUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCUserModel.swift; path = Model/CCUserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		3012348A1BD05B38007C3ABB /* Crowd Control */ = {
 			isa = PBXGroup;
 			children = (
+				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
 				308ECFA21BD72E25000E4F21 /* Model */,
 				308ECFA01BD72E17000E4F21 /* Controller */,
 				308ECFA11BD72E20000E4F21 /* View */,
@@ -139,11 +142,10 @@
 		308ECFA01BD72E17000E4F21 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				30D427831BE0AC4F00DE4D2D /* GroupInfoViewController.swift */,
-				3012348B1BD05B38007C3ABB /* AppDelegate.swift */,
-				3012348F1BD05B38007C3ABB /* MapViewController.swift */,
-				30D427811BE038E200DE4D2D /* ChatViewController.swift */,
-				309620961BE88542008647C6 /* WelcomeViewController.swift */,
+				30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */,
+				30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */,
+				30F9F3A91BE8A78400D03B6A /* MapViewController.swift */,
+				30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -153,7 +155,7 @@
 			children = (
 				301234911BD05B39007C3ABB /* Main.storyboard */,
 				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
-				309620941BE86811008647C6 /* WelcomeScreen.storyboard */,
+				30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -161,6 +163,7 @@
 		308ECFA21BD72E25000E4F21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30F9F3AF1BE8A7A300D03B6A /* CCUserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -279,8 +282,8 @@
 			files = (
 				301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */,
 				301234951BD05B39007C3ABB /* Assets.xcassets in Resources */,
+				30F9F3A61BE8A76C00D03B6A /* WelcomeScreen.storyboard in Resources */,
 				301234931BD05B39007C3ABB /* Main.storyboard in Resources */,
-				309620951BE86811008647C6 /* WelcomeScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,11 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D427841BE0AC4F00DE4D2D /* GroupInfoViewController.swift in Sources */,
-				301234901BD05B38007C3ABB /* MapViewController.swift in Sources */,
-				30D427821BE038E300DE4D2D /* ChatViewController.swift in Sources */,
-				309620971BE88542008647C6 /* WelcomeViewController.swift in Sources */,
+				30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */,
+				30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */,
+				30F9F3B01BE8A7A300D03B6A /* CCUserModel.swift in Sources */,
 				3012348C1BD05B38007C3ABB /* AppDelegate.swift in Sources */,
+				30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */,
+				30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +363,14 @@
 				301234971BD05B39007C3ABB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30F9F3A51BE8A76C00D03B6A /* Base */,
+			);
+			name = WelcomeScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
