@@ -39,7 +39,7 @@ class ParseGroupModel: GroupModel {
     }
     func addWaypoint(waypoint: Waypoint){
         if self.waypoints == nil {
-            self.waypoints! = [waypoint]
+            self.waypoints = [waypoint]
         }else{
             self.waypoints! += [waypoint]
         }
