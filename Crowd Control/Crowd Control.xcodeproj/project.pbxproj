@@ -121,10 +121,10 @@
 		3012347F1BD05B38007C3ABB = {
 			isa = PBXGroup;
 			children = (
-				C2D186B61BDE98BB00C27167 /* Frameworks */,
 				3012348A1BD05B38007C3ABB /* Crowd Control */,
 				301234A11BD05B39007C3ABB /* Crowd ControlTests */,
 				301234AC1BD05B39007C3ABB /* Crowd ControlUITests */,
+				C2D186B61BDE98BB00C27167 /* Frameworks */,
 				301234891BD05B38007C3ABB /* Products */,
 			);
 			sourceTree = "<group>";
