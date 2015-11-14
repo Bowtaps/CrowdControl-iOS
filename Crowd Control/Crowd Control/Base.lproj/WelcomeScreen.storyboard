@@ -148,7 +148,7 @@
         <!--Login-->
         <scene sceneID="yff-qY-epn">
             <objects>
-                <viewController title="Login" id="2Qt-Qm-Wfs" sceneMemberID="viewController">
+                <viewController title="Login" id="2Qt-Qm-Wfs" customClass="LoginViewController" customModule="Crowd_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6F8-Kf-emM"/>
                         <viewControllerLayoutGuide type="bottom" id="Hnm-Mr-xo1"/>
@@ -297,7 +297,7 @@
         <!--Signup-->
         <scene sceneID="Gl6-JT-t4F">
             <objects>
-                <viewController title="Signup" modalTransitionStyle="flipHorizontal" id="d71-eD-pDd" userLabel="Signup" sceneMemberID="viewController">
+                <viewController title="Signup" modalTransitionStyle="flipHorizontal" id="d71-eD-pDd" userLabel="Signup" customClass="SignupViewController" customModule="Crowd_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FRb-Lm-eLx"/>
                         <viewControllerLayoutGuide type="bottom" id="0CE-mB-Biq"/>
