@@ -71,7 +71,7 @@
 		30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupInfoViewController.swift; path = Controller/GroupInfoViewController.swift; sourceTree = "<group>"; };
 		30F9F3A91BE8A78400D03B6A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controller/MapViewController.swift; sourceTree = "<group>"; };
 		30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controller/WelcomeViewController.swift; sourceTree = "<group>"; };
-		C2D186B21BDC361800C27167 /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		C2D186B21BDC361800C27167 /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupModel.swift; path = Model/GroupModel.swift; sourceTree = "<group>"; };
 		C2D186B71BDE994E00C27167 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.9.0/Bolts.framework"; sourceTree = "<group>"; };
 		C2D186B81BDE994E00C27167 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.9.0/Parse.framework"; sourceTree = "<group>"; };
 		C2D186B91BDE994E00C27167 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.9.0/ParseCrashReporting.framework"; sourceTree = "<group>"; };
@@ -80,9 +80,9 @@
 		C2D186BC1BDE994E00C27167 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1.9.0/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
 		C2D186BD1BDE994E00C27167 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.9.0/ParseUI.framework"; sourceTree = "<group>"; };
 		C2D186C51BE1BBD800C27167 /* CCUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserTest.swift; sourceTree = "<group>"; };
-		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUserModel.swift; sourceTree = "<group>"; };
+		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseUserModel.swift; path = Model/ParseUserModel.swift; sourceTree = "<group>"; };
 		C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModelTests.swift; sourceTree = "<group>"; };
-		C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseGroupModel.swift; sourceTree = "<group>"; };
+		C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseGroupModel.swift; path = Model/ParseGroupModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +186,8 @@
 		308ECFA11BD72E20000E4F21 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				301234911BD05B39007C3ABB /* Main.storyboard */,
 				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
+				301234911BD05B39007C3ABB /* Main.storyboard */,
 				30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */,
 			);
 			name = View;
@@ -198,8 +198,8 @@
 			children = (
 				301502691BE9B3F200B63F7B /* CCUserModel.swift */,
 				C2D186B21BDC361800C27167 /* GroupModel.swift */,
-				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
 				C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */,
+				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
