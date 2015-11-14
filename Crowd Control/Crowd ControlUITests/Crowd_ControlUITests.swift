@@ -29,22 +29,40 @@ class Crowd_ControlUITests: XCTestCase {
 	/// Tests the various buttons and UI elements on the welcome screen.
 	func testWelcomeScreen() {
 		
+		// Show login screen
 		let app = XCUIApplication()
 		let loginWithEmailButton = app.buttons["Login with Email"]
 		loginWithEmailButton.tap()
 		XCTAssertEqual(app.textFields["Login Email Field"].exists, true)
 		XCTAssertEqual(app.secureTextFields["Login Password Field"].exists, true)
 		
+		// Dismiss login screen
 		let cancelButton = app.navigationBars["Login"].buttons["Cancel"]
 		cancelButton.tap()
 		XCTAssertEqual(app.textFields["Login Email Field"].exists, false)
 		XCTAssertEqual(app.secureTextFields["Login Password Field"].exists, false)
 		
+		// Show login screen, return to welcome screen
 		loginWithEmailButton.tap()
 		XCTAssertEqual(app.textFields["Login Email Field"].exists, true)
 		XCTAssertEqual(app.secureTextFields["Login Password Field"].exists, true)
 		
+		// Show signup screen
+		let createAccountButton = app.buttons["create new account"]
+		createAccountButton.tap()
+		XCTAssertEqual(app.textFields["Signup Name Field"].exists, true)
+		XCTAssertEqual(app.textFields["Signup Email Field"].exists, true)
+		XCTAssertEqual(app.secureTextFields["Signup Password Field"].exists, true)
+		XCTAssertEqual(app.secureTextFields["Signup Password Confirm Field"].exists, true)
+		
+		// Dismiss signup screen, return to welcome screen
 		cancelButton.tap()
+		XCTAssertEqual(app.textFields["Signup Name Field"].exists, false)
+		XCTAssertEqual(app.textFields["Signup Email Field"].exists, false)
+		XCTAssertEqual(app.secureTextFields["Signup Password Field"].exists, false)
+		XCTAssertEqual(app.secureTextFields["Signup Password Confirm Field"].exists, false)
+		
+		XCTAssertEqual(cancelButton.exists, false)
 		XCTAssertEqual(app.textFields["Login Email Field"].exists, false)
 		XCTAssertEqual(app.secureTextFields["Login Password Field"].exists, false)
 	}
@@ -55,15 +73,42 @@ class Crowd_ControlUITests: XCTestCase {
 		let app = XCUIApplication()
 		app.buttons["Login with Email"].tap()
 		
-		let johnnyAppleseedIcloudComTextField = app.textFields["Login Email Field"]
-		johnnyAppleseedIcloudComTextField.tap()
-		johnnyAppleseedIcloudComTextField.typeText("test@bowtaps.com")
+		let emailField = app.textFields["Login Email Field"]
+		emailField.tap()
+		emailField.typeText("test@bowtaps.com")
 		
-		let secureTextField = app.secureTextFields["Login Password Field"]
-		secureTextField.tap()
-		secureTextField.tap()
-		secureTextField.typeText("password")
+		let passwordField = app.secureTextFields["Login Password Field"]
+		passwordField.tap()
+		passwordField.typeText("password")
 		app.buttons["Login"].tap()
+		
+		XCTAssertEqual(app.tabBars.count, 1)
+		XCTAssertEqual(app.navigationBars["Group Info"].exists, true)
+	}
+	
+	/// Tests creating a new account to log in to the app using a name, email, and password.
+	func testSignupEmail() {
+		
+		let app = XCUIApplication()
+		app.buttons["Login with Email"].tap()
+		app.buttons["create new account"].tap()
+		
+		let nameField = app.textFields["Signup Name Field"]
+		nameField.tap()
+		nameField.typeText("test user")
+		
+		let emailField = app.textFields["Signup Email Field"]
+		emailField.tap()
+		emailField.typeText("test@bowtaps.com")
+		
+		let passwordField = app.secureTextFields["Signup Password Field"]
+		passwordField.tap()
+		passwordField.typeText("password")
+		
+		let passwordConfirmField = app.secureTextFields["Signup Password Confirm Field"]
+		passwordConfirmField.tap()
+		passwordConfirmField.typeText("password")
+		app.buttons["Create Account"].tap()
 		
 		XCTAssertEqual(app.tabBars.count, 1)
 		XCTAssertEqual(app.navigationBars["Group Info"].exists, true)
