@@ -5,7 +5,7 @@
 //  Created by Evan Hammer on 10/28/15.
 //  Copyright © 2015 Bowtaps. All rights reserved.
 //
-
+import Parse
 import Foundation
 
 class ParseUserModel: CCUserModel {
@@ -41,9 +41,26 @@ class ParseUserModel: CCUserModel {
     func load(){
         //Load data from Parse
         print("Load from Parse")
+        let user = PFUser.currentUser()
+        let query = PFQuery(className: "CCUser")
+        query.whereKey("UserId", equalTo: user!)
+        let resp = try! query.findObjects()
+        print(resp)
     }
     func loadAsync(){
         print("Load Async from Parse")
+        let user = PFUser.currentUser()
+        let query = PFQuery(className: "CCUser")
+        query.whereKey("UserId", equalTo: user!)
+        query.findObjectsInBackgroundWithBlock {
+            (object: PFObject?, error: NSError?) -> Void in
+            if error != nil || object == nil {
+                print("The request failed.")
+            } else {
+                // The find succeeded.
+                print("Successfully retrieved the object.")
+            }
+        }
     }
     func save(){
         print("Send data to Parse")
