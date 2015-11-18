@@ -82,5 +82,18 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1668764053399231</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>1668764053399231</string>
+	<key>FacebookDisplayName</key>
+	<string>Crowd Control</string>
 </dict>
 </plist>

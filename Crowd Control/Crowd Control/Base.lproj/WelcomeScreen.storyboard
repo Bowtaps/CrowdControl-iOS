@@ -104,6 +104,9 @@
                                         <include reference="wNS-yp-K6q"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="facebookButtonTapped:" destination="phR-Rl-VSU" eventType="touchUpOutside" id="Hcq-hY-L7Y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -139,6 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6cb-cx-54t"/>
                     <connections>
+                        <outlet property="facebookLoginButton" destination="ZKh-L0-fLe" id="f2L-dK-oFD"/>
                         <segue destination="WNw-Ix-smx" kind="show" identifier="segueToMainView" id="yhr-Sd-z48"/>
                     </connections>
                 </viewController>
