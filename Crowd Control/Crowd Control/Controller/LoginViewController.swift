@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 /// Custom view controller class for handling user logins.
 ///
@@ -17,5 +18,22 @@ import UIKit
 /// - Note:
 /// This class is a stub, with methods to be implemented as needed
 class LoginViewController: UIViewController {
+	
+	@IBOutlet weak var emailField: UITextField!
+	@IBOutlet weak var passwordField: UITextField!
+	@IBOutlet weak var submitButton: UIButton!
+	
+	@IBAction func submitButtonTapped(sender: AnyObject) {
+		PFUser.logInWithUsernameInBackground(emailField.text!, password:passwordField.text!) {
+			(user: PFUser?, error: NSError?) -> Void in
+			if user != nil {
+				// Do stuff after successful login.
+				print ("Login was successful")
+			} else {
+				// The login failed. Check error to see why.
+				print ("Failed to login")
+			}
+		}
+	}
 	
 }

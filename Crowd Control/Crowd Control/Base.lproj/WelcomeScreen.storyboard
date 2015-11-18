@@ -201,7 +201,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Login"/>
                                                 <connections>
-                                                    <segue destination="BN2-ZC-ikD" kind="unwind" unwindAction="rewindToEventView:" id="jwa-11-P2V"/>
+                                                    <action selector="submitButtonTapped:" destination="2Qt-Qm-Wfs" eventType="touchUpInside" id="c7E-eT-VwN"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7r-Pb-oTG">
@@ -289,6 +289,11 @@
                             <constraint firstItem="Dgg-S3-Vlv" firstAttribute="top" secondItem="6F8-Kf-emM" secondAttribute="bottom" id="w2Z-Yb-svw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="F3C-Kf-UwP" id="Y4D-hD-uEG"/>
+                        <outlet property="passwordField" destination="liu-EE-WaF" id="jsc-8A-E1a"/>
+                        <outlet property="submitButton" destination="KAZ-DV-SXK" id="6f8-62-h6l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWB-1o-MIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BN2-ZC-ikD" userLabel="Exit" sceneMemberID="exit"/>
