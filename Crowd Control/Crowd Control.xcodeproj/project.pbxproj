@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		301234931BD05B39007C3ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234911BD05B39007C3ABB /* Main.storyboard */; settings = {ASSET_TAGS = (100, ); }; };
+		301234931BD05B39007C3ABB /* GroupScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234911BD05B39007C3ABB /* GroupScreens.storyboard */; settings = {ASSET_TAGS = (100, ); }; };
 		301234951BD05B39007C3ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301234941BD05B39007C3ABB /* Assets.xcassets */; };
 		301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234961BD05B39007C3ABB /* LaunchScreen.storyboard */; };
 		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
@@ -55,7 +55,7 @@
 
 /* Begin PBXFileReference section */
 		301234881BD05B38007C3ABB /* Crowd Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crowd Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		301234921BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		301234921BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GroupScreens.storyboard; sourceTree = "<group>"; };
 		301234941BD05B39007C3ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301234971BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		301234991BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
-				301234911BD05B39007C3ABB /* Main.storyboard */,
+				301234911BD05B39007C3ABB /* GroupScreens.storyboard */,
 				30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */,
 			);
 			name = View;
@@ -340,7 +340,7 @@
 				301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */,
 				301234951BD05B39007C3ABB /* Assets.xcassets in Resources */,
 				30F9F3A61BE8A76C00D03B6A /* WelcomeScreen.storyboard in Resources */,
-				301234931BD05B39007C3ABB /* Main.storyboard in Resources */,
+				301234931BD05B39007C3ABB /* GroupScreens.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,12 +413,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		301234911BD05B39007C3ABB /* Main.storyboard */ = {
+		301234911BD05B39007C3ABB /* GroupScreens.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				301234921BD05B39007C3ABB /* Base */,
 			);
-			name = Main.storyboard;
+			name = GroupScreens.storyboard;
 			sourceTree = "<group>";
 		};
 		301234961BD05B39007C3ABB /* LaunchScreen.storyboard */ = {
