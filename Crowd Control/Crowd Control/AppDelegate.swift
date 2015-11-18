@@ -8,8 +8,8 @@
 
 import UIKit
 
-//import FBSDKCoreKit
-//import FacebookUtilsV4
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
 import Parse
 import Bolts
 

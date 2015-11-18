@@ -52,7 +52,7 @@ class ParseUserModel: CCUserModel {
         let query = PFQuery(className: "CCUser")
         query.whereKey("UserId", equalTo: user!)
         query.findObjectsInBackgroundWithBlock {
-            (object: PFObject?, error: NSError?) -> Void in
+            (object: [PFObject]?, error: NSError?) -> Void in
             if error != nil || object == nil {
                 print("The request failed.")
             } else {
@@ -63,6 +63,7 @@ class ParseUserModel: CCUserModel {
     }
     func save(){
         print("Send data to Parse")
+		/*
         let user = PFUser.currentUser()
         let ccuser = PFObject(className: "CCUser")
         ccuser["location"] = self.location
@@ -70,9 +71,11 @@ class ParseUserModel: CCUserModel {
         ccuser["status"] = self.status
         ccuser.whereKey("UserId", user!)
         let resp = ccuser.save()
+*/
     }
     func saveAsync(){
         print("Send Async data to Parse")
+		/*
         let user = PFUser.currentUser()
         let ccuser = PFObject(className: "CCUser")
         ccuser["location"] = self.location
@@ -89,5 +92,6 @@ class ParseUserModel: CCUserModel {
                 print(error?.description)
             }
         }
+*/
     }
 }
