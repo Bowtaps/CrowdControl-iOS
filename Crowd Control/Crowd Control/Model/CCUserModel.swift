@@ -17,7 +17,6 @@ protocol CCUserModel {
     //ParseUser Table in Parse
     var objectId: String {get}
     var username: String {get set}
-    var password: String {get}
     var authData: String {get}
     var emailVerified: Bool {get}
     var email: String {get}

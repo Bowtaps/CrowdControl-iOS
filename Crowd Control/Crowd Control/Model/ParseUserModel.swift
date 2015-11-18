@@ -17,7 +17,6 @@ class ParseUserModel: CCUserModel {
     //ParseUser Table in Parse
     var objectId: String
     var username: String
-    var password: String
     var authData: String
     var emailVerified: Bool
     var email: String
@@ -30,7 +29,6 @@ class ParseUserModel: CCUserModel {
         self.preferences = ""
         self.objectId = ""
         self.username = ""
-        self.password = ""
         self.authData = ""
         self.emailVerified = true
         self.email = ""
@@ -44,6 +42,7 @@ class ParseUserModel: CCUserModel {
         let user = PFUser.currentUser()
         let query = PFQuery(className: "CCUser")
         query.whereKey("UserId", equalTo: user!)
+        //TODO: Catch errors
         let resp = try! query.findObjects()
         print(resp)
     }
@@ -64,8 +63,31 @@ class ParseUserModel: CCUserModel {
     }
     func save(){
         print("Send data to Parse")
+        let user = PFUser.currentUser()
+        let ccuser = PFObject(className: "CCUser")
+        ccuser["location"] = self.location
+        ccuser["preferences"] = self.preferences
+        ccuser["status"] = self.status
+        ccuser.whereKey("UserId", user!)
+        let resp = ccuser.save()
     }
     func saveAsync(){
         print("Send Async data to Parse")
+        let user = PFUser.currentUser()
+        let ccuser = PFObject(className: "CCUser")
+        ccuser["location"] = self.location
+        ccuser["preferences"] = self.preferences
+        ccuser["status"] = self.status
+        ccuser.whereKey("UserId", user!)
+        ccuser.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                // The object has been saved.
+                print("success")
+            } else {
+                // There was a problem, check error.description
+                print(error?.description)
+            }
+        }
     }
 }

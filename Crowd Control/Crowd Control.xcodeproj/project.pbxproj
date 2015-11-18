@@ -284,6 +284,7 @@
 				KnownAssetTags = (
 					100,
 				);
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Bowtaps;
 				TargetAttributes = {
