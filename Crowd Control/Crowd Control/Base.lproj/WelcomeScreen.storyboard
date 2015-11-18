@@ -25,13 +25,13 @@
             </objects>
             <point key="canvasLocation" x="743" y="602"/>
         </scene>
-        <!--Main-->
+        <!--GroupScreens-->
         <scene sceneID="1gN-OS-yaN">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="WNw-Ix-smx" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="GroupScreens" id="WNw-Ix-smx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUH-ri-WKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="54"/>
+            <point key="canvasLocation" x="1297" y="53"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="ifI-LI-HoF">
@@ -201,7 +201,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Login"/>
                                                 <connections>
-                                                    <segue destination="BN2-ZC-ikD" kind="unwind" unwindAction="rewindToEventView:" id="jwa-11-P2V"/>
+                                                    <action selector="submitButtonTapped:" destination="2Qt-Qm-Wfs" eventType="touchUpInside" id="c7E-eT-VwN"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7r-Pb-oTG">
@@ -289,6 +289,11 @@
                             <constraint firstItem="Dgg-S3-Vlv" firstAttribute="top" secondItem="6F8-Kf-emM" secondAttribute="bottom" id="w2Z-Yb-svw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="F3C-Kf-UwP" id="Y4D-hD-uEG"/>
+                        <outlet property="passwordField" destination="liu-EE-WaF" id="jsc-8A-E1a"/>
+                        <outlet property="submitButton" destination="KAZ-DV-SXK" id="6f8-62-h6l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWB-1o-MIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BN2-ZC-ikD" userLabel="Exit" sceneMemberID="exit"/>
@@ -322,7 +327,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dispaly Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsr-5U-uPc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsr-5U-uPc">
                                                 <rect key="frame" x="82" y="22" width="100" height="20"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -342,12 +347,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="••••••••••••••••" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-fi-KAy" userLabel="Signup Password Field">
-                                                <rect key="frame" x="82" y="210" width="250" height="30"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twl-2Q-kYg">
                                                 <rect key="frame" x="82" y="181" width="74" height="21"/>
                                                 <animations/>
@@ -368,7 +367,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OQ-vk-3ZR">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OQ-vk-3ZR" userLabel="Signup Submit Button">
                                                 <rect key="frame" x="82" y="350" width="130" height="30"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.01176470588" green="0.47450980390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -380,9 +379,15 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Create Account"/>
                                                 <connections>
-                                                    <segue destination="ICv-BM-UuT" kind="unwind" unwindAction="rewindToEventView:" id="YZM-Xi-exf"/>
+                                                    <action selector="submitButtonTapped:" destination="d71-eD-pDd" eventType="touchUpInside" id="oXP-4a-KA7"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="••••••••••••••••" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-fi-KAy" userLabel="Signup Password Field">
+                                                <rect key="frame" x="82" y="210" width="250" height="30"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
+                                            </textField>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -448,6 +453,13 @@
                             <constraint firstItem="KXJ-Qd-SF1" firstAttribute="top" secondItem="FRb-Lm-eLx" secondAttribute="bottom" id="qPl-qM-Ajn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="bgU-vS-Ya3" id="jnn-eJ-Y9q"/>
+                        <outlet property="nameField" destination="uQf-tV-2sB" id="SC8-S0-zsx"/>
+                        <outlet property="passwordConfirmField" destination="TfG-Vq-2NA" id="ftM-pr-HgS"/>
+                        <outlet property="passwordField" destination="2YG-fi-KAy" id="mM1-oV-8o7"/>
+                        <outlet property="submitButton" destination="5OQ-vk-3ZR" id="aVe-pn-ge4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APj-gA-LDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ICv-BM-UuT" userLabel="Exit" sceneMemberID="exit"/>
