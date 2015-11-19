@@ -81,7 +81,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKh-L0-fLe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKh-L0-fLe" userLabel="Facebook Login Button">
                                 <rect key="frame" x="17" y="353" width="170" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.47450980390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,7 +105,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="facebookButtonTapped:" destination="phR-Rl-VSU" eventType="touchUpOutside" id="Hcq-hY-L7Y"/>
+                                    <action selector="facebookButtonTapped:" destination="phR-Rl-VSU" eventType="touchUpInside" id="GMz-Na-V2T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -142,7 +142,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="6cb-cx-54t"/>
                     <connections>
-                        <outlet property="facebookLoginButton" destination="ZKh-L0-fLe" id="f2L-dK-oFD"/>
                         <segue destination="WNw-Ix-smx" kind="show" identifier="segueToMainView" id="yhr-Sd-z48"/>
                     </connections>
                 </viewController>

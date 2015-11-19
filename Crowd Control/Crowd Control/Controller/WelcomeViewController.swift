@@ -12,8 +12,6 @@ import ParseFacebookUtilsV4
 
 class WelcomeViewController: UIViewController {
 	
-	@IBOutlet weak var facebookLoginButton: UIButton!
-	
 	var goToEventView = false
 	
 	override func viewDidAppear(animated: Bool) {
@@ -25,6 +23,7 @@ class WelcomeViewController: UIViewController {
 	}
 	
 	@IBAction func facebookButtonTapped(sender: AnyObject) {
+		print ("tapped")
 		PFFacebookUtils.logInInBackgroundWithReadPermissions([]) {
 			(user: PFUser?, error: NSError?) -> Void in
 			if let user = user {
