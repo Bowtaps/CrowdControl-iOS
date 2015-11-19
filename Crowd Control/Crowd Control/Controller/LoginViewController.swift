@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
 			if user != nil {
 				// Do stuff after successful login.
 				print ("Login was successful")
+                let newuser = ParseUserModel()
+                newuser.load()
 			} else {
 				// The login failed. Check error to see why.
 				print ("Failed to login")

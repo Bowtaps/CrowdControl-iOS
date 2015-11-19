@@ -11,6 +11,6 @@ import XCTest
 /*
 class ParseUserTest: XCTestCase{
     func testLoad(){
-        var testModel = ParseUserModel("test", (0.0,0.0), "test", "test", "test", "test", "test");
+        var testModel = ParseUserModel();
     }
 }*/

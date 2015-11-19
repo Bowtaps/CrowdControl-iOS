@@ -26,15 +26,15 @@ class SignupViewController: UIViewController {
 	@IBOutlet weak var submitButton: UIButton!
 	
 	@IBAction func submitButtonTapped(sender: AnyObject) {
-		let user = PFUser()
-		user.username = emailField.text
-		user.email = emailField.text
-		user.password = passwordField.text
+		let parseUser = PFUser()
+		parseUser.username = emailField.text
+        parseUser.email = emailField.text
+		parseUser.password = passwordField.text
 		
 		// other fields can be set just like with PFObject
-		user["phone"] = "415-392-0202"
+		parseUser["phone"] = "415-392-0202"
 		
-		user.signUpInBackgroundWithBlock {
+		parseUser.signUpInBackgroundWithBlock {
 			(succeeded: Bool, error: NSError?) -> Void in
 			if let error = error {
 				let errorString = error.userInfo["error"] as? NSString
@@ -42,6 +42,11 @@ class SignupViewController: UIViewController {
 			} else {
 				// Hooray! Let them use the app now.
 				print ("Hooray!")
+                let user = ParseUserModel()
+                user.username = self.emailField.text!
+                user.email = self.emailField.text!
+                user.displayName = self.nameField.text!
+                user.save()
 			}
 		}
 	}

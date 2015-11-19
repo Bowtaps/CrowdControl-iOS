@@ -11,27 +11,23 @@ import Foundation
 class ParseUserModel: CCUserModel {
     //CCUser Table in Parse
     var status: String?
-    var location: (Double, Double)
-    var preferences: String?
+    var location = (0.0,0.0)
+    var displayName = ""
     
     //ParseUser Table in Parse
-    var objectId: String
-    var username: String
-    var authData: String
-    var emailVerified: Bool
-    var email: String
+    var objectId = "" //do we really need this?
+    var username = ""
+    var preferences: String?
+    var authData: String //do we really need this?
+    var emailVerified = false
+    var email = ""
     var createdAt: NSDate
     var updatedAt: NSDate
     
     init(){
-        self.status = ""
-        self.location = (0.0,0.0)
-        self.preferences = ""
-        self.objectId = ""
-        self.username = ""
+        self.status = nil
+        self.preferences = nil
         self.authData = ""
-        self.emailVerified = true
-        self.email = ""
         self.createdAt = NSDate.init()
         self.updatedAt = NSDate.init()
     }
@@ -44,6 +40,7 @@ class ParseUserModel: CCUserModel {
         query.whereKey("UserId", equalTo: user!)
         //TODO: Catch errors
         let resp = try! query.findObjects()
+        print(user?.objectId)
         print(resp)
     }
     func loadAsync(){
@@ -58,30 +55,26 @@ class ParseUserModel: CCUserModel {
             } else {
                 // The find succeeded.
                 print("Successfully retrieved the object.")
+                print(object)
             }
         }
     }
     func save(){
         print("Send data to Parse")
-		/*
+		
         let user = PFUser.currentUser()
         let ccuser = PFObject(className: "CCUser")
-        ccuser["location"] = self.location
-        ccuser["preferences"] = self.preferences
-        ccuser["status"] = self.status
-        ccuser.whereKey("UserId", user!)
-        let resp = ccuser.save()
-*/
+        ccuser["DisplayName"] = self.displayName
+        ccuser["UserID"] = user!
+        let resp = try! ccuser.save()
+        print(resp)
     }
     func saveAsync(){
         print("Send Async data to Parse")
-		/*
         let user = PFUser.currentUser()
         let ccuser = PFObject(className: "CCUser")
-        ccuser["location"] = self.location
-        ccuser["preferences"] = self.preferences
-        ccuser["status"] = self.status
-        ccuser.whereKey("UserId", user!)
+        ccuser["DisplayName"] = self.displayName
+        ccuser["UserID"] = user!
         ccuser.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
@@ -92,6 +85,5 @@ class ParseUserModel: CCUserModel {
                 print(error?.description)
             }
         }
-*/
     }
 }
