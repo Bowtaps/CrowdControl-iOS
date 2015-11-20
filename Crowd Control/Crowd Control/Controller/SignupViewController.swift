@@ -17,7 +17,7 @@ import Parse
 ///
 /// - Note:
 /// This class is a stub, with methods to be implemented as needed
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UITextFieldDelegate {
 	
 	@IBOutlet weak var nameField: UITextField!
 	@IBOutlet weak var emailField: UITextField!
@@ -25,15 +25,53 @@ class SignupViewController: UIViewController {
 	@IBOutlet weak var passwordConfirmField: UITextField!
 	@IBOutlet weak var submitButton: UIButton!
 	
+	var signupFormFields = [UITextField]()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		// Keep track of field items in form
+		signupFormFields = [nameField, emailField, passwordField, passwordConfirmField]
+		for field in signupFormFields {
+			field.delegate = self
+		}
+	}
+	
 	@IBAction func submitButtonTapped(sender: AnyObject) {
+		submitForm()
+	}
+	
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		
+		if textField == signupFormFields.last! {
+			submitForm()
+		} else {
+			
+			// Select next form item
+			textField.resignFirstResponder()
+			for var i = 1; i < signupFormFields.count; i++ {
+				if signupFormFields[i-1] == textField {
+					signupFormFields[i].becomeFirstResponder()
+				}
+			}
+		}
+		
+		return true
+	}
+	
+	func submitForm() {
+		
+		// Hide the keyboard
+		self.view.endEditing(true)
+		
+		// Construct user from field
 		let user = PFUser()
 		user.username = emailField.text
 		user.email = emailField.text
 		user.password = passwordField.text
-		
-		// other fields can be set just like with PFObject
 		user["phone"] = "415-392-0202"
 		
+		// Attempt signup in background
 		user.signUpInBackgroundWithBlock {
 			(succeeded: Bool, error: NSError?) -> Void in
 			if let error = error {
@@ -42,6 +80,7 @@ class SignupViewController: UIViewController {
 			} else {
 				// Hooray! Let them use the app now.
 				print ("Hooray!")
+				self.performSegueWithIdentifier("rewindToEventView", sender: self)
 			}
 		}
 	}

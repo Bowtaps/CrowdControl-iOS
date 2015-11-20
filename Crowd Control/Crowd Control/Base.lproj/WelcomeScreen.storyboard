@@ -269,7 +269,7 @@
                                     <navigationItem title="Login" id="UGp-Qg-7gH">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hBZ-S2-Yiu">
                                             <connections>
-                                                <segue destination="BN2-ZC-ikD" kind="unwind" unwindAction="rewindToWelcomeView:" id="7Gt-cH-Xyb"/>
+                                                <segue destination="BN2-ZC-ikD" kind="unwind" identifier="rewindToWelcomeView" unwindAction="rewindToWelcomeView:" id="7Gt-cH-Xyb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -293,6 +293,7 @@
                         <outlet property="emailField" destination="F3C-Kf-UwP" id="Y4D-hD-uEG"/>
                         <outlet property="passwordField" destination="liu-EE-WaF" id="jsc-8A-E1a"/>
                         <outlet property="submitButton" destination="KAZ-DV-SXK" id="6f8-62-h6l"/>
+                        <segue destination="BN2-ZC-ikD" kind="unwind" identifier="rewindToEventView" unwindAction="rewindToEventView:" id="mT3-r5-4L9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWB-1o-MIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,7 +433,7 @@
                                     <navigationItem title="Create Account" id="OtP-fJ-mpa">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ecj-hG-t9Y">
                                             <connections>
-                                                <segue destination="ICv-BM-UuT" kind="unwind" unwindAction="rewindToWelcomeView:" id="zsT-Gd-nKm"/>
+                                                <segue destination="ICv-BM-UuT" kind="unwind" identifier="rewindToWelcomeView" unwindAction="rewindToWelcomeView:" id="zsT-Gd-nKm"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -459,6 +460,7 @@
                         <outlet property="passwordConfirmField" destination="TfG-Vq-2NA" id="ftM-pr-HgS"/>
                         <outlet property="passwordField" destination="2YG-fi-KAy" id="mM1-oV-8o7"/>
                         <outlet property="submitButton" destination="5OQ-vk-3ZR" id="aVe-pn-ge4"/>
+                        <segue destination="ICv-BM-UuT" kind="unwind" identifier="rewindToEventView" unwindAction="rewindToEventView:" id="KyG-Uf-Ag7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APj-gA-LDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
