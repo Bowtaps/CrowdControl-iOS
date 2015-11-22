@@ -65,6 +65,10 @@ class Crowd_ControlUITests: XCTestCase {
 		XCTAssertEqual(cancelButton.exists, false)
 		XCTAssertEqual(app.textFields["Login Email Field"].exists, false)
 		XCTAssertEqual(app.secureTextFields["Login Password Field"].exists, false)
+		
+		let facebookButton = app.buttons["Login with Facebook"]
+		facebookButton.tap()
+		app.buttons["Done"].tap()
 	}
 	
 	/// Tests logging in using email and password from the welcome screen.
@@ -75,7 +79,7 @@ class Crowd_ControlUITests: XCTestCase {
 		
 		let emailField = app.textFields["Login Email Field"]
 		emailField.tap()
-		emailField.typeText("test@bowtaps.com")
+		emailField.typeText("testuser4@bowtaps.com")
 		
 		let passwordField = app.secureTextFields["Login Password Field"]
 		passwordField.tap()
