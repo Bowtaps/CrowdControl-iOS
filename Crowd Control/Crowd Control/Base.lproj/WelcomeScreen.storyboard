@@ -25,13 +25,13 @@
             </objects>
             <point key="canvasLocation" x="743" y="602"/>
         </scene>
-        <!--GroupScreens-->
+        <!--MainScreens-->
         <scene sceneID="1gN-OS-yaN">
             <objects>
-                <viewControllerPlaceholder storyboardName="GroupScreens" id="WNw-Ix-smx" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MainScreens" id="WNw-Ix-smx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUH-ri-WKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="53"/>
+            <point key="canvasLocation" x="1297.5" y="29"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="ifI-LI-HoF">

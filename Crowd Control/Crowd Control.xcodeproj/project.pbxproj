@@ -32,6 +32,8 @@
 		3076F0441BFD45CC002E840D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3076F0411BFD45CC002E840D /* FBSDKShareKit.framework */; };
 		3099A5A21BF6BA5600490571 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A5A11BF6BA5600490571 /* LoginViewController.swift */; };
 		3099A5A41BF6BD4900490571 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A5A31BF6BD4900490571 /* SignupViewController.swift */; };
+		309C8C951C027FF500E1F6AA /* MainScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309C8C931C027FF500E1F6AA /* MainScreens.storyboard */; };
+		309C8C971C029EDC00E1F6AA /* GroupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309C8C961C029EDC00E1F6AA /* GroupTableController.swift */; };
 		30B1A8F91BFC1C080021B494 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30B1A8F61BFC1C080021B494 /* FacebookSDKStrings.bundle */; };
 		30B1A8FA1BFC1C080021B494 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A8F71BFC1C080021B494 /* FBSDKCoreKit.framework */; };
 		30B1A8FB1BFC1C080021B494 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A8F81BFC1C080021B494 /* FBSDKLoginKit.framework */; };
@@ -110,6 +112,8 @@
 		3076F0411BFD45CC002E840D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		3099A5A11BF6BA5600490571 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		3099A5A31BF6BD4900490571 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = Controller/SignupViewController.swift; sourceTree = "<group>"; };
+		309C8C941C027FF500E1F6AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainScreens.storyboard; sourceTree = "<group>"; };
+		309C8C961C029EDC00E1F6AA /* GroupTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableController.swift; sourceTree = "<group>"; };
 		30B1A8F61BFC1C080021B494 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = "FacebookSDKs-iOS-20151111/FacebookSDKStrings.bundle"; sourceTree = "<group>"; };
 		30B1A8F71BFC1C080021B494 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		30B1A8F81BFC1C080021B494 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 				30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */,
 				3099A5A11BF6BA5600490571 /* LoginViewController.swift */,
 				3099A5A31BF6BD4900490571 /* SignupViewController.swift */,
+				309C8C961C029EDC00E1F6AA /* GroupTableController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
 				301234911BD05B39007C3ABB /* GroupScreens.storyboard */,
 				30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */,
+				309C8C931C027FF500E1F6AA /* MainScreens.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				301234951BD05B39007C3ABB /* Assets.xcassets in Resources */,
 				30F9F3A61BE8A76C00D03B6A /* WelcomeScreen.storyboard in Resources */,
 				301234931BD05B39007C3ABB /* GroupScreens.storyboard in Resources */,
+				309C8C951C027FF500E1F6AA /* MainScreens.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +511,7 @@
 			files = (
 				300015781C0A479D005E42A1 /* ParseModelManager.swift in Sources */,
 				C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */,
+				309C8C971C029EDC00E1F6AA /* GroupTableController.swift in Sources */,
 				3099A5A41BF6BD4900490571 /* SignupViewController.swift in Sources */,
 				30755E6C1C05752800E2EFBF /* UserProfileModel.swift in Sources */,
 				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
@@ -569,6 +577,14 @@
 				301234971BD05B39007C3ABB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		309C8C931C027FF500E1F6AA /* MainScreens.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				309C8C941C027FF500E1F6AA /* Base */,
+			);
+			name = MainScreens.storyboard;
 			sourceTree = "<group>";
 		};
 		30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */ = {
