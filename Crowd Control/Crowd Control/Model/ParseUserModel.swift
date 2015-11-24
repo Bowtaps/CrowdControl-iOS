@@ -36,18 +36,20 @@ class ParseUserModel: CCUserModel {
         //Load data from Parse
         print("Load from Parse")
         let user = PFUser.currentUser()
+        self.objectId = user!.objectId!
+        self.username = user!.username!
+        self.email = user!.email!
         let query = PFQuery(className: "CCUser")
         query.whereKey("UserId", equalTo: user!)
         //TODO: Catch errors
-        let resp = try! query.findObjects()
-        print(user?.objectId)
+        let resp = try! query.findObjects() as [PFObject]
         print(resp)
     }
     func loadAsync(){
         print("Load Async from Parse")
         let user = PFUser.currentUser()
         let query = PFQuery(className: "CCUser")
-        query.whereKey("UserId", equalTo: user!)
+        query.whereKey("UserId", equalTo: user!.objectId!)
         query.findObjectsInBackgroundWithBlock {
             (object: [PFObject]?, error: NSError?) -> Void in
             if error != nil || object == nil {
@@ -56,6 +58,9 @@ class ParseUserModel: CCUserModel {
                 // The find succeeded.
                 print("Successfully retrieved the object.")
                 print(object)
+                for objects in object! {
+                    print(objects)
+                }
             }
         }
     }
@@ -66,8 +71,8 @@ class ParseUserModel: CCUserModel {
         let ccuser = PFObject(className: "CCUser")
         ccuser["DisplayName"] = self.displayName
         ccuser["UserID"] = user!
-        let resp = try! ccuser.save()
-        print(resp)
+        _ = try! ccuser.save() //this should be a function?
+        
     }
     func saveAsync(){
         print("Send Async data to Parse")

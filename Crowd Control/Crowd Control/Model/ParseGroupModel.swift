@@ -51,6 +51,7 @@ class ParseGroupModel: GroupModel {
     }
     func load(){
         //TODO Write the code for parse loading communication
+        
     }
     func loadAsync(){
         //TODO Write the code for parse loading asynchronously
