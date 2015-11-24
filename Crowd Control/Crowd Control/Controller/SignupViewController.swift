@@ -46,7 +46,7 @@ class SignupViewController: UIViewController {
                 user.username = self.emailField.text!
                 user.email = self.emailField.text!
                 user.displayName = self.nameField.text!
-                user.saveAsync()
+                user.create()
 			}
 		}
 	}

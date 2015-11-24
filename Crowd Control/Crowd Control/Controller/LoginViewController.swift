@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
 				// Do stuff after successful login.
 				print ("Login was successful")
                 let newuser = ParseUserModel()
-                newuser.load()
+                newuser.loadAsync()
 			} else {
 				// The login failed. Check error to see why.
 				print ("Failed to login")
