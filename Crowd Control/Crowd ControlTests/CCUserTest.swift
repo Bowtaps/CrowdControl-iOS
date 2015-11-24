@@ -13,7 +13,7 @@ import Parse
 class ParseUserTest: XCTestCase{
     func testLoad(){
         //create a user
-        PFUser.logInWithUsernameInBackground("user3@test.com", password:"testing") {
+       /* PFUser.logInWithUsernameInBackground("user3@test.com", password:"testing") {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 // Do stuff after successful login.
@@ -24,6 +24,7 @@ class ParseUserTest: XCTestCase{
                 // The login failed. Check error to see why.
                 print ("Failed to login")
             }
-        }
+        }*/
+        //TODO:  Need to rework this
     }
 }
