@@ -81,6 +81,11 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
 				// Hooray! Let them use the app now.
 				print ("Hooray!")
 				self.performSegueWithIdentifier("rewindToEventView", sender: self)
+                let user = ParseUserModel()
+                user.username = self.emailField.text!
+                user.email = self.emailField.text!
+                user.displayName = self.nameField.text!
+                user.create()
 			}
 		}
 	}
