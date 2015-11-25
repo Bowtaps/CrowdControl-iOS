@@ -15,6 +15,7 @@
 		3015026A1BE9B3F200B63F7B /* CCUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301502691BE9B3F200B63F7B /* CCUserModel.swift */; };
 		3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015026B1BE9B58300B63F7B /* AppDelegate.swift */; };
 		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
+		30755E661C054D8800E2EFBF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30755E651C054D8800E2EFBF /* UserModel.swift */; };
 		3076F0371BFD43B0002E840D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3076F0301BFD43B0002E840D /* Bolts.framework */; };
 		3076F0381BFD43B0002E840D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3076F0311BFD43B0002E840D /* Parse.framework */; };
 		3076F0391BFD43B0002E840D /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3076F0321BFD43B0002E840D /* ParseCrashReporting.framework */; };
@@ -86,6 +87,7 @@
 		301502691BE9B3F200B63F7B /* CCUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCUserModel.swift; path = Model/CCUserModel.swift; sourceTree = "<group>"; };
 		3015026B1BE9B58300B63F7B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		30755E651C054D8800E2EFBF /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Model/UserModel.swift; sourceTree = "<group>"; };
 		3076F0301BFD43B0002E840D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.9.1/Bolts.framework"; sourceTree = "<group>"; };
 		3076F0311BFD43B0002E840D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.9.1/Parse.framework"; sourceTree = "<group>"; };
 		3076F0321BFD43B0002E840D /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.9.1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
@@ -271,7 +273,7 @@
 				C2D186B21BDC361800C27167 /* GroupModel.swift */,
 				C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */,
 				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
-				C2A723FC1C04CFFB00692EE4 /* UserProfileModel.swift */,
+				30755E651C054D8800E2EFBF /* UserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -465,6 +467,7 @@
 				3099A5A41BF6BD4900490571 /* SignupViewController.swift in Sources */,
 				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
 				3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */,
+				30755E661C054D8800E2EFBF /* UserModel.swift in Sources */,
 				30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */,
 				30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */,
 				3015026A1BE9B3F200B63F7B /* CCUserModel.swift in Sources */,
