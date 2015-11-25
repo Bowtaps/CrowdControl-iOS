@@ -84,8 +84,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                 let user = ParseUserModel()
                 user.username = self.emailField.text!
                 user.email = self.emailField.text!
-                user.displayName = self.nameField.text!
-                user.create()
+                //user.displayName = self.nameField.text!
+                //user.create()
 			}
 		}
 	}
