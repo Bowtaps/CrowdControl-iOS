@@ -12,9 +12,7 @@ To build the documentation, follow these steps:
 
 1. Install Jazzy by cloning the open source repo and following the instructions on [https://github.com/Realm/jazzy](https://github.com/Realm/jazzy)
 2. CD into the `<REPO ROOT>/Crowd Control` directory (where the .xcodeproj is located)
-3. Run the following command:
-
-   jazzy -c --swift-version 2.1 --min-acl internal 
+3. Run the following command: `jazzy -c --swift-version 2.1 --min-acl internal`
 
 Be careful not to commit the generated documents! The generated files will be placed in a directory called `docs`.
 
