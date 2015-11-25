@@ -16,6 +16,8 @@
 		3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015026B1BE9B58300B63F7B /* AppDelegate.swift */; };
 		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
 		30755E661C054D8800E2EFBF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30755E651C054D8800E2EFBF /* UserModel.swift */; };
+		30755E6A1C056D5F00E2EFBF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30755E691C056D5F00E2EFBF /* BaseModel.swift */; };
+		30755E6C1C05752800E2EFBF /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30755E6B1C05752800E2EFBF /* UserProfileModel.swift */; };
 		3076F0371BFD43B0002E840D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3076F0301BFD43B0002E840D /* Bolts.framework */; };
 		3076F0381BFD43B0002E840D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3076F0311BFD43B0002E840D /* Parse.framework */; };
 		3076F0391BFD43B0002E840D /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3076F0321BFD43B0002E840D /* ParseCrashReporting.framework */; };
@@ -48,7 +50,6 @@
 		30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */; };
 		30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A91BE8A78400D03B6A /* MapViewController.swift */; };
 		30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */; };
-		C2A723FD1C04CFFB00692EE4 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A723FC1C04CFFB00692EE4 /* UserProfileModel.swift */; };
 		C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B21BDC361800C27167 /* GroupModel.swift */; };
 		C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C51BE1BBD800C27167 /* CCUserTest.swift */; };
 		C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */; };
@@ -88,6 +89,8 @@
 		3015026B1BE9B58300B63F7B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30755E651C054D8800E2EFBF /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Model/UserModel.swift; sourceTree = "<group>"; };
+		30755E691C056D5F00E2EFBF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		30755E6B1C05752800E2EFBF /* UserProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileModel.swift; path = Model/UserProfileModel.swift; sourceTree = "<group>"; };
 		3076F0301BFD43B0002E840D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.9.1/Bolts.framework"; sourceTree = "<group>"; };
 		3076F0311BFD43B0002E840D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.9.1/Parse.framework"; sourceTree = "<group>"; };
 		3076F0321BFD43B0002E840D /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.9.1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
@@ -119,7 +122,6 @@
 		30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupInfoViewController.swift; path = Controller/GroupInfoViewController.swift; sourceTree = "<group>"; };
 		30F9F3A91BE8A78400D03B6A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controller/MapViewController.swift; sourceTree = "<group>"; };
 		30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controller/WelcomeViewController.swift; sourceTree = "<group>"; };
-		C2A723FC1C04CFFB00692EE4 /* UserProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileModel.swift; path = Model/UserProfileModel.swift; sourceTree = "<group>"; };
 		C2D186B21BDC361800C27167 /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupModel.swift; path = Model/GroupModel.swift; sourceTree = "<group>"; };
 		C2D186C51BE1BBD800C27167 /* CCUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserTest.swift; sourceTree = "<group>"; };
 		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseUserModel.swift; path = Model/ParseUserModel.swift; sourceTree = "<group>"; };
@@ -269,11 +271,13 @@
 		308ECFA21BD72E25000E4F21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30755E6B1C05752800E2EFBF /* UserProfileModel.swift */,
 				301502691BE9B3F200B63F7B /* CCUserModel.swift */,
 				C2D186B21BDC361800C27167 /* GroupModel.swift */,
 				C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */,
 				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
 				30755E651C054D8800E2EFBF /* UserModel.swift */,
+				30755E691C056D5F00E2EFBF /* BaseModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -465,14 +469,15 @@
 			files = (
 				C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */,
 				3099A5A41BF6BD4900490571 /* SignupViewController.swift in Sources */,
+				30755E6C1C05752800E2EFBF /* UserProfileModel.swift in Sources */,
 				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
 				3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */,
 				30755E661C054D8800E2EFBF /* UserModel.swift in Sources */,
 				30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */,
 				30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */,
+				30755E6A1C056D5F00E2EFBF /* BaseModel.swift in Sources */,
 				3015026A1BE9B3F200B63F7B /* CCUserModel.swift in Sources */,
 				30B1A8FC1BFC1C5D0021B494 /* ParseUserModel.swift in Sources */,
-				C2A723FD1C04CFFB00692EE4 /* UserProfileModel.swift in Sources */,
 				30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */,
 				3099A5A21BF6BA5600490571 /* LoginViewController.swift in Sources */,
 				30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */,
