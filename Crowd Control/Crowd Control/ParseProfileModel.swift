@@ -1,18 +1,16 @@
 //
-//  ParseUserModel.swift
+//  ParseProfileModel.swift
 //  Crowd Control
 //
-//  Created by Evan Hammer on 10/28/15.
+//  Created by Evan Hammer on 11/25/15.
 //  Copyright © 2015 Bowtaps. All rights reserved.
 //
-import Parse
-import Foundation
 
-class ParseUserModel: UserModel {
-    var username: String?
-    var emailVerified: Bool?
-    var email: String?
-    var phone: String?
+import Foundation
+import Parse
+
+class ParseProfileModel: UserProfileModel{
+    var displayName: String?
     
     var id: String?
     var created: NSDate?
@@ -20,11 +18,7 @@ class ParseUserModel: UserModel {
     var modified: Bool
     
     init(){
-        self.username = nil
-        self.emailVerified = nil
-        self.email = nil
-        self.phone = nil
-        
+        self.displayName = nil
         self.id = nil
         self.created = nil
         self.update = nil
@@ -32,7 +26,7 @@ class ParseUserModel: UserModel {
     }
     
     func load(){}
-
+    
     func loadInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?){}
     
     func save(){}

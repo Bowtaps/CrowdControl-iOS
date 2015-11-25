@@ -18,7 +18,7 @@ protocol UserModel: BaseModel {
 	
 	/// Boolean indicating whether or not the user has successfully completed the email verification
 	/// process. May be `nil` if this value has not been set.
-	var emailVarified: Bool? {get}
+	var emailVerified: Bool? {get}
 	
 	/// String containing the email address of the user. May be `nil` if this value has not been
 	/// set.
