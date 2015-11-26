@@ -14,21 +14,22 @@ import Foundation
 /// - Unique identifier
 /// - Creation timestamp
 /// - Last updated timestamp
-/// - Flag indicating modification since last push/pull
+/// - Flag indicating modification since last save
+/// - Methods for loading from and saving to storage
 protocol BaseModel {
 	
 	/// The ID of the object as determined by remote storage. This value is automatically generated
 	/// when the object is stored and is usually determined by a remote server. It is valid for this
 	/// value to be nil, and thus should be used with care and only if absolutely necessary.
-	var id: String? {get}
+	var id: String {get}
 	
 	/// Timestamp of when this object was first created and stored. This value may be automatically
 	/// determined by the server if the model is using a remote machine for storage.
-	var created: NSDate? {get}
+	var created: NSDate {get}
 	
 	/// Timestamp of the last time this object was updated in storage. This value may be
 	/// automatically determined by the server if the model is using a remote machine for storage.
-	var updated: NSDate? {get}
+	var updated: NSDate {get}
 	
 	/// Flag indicating whether or not this object has been modified since it was last pulled from
 	/// or pushed to storage.

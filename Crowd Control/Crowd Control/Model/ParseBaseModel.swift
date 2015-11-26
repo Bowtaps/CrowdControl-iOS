@@ -21,7 +21,7 @@ import Parse
 class ParseBaseModel: BaseModel {
 	
 	/// Key corresponding to `id` field
-	private static let keyId = "objectId"
+	private static let idKey = "objectId"
 	
 	/// Key corresponding to `created` field
 	private static let createdKey = "createdAt"
