@@ -12,7 +12,7 @@ import Parse
 /// This class extends the `ParseBaseModel` class and implements the `UserModel`
 /// protocol and is the class to access the current user's information from
 /// Parse.
-class ParseUserModel: UserModel {
+class ParseUserModel: ParseBaseModel, UserModel {
 	
 	/// Key corresponding to `username` field
 	private static let usernameKey = "username"
@@ -25,6 +25,17 @@ class ParseUserModel: UserModel {
 	
 	/// Key corresponding to `phone` field
 	private static let phoneKey = "phone"
+	
+	
+	/// Class constructor. Initializes the instance from a `PFObject`.
+	///
+	/// - Parameter withParseObject: The Parse object to tie this model to the
+	///                              Parse database.
+	///
+	/// - SeeAlso: PFObject
+	init(withParseObject object: PFObject) {
+		super.init(withParseObject: object)
+	}
 	
 	
     /// String containing the current user's username as defined in the

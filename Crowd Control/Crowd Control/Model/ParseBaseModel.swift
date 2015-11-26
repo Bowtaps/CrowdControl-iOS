@@ -39,11 +39,11 @@ class ParseBaseModel: BaseModel {
 	
 	/// Class constructor. Initializes the instance from a `PFObject`.
 	/// 
-	/// - Parameter object: The Parse object to tie this model together to the
-	///                     Parse database.
+	/// - Parameter withParseObject: The Parse object to tie this model to the Parse
+	///                              Parse database.
 	/// 
 	/// - SeeAlso PFObject
-	init(fromPFObject object: PFObject) {
+	init(withParseObject object: PFObject) {
 		parseObject = object
 	}
 	
