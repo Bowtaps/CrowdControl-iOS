@@ -28,7 +28,7 @@ protocol BaseModel {
 	
 	/// Timestamp of the last time this object was updated in storage. This value may be
 	/// automatically determined by the server if the model is using a remote machine for storage.
-	var update: NSDate? {get}
+	var updated: NSDate? {get}
 	
 	/// Flag indicating whether or not this object has been modified since it was last pulled from
 	/// or pushed to storage.
