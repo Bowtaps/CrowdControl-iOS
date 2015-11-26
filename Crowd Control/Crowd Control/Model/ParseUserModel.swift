@@ -14,6 +14,9 @@ import Parse
 /// Parse.
 class ParseUserModel: ParseBaseModel, UserModel {
 	
+	/// Parse table name
+	private static let tableName = "_User"
+	
 	/// Key corresponding to `username` field
 	private static let usernameKey = "username"
 	
@@ -29,11 +32,11 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	
 	/// Class constructor. Initializes the instance from a `PFObject`.
 	///
-	/// - Parameter withParseObject: The Parse object to tie this model to the
-	///                              Parse database.
+	/// - Parameter withParseUser: The Parse user to tie this model to the
+	///                            Parse database.
 	///
 	/// - SeeAlso: PFObject
-	init(withParseObject object: PFObject) {
+	init(withParseUser user: PFUser) {
 		super.init(withParseObject: object)
 	}
 	
@@ -42,7 +45,7 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	/// `UserModel` protocol.
     var username: String {
 		get {
-			return parseObject[usernameKey] as String
+			return (parseObject as PFUser).username
 		}
 	}
 	
@@ -53,7 +56,7 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	///            email has not been verified.
     var emailVerified: Bool {
 		get {
-			return parseObject[emailVerifiedKey] as Bool
+			return (parseObject as PFUser).emailVerified
 		}
 	}
 	
@@ -61,10 +64,10 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	/// protocol.
     var email: String {
 		get {
-			return parseObject[emailKey] as String
+			return (parseObject as PFUser).email
 		}
 		set {
-			parseObject[emailKey] = newValue
+			(parseObject as PFUser) = newValue
 		}
 	}
 	
