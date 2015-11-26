@@ -9,34 +9,81 @@
 import Foundation
 import Parse
 
+/// The core Parse implementation for models. Implements the BaseModel protocol
+/// and provies functionality to access the basic information about the model,
+/// such as:
+/// 
+/// - Unique identifier
+/// - Creation timestamp
+/// - Last updated timestamp
+/// - Flag indicating modification since last save
+/// - Methods for loading from and saving to storage
 class ParseBaseModel: BaseModel {
 	
+	/// Key corresponding to `id` field
 	private static let keyId = "objectId"
+	
+	/// Key corresponding to `created` field
 	private static let createdKey = "createdAt"
+	
+	/// Key corresponding to `updated` field
 	private static let updatedKey = "updatedKey"
 	
-	let parseObject: PFObject?
+	
+	
+	/// Internal reference to the Parse API object representing this object in
+	/// the remote database.
+	let parseObject: PFObject
 	
 	
 	
-	var id: String? {
+	/// Class constructor. Initializes the instance from a `PFObject`.
+	/// 
+	/// - Parameter object: The Parse object to tie this model together to the
+	///                     Parse database.
+	/// 
+	/// - SeeAlso PFObject
+	init(fromPFObject object: PFObject) {
+		parseObject = object
+	}
+	
+	
+	
+	/// Read-only computed value representing the ID of the object as defined in
+	/// the `BaseModel` protocol.
+	/// 
+	/// - SeeAlso: BaseModel.id
+	var id: String {
 		get {
-			return parseObject?[idKey] as? String
+			return parseObject[idKey] as String
 		}
 	}
 	
-	var created: NSDate? {
+	/// Read-only computed value for the timestamp when this object was
+	/// initially created as defined in the `BaseModel` protocol.
+	/// 
+	/// - SeeAlso: BaseModel.created
+	var created: NSDate {
 		get {
-			return parseObject?.createdAt
+			return parseObject.createdAt
 		}
 	}
 	
-	var updated: NSDate? {
+	/// Read-only computed value for the timestamp when this object was
+	/// last updated on the server as defined in the `BaseModel` protocol.
+	/// 
+	/// - SeeAlso: BaseModel.updated
+	var updated: NSDate {
 		get {
-			return parseObject?.updatedAt
+			return parseObject.updatedAt
 		}
 	}
 	
+	/// Read-only computed value indicating whether or not the data contained
+	/// in this model is "dirty", which is to say that this model contains
+	/// changes that have not been saved to the server.
+	/// 
+	/// - SeeAlso: BaseModel.modified
 	var modified: Bool {
 		get {
 			if let parseObject = parseObject? {
@@ -49,43 +96,43 @@ class ParseBaseModel: BaseModel {
 	
 	
 	
+	/// Reloads this object from Parse as defined by the `BaseModel` protocol.
+	/// 
+	/// - SeeAlso: BaseModel.load()
 	func load() {
-		if let parseObject = parseObject? {
-			parseObject.fetch()
-		}
+		parseObject.fetch()
 	}
 	
+	/// Reloads this object from Parse asynchronously as defined by the
+	/// `BaseModel` protocol.
+	/// 
+	/// - SeeAlso: BaseModel.loadInBackground(_:)
 	func loadInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?) {
-		if let parseObject = parseObject? {
-			parseObject.fetchInBackgroundWithBlock {
-				(object: PFObject?, error: NSError?) -> Void in
-				if callback != nil {
-					callback!(object: self, error: error)
-				}
+		parseObject.fetchInBackgroundWithBlock {
+			(object: PFObject?, error: NSError?) -> Void in
+			if callback != nil {
+				callback!(object: self, error: error)
 			}
-		} else if callback != nil {
-			callback!(object: nil, error: nil)
 		}
 	}
 	
+	/// Saves this object to Parse as defined by the `BaseModel` protocol.
+	/// 
+	/// - SeeAlso: BaseModel.save()
 	func save() {
-		if let parseObject = parseObject? {
-			parseObject.save()
-		}
+		parseObject.save()
 	}
 	
+	/// Saves this object to Parse as defined by the `BaseModel` protocol.
+	/// 
+	/// - SeeAlso: BaseModel.saveInBackground(_:)
 	func saveInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?) {
-		if let parseObject = parseObject? {
-			parseObject.saveInBackgroundWithBlock {
-				(object: PFObject?, error: NSError?) -> Void in
-				if callback != nil {
-					callback!(object: self, error: error)
-				}
+		parseObject.saveInBackgroundWithBlock {
+			(object: PFObject?, error: NSError?) -> Void in
+			if callback != nil {
+				callback!(object: self, error: error)
 			}
-		} else if callback != nil {
-			callback!(object: nil, error: nil)
 		}
 	}
-	
 	
 }

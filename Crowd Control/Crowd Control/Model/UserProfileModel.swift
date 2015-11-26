@@ -19,6 +19,6 @@ protocol UserProfileModel: BaseModel {
 	///
 	/// - Displayed as a label identifying the user to other users
 	/// - Returned as a search result when and if searching for users is ever performed
-	var displayName: String? {get set}
+	var displayName: String {get set}
 	
 }

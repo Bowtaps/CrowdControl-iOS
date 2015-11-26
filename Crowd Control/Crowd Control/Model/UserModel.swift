@@ -14,17 +14,17 @@ import Foundation
 protocol UserModel: BaseModel {
 	
 	/// String containing the user's login username. May be `nil` if this value has not been set.
-	var username: String? {get}
+	var username: String {get}
 	
 	/// Boolean indicating whether or not the user has successfully completed the email verification
 	/// process. May be `nil` if this value has not been set.
-	var emailVerified: Bool? {get}
+	var emailVerified: Bool {get}
 	
 	/// String containing the email address of the user. May be `nil` if this value has not been
 	/// set.
-	var email: String? {get set}
+	var email: String {get set}
 	
 	/// String containing the phone number of the user. May be `nil` if this value has not been set.
-	var phone: String? {get set}
+	var phone: String {get set}
 	
 }
