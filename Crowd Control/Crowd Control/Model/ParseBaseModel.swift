@@ -27,7 +27,7 @@ class ParseBaseModel: BaseModel {
 	private static let createdKey = "createdAt"
 	
 	/// Key corresponding to `updated` field
-	private static let updatedKey = "updatedKey"
+	private static let updatedKey = "updatedAt"
 	
 	
 	
