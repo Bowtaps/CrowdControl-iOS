@@ -55,7 +55,7 @@ class ParseBaseModel: BaseModel {
 	/// - SeeAlso: BaseModel.id
 	var id: String {
 		get {
-			return parseObject[idKey] as String
+			return parseObject[ParseBaseModel.idKey] as! String
 		}
 	}
 	
@@ -65,7 +65,7 @@ class ParseBaseModel: BaseModel {
 	/// - SeeAlso: BaseModel.created
 	var created: NSDate {
 		get {
-			return parseObject.createdAt
+			return parseObject.createdAt!
 		}
 	}
 	
@@ -75,7 +75,7 @@ class ParseBaseModel: BaseModel {
 	/// - SeeAlso: BaseModel.updated
 	var updated: NSDate {
 		get {
-			return parseObject.updatedAt
+			return parseObject.updatedAt!
 		}
 	}
 	
@@ -86,11 +86,7 @@ class ParseBaseModel: BaseModel {
 	/// - SeeAlso: BaseModel.modified
 	var modified: Bool {
 		get {
-			if let parseObject = parseObject? {
-				return parseObject.dirty
-			} else {
-				return false
-			}
+			return parseObject.isDirty()
 		}
 	}
 	
@@ -99,8 +95,8 @@ class ParseBaseModel: BaseModel {
 	/// Reloads this object from Parse as defined by the `BaseModel` protocol.
 	/// 
 	/// - SeeAlso: BaseModel.load()
-	func load() {
-		parseObject.fetch()
+	func load() throws {
+		try parseObject.fetch()
 	}
 	
 	/// Reloads this object from Parse asynchronously as defined by the
@@ -119,8 +115,8 @@ class ParseBaseModel: BaseModel {
 	/// Saves this object to Parse as defined by the `BaseModel` protocol.
 	/// 
 	/// - SeeAlso: BaseModel.save()
-	func save() {
-		parseObject.save()
+	func save() throws {
+		try parseObject.save()
 	}
 	
 	/// Saves this object to Parse as defined by the `BaseModel` protocol.
@@ -128,7 +124,7 @@ class ParseBaseModel: BaseModel {
 	/// - SeeAlso: BaseModel.saveInBackground(_:)
 	func saveInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?) {
 		parseObject.saveInBackgroundWithBlock {
-			(object: PFObject?, error: NSError?) -> Void in
+			(succeeded: Bool, error: NSError?) -> Void in
 			if callback != nil {
 				callback!(object: self, error: error)
 			}

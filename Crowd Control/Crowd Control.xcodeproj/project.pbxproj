@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300926DD1C092861005F6034 /* ParseBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300926DB1C092861005F6034 /* ParseBaseModel.swift */; };
+		300926DE1C092861005F6034 /* ParseUserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300926DC1C092861005F6034 /* ParseUserProfileModel.swift */; };
 		301234931BD05B39007C3ABB /* GroupScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234911BD05B39007C3ABB /* GroupScreens.storyboard */; settings = {ASSET_TAGS = (100, ); }; };
 		301234951BD05B39007C3ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301234941BD05B39007C3ABB /* Assets.xcassets */; };
 		301234981BD05B39007C3ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301234961BD05B39007C3ABB /* LaunchScreen.storyboard */; };
 		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
 		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
-		3015026A1BE9B3F200B63F7B /* CCUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301502691BE9B3F200B63F7B /* CCUserModel.swift */; };
 		3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015026B1BE9B58300B63F7B /* AppDelegate.swift */; };
 		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
 		30755E661C054D8800E2EFBF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30755E651C054D8800E2EFBF /* UserModel.swift */; };
@@ -50,7 +51,6 @@
 		30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */; };
 		30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A91BE8A78400D03B6A /* MapViewController.swift */; };
 		30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */; };
-		C2A723FF1C06153A00692EE4 /* ParseProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A723FE1C06153A00692EE4 /* ParseProfileModel.swift */; };
 		C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B21BDC361800C27167 /* GroupModel.swift */; };
 		C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C51BE1BBD800C27167 /* CCUserTest.swift */; };
 		C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */; };
@@ -75,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300926DB1C092861005F6034 /* ParseBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseBaseModel.swift; path = Model/ParseBaseModel.swift; sourceTree = "<group>"; };
+		300926DC1C092861005F6034 /* ParseUserProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseUserProfileModel.swift; path = Model/ParseUserProfileModel.swift; sourceTree = "<group>"; };
 		301234881BD05B38007C3ABB /* Crowd Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crowd Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		301234921BD05B39007C3ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GroupScreens.storyboard; sourceTree = "<group>"; };
 		301234941BD05B39007C3ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,7 +88,6 @@
 		301234A91BD05B39007C3ABB /* Crowd ControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crowd ControlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlUITests.swift; sourceTree = "<group>"; };
 		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		301502691BE9B3F200B63F7B /* CCUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCUserModel.swift; path = Model/CCUserModel.swift; sourceTree = "<group>"; };
 		3015026B1BE9B58300B63F7B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30755E651C054D8800E2EFBF /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Model/UserModel.swift; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupInfoViewController.swift; path = Controller/GroupInfoViewController.swift; sourceTree = "<group>"; };
 		30F9F3A91BE8A78400D03B6A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controller/MapViewController.swift; sourceTree = "<group>"; };
 		30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controller/WelcomeViewController.swift; sourceTree = "<group>"; };
-		C2A723FE1C06153A00692EE4 /* ParseProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseProfileModel.swift; sourceTree = "<group>"; };
 		C2D186B21BDC361800C27167 /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupModel.swift; path = Model/GroupModel.swift; sourceTree = "<group>"; };
 		C2D186C51BE1BBD800C27167 /* CCUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserTest.swift; sourceTree = "<group>"; };
 		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseUserModel.swift; path = Model/ParseUserModel.swift; sourceTree = "<group>"; };
@@ -273,14 +273,14 @@
 		308ECFA21BD72E25000E4F21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				30755E6B1C05752800E2EFBF /* UserProfileModel.swift */,
-				301502691BE9B3F200B63F7B /* CCUserModel.swift */,
+				30755E691C056D5F00E2EFBF /* BaseModel.swift */,
 				C2D186B21BDC361800C27167 /* GroupModel.swift */,
+				300926DB1C092861005F6034 /* ParseBaseModel.swift */,
 				C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */,
 				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
+				300926DC1C092861005F6034 /* ParseUserProfileModel.swift */,
 				30755E651C054D8800E2EFBF /* UserModel.swift */,
-				30755E691C056D5F00E2EFBF /* BaseModel.swift */,
-				C2A723FE1C06153A00692EE4 /* ParseProfileModel.swift */,
+				30755E6B1C05752800E2EFBF /* UserProfileModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -473,18 +473,18 @@
 				C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */,
 				3099A5A41BF6BD4900490571 /* SignupViewController.swift in Sources */,
 				30755E6C1C05752800E2EFBF /* UserProfileModel.swift in Sources */,
-				C2A723FF1C06153A00692EE4 /* ParseProfileModel.swift in Sources */,
 				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
 				3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */,
+				300926DD1C092861005F6034 /* ParseBaseModel.swift in Sources */,
 				30755E661C054D8800E2EFBF /* UserModel.swift in Sources */,
 				30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */,
 				30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */,
 				30755E6A1C056D5F00E2EFBF /* BaseModel.swift in Sources */,
-				3015026A1BE9B3F200B63F7B /* CCUserModel.swift in Sources */,
 				30B1A8FC1BFC1C5D0021B494 /* ParseUserModel.swift in Sources */,
 				30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */,
 				3099A5A21BF6BA5600490571 /* LoginViewController.swift in Sources */,
 				30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */,
+				300926DE1C092861005F6034 /* ParseUserProfileModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

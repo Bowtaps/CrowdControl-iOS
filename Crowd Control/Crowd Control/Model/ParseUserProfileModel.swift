@@ -14,6 +14,9 @@ import Parse
 /// from Parse.
 class ParseUserProfileModel: ParseBaseModel, UserProfileModel {
 	
+	/// Parse table name
+	private static let tableName = "CCUser"
+	
 	/// Key corresponding to `displayName` field
 	private static let displayNameKey = "DisplayName"
 	
@@ -25,7 +28,7 @@ class ParseUserProfileModel: ParseBaseModel, UserProfileModel {
 	///                              Parse database.
 	///
 	/// - SeeAlso: PFObject
-	init(withParseObject object: PFObject) {
+	override init(withParseObject object: PFObject) {
 		super.init(withParseObject: object)
 	}
 	
@@ -33,10 +36,10 @@ class ParseUserProfileModel: ParseBaseModel, UserProfileModel {
 	/// `UserProfileModel` protocol.
 	var displayName: String {
 		get {
-			return parseObject[displayNameKey] as String
+			return parseObject[ParseUserProfileModel.displayNameKey] as! String
 		}
 		set {
-			parseObject[displayNameKey] = newValue
+			parseObject[ParseUserProfileModel.displayNameKey] = newValue
 		}
 	}
 	

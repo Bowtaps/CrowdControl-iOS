@@ -37,7 +37,7 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	///
 	/// - SeeAlso: PFObject
 	init(withParseUser user: PFUser) {
-		super.init(withParseObject: object)
+		super.init(withParseObject: user)
 	}
 	
 	
@@ -45,7 +45,7 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	/// `UserModel` protocol.
     var username: String {
 		get {
-			return (parseObject as PFUser).username
+			return (parseObject as! PFUser).username!
 		}
 	}
 	
@@ -56,7 +56,7 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	///            email has not been verified.
     var emailVerified: Bool {
 		get {
-			return (parseObject as PFUser).emailVerified
+			return parseObject[ParseUserModel.emailVerifiedKey] as! Bool
 		}
 	}
 	
@@ -64,10 +64,10 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	/// protocol.
     var email: String {
 		get {
-			return (parseObject as PFUser).email
+			return (parseObject as! PFUser).email!
 		}
 		set {
-			(parseObject as PFUser) = newValue
+			(parseObject as! PFUser).email = newValue
 		}
 	}
 	
@@ -75,10 +75,10 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	/// `UserModel` protocol.
     var phone: String {
 		get {
-			return parseObject[phoneKey] as String
+			return parseObject[ParseUserModel.phoneKey] as! String
 		}
 		set {
-			parseObject[phoneKey] = newValue
+			parseObject[ParseUserModel.phoneKey] = newValue
 		}
 	}
 	

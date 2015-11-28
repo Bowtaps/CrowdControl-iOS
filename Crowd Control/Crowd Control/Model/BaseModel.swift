@@ -42,7 +42,7 @@ protocol BaseModel {
 	/// will throw an exception if an error occurs.
 	///
 	/// - SeeAlso: `loadInBackground(_:)`
-	func load()
+	func load() throws
 	
 	/// Loads this object from storage, either local or remote as determined by the implementation.
 	///
@@ -64,7 +64,7 @@ protocol BaseModel {
 	/// will throw an exception if an error occurs.
 	///
 	/// - SeeAlso: `saveInBackground(_:)`
-	func save()
+	func save() throws
 	
 	/// Saves this object to storage, either local or remote as determined by the implementation.
 	///
