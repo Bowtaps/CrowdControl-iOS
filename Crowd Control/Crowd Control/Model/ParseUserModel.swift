@@ -14,31 +14,49 @@ import Parse
 /// Parse.
 class ParseUserModel: ParseBaseModel, UserModel {
 	
-	/// Parse table name
+	/// Parse table name.
 	private static let tableName = "_User"
 	
-	/// Key corresponding to `username` field
+	/// Key corresponding to `username` field.
 	private static let usernameKey = "username"
 	
-	/// Key corresponding to `emailVerified` field
+	/// Key corresponding to `emailVerified` field.
 	private static let emailVerifiedKey = "emailVerified"
 	
-	/// Key corresponding to `email` field
+	/// Key corresponding to `email` field.
 	private static let emailKey = "email"
 	
-	/// Key corresponding to `phone` field
+	/// Key corresponding to `phone` field.
 	private static let phoneKey = "phone"
+	
+	/// Key corrresponding to `profile` field.
+	private static let profileKey = "CCUser"
+	
+	
+	
+	/// The model corresponding to this user's public profile.
+	let profile: UserProfileModel
+	
 	
 	
 	/// Class constructor. Initializes the instance from a `PFObject`.
 	///
 	/// - Parameter withParseUser: The Parse user to tie this model to the
 	///                            Parse database.
+	/// - Parameter profile: An optional user profile model to connect to this user. If no value is
+	///                      or `nil` is provided, this constructor will attempt to get the profile
+	///						 from the `withParseUser` model.
 	///
 	/// - SeeAlso: PFObject
-	init(withParseUser user: PFUser) {
+	init(withParseUser user: PFUser, profile: UserProfileModel? = nil) {
+		if let profile = profile {
+			self.profile = profile
+		} else {
+			self.profile = ParseUserProfileModel(withParseObject: user[ParseUserModel.profileKey] as! PFObject)
+		}
 		super.init(withParseObject: user)
 	}
+	
 	
 	
     /// String containing the current user's username as defined in the
@@ -80,6 +98,34 @@ class ParseUserModel: ParseBaseModel, UserModel {
 		set {
 			parseObject[ParseUserModel.phoneKey] = newValue
 		}
+	}
+	
+	
+	
+	/// Main function for creating a new user. Automatically creates a corresponding user profile
+	/// and returns both in a tuple.
+	/// 
+	/// - Note: Both returned objects must be saved individually before they are added to the
+	///         database.
+	///
+	/// - Parameter username: The new user's username.
+	/// - Parameter password: The new user's password.
+	///
+	/// - Returns: A tuple containing the newly created user object and its corresponding profile.
+	static func createFromSignUp(username: String, password: String) -> (user: ParseUserModel, profile: ParseUserProfileModel) {
+		
+		// Create new profile object
+		let profile = ParseUserProfileModel()
+		
+		// Create new user object
+		let parseUser = PFUser()
+		parseUser.username = username
+		parseUser.password = password
+		parseUser[profileKey] = profile.parseObject
+		
+		// Now create a UserModel
+		let user = ParseUserModel(withParseUser: parseUser, profile: profile)
+		return (user, profile)
 	}
 	
 }

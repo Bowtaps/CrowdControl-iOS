@@ -27,4 +27,7 @@ protocol UserModel: BaseModel {
 	/// String containing the phone number of the user. May be `nil` if this value has not been set.
 	var phone: String {get set}
 	
+	/// Model for the user's public profile info
+	var profile: UserProfileModel {get}
+	
 }

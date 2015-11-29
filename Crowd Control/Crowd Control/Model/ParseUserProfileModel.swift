@@ -22,6 +22,11 @@ class ParseUserProfileModel: ParseBaseModel, UserProfileModel {
 	
 	
 	
+	/// Default class contructor. Creates a new entry in the database if saved.
+	init() {
+		super.init(withParseObject: PFObject(className: ParseUserProfileModel.tableName))
+	}
+	
 	/// Class constructor. Initializes the isntance from a `PFObject`.
 	///
 	/// - Parameter withParseObject: The Parse object to tie this model to the
