@@ -7,60 +7,73 @@
 //
 
 import Foundation
+import Parse
 
-class ParseGroupModel: GroupModel {
-    var groupLeader: String
-    var groupName: String
-    //Itinerary is currently set to string to use as a place holder until we know
-    //what the data type looks like
-    var itinerary: [String]?
-    var status: String?
-    var waypoints: [Waypoint]?
-    var groupMembers: [String]
+class ParseGroupModel: ParseBaseModel, GroupModel {
+    /// Parse table name.
+    private static let tableName = "Group"
     
-    init(){
-        self.groupLeader = ""
-        self.groupName = ""
-        self.itinerary = nil
-        self.status = nil
-        self.waypoints = nil
-        self.groupMembers = []
+    /// Key corresponding to 'generalLocation' field.
+    private static let generalLocationKey = "GeneralLocation"
+    
+    /// Key corresponding to `groupDescription` field.
+    private static let groupDescriptionKey = "GroupDescription"
+    
+    /// Key corresponding to `groupName` field.
+    private static let groupNameKey = "GroupName"
+    
+    /// Key corresponding to `groupMembers` field.
+    private static let groupMembersKey = "GroupMembers"
+    
+    /// Default class contructor. Creates a new entry in the database if saved.
+    init() {
+        super.init(withParseObject: PFObject(className: ParseGroupModel.tableName))
     }
-    func addGroupMember(member: String){
-        self.groupMembers += [member]
+    
+    /// Class constructor. Initializes the isntance from a `PFObject`.
+    ///
+    /// - Parameter withParseObject: The Parse object to tie this model to the
+    ///                              Parse database.
+    ///
+    /// - SeeAlso: PFObject
+    override init(withParseObject object: PFObject) {
+        super.init(withParseObject: object)
     }
-    func addItineraryItem(itineraryItem: String){
-        if self.itinerary == nil {
-            self.itinerary = [itineraryItem]
+    
+    /// PFGeoPoint Object to store the groups general location.  This field is used for
+    /// looking up groups as well as future support with finding ads by location
+    /// 
+    /// - SeeAlso: PFGeoPoint
+    var generalLocation: PFGeoPoint {
+        get {
+            return parseObject[ParseGroupModel.generalLocationKey] as! PFGeoPoint
         }
-        else {
-            self.itinerary! += [itineraryItem]
+        set {
+            parseObject[ParseGroupModel.generalLocationKey] = newValue
         }
     }
-    func addWaypoint(waypoint: Waypoint){
-        if self.waypoints == nil {
-            self.waypoints = [waypoint]
-        }else{
-            self.waypoints! += [waypoint]
+    /// String to hold the description of the group.
+    var groupDescription: String {
+        get {
+            return parseObject[ParseGroupModel.groupDescriptionKey] as! String
+        }
+        set {
+            parseObject[ParseGroupModel.groupDescriptionKey] = newValue
         }
     }
-    func removeGroupMember(member: String){
-        //remove the item(member) from the groupMember list by getting the index of the element
-        //and removing the item at that index
-        self.groupMembers.removeAtIndex(self.groupMembers.indexOf(member)!)
+    /// String to hold the Name of the group.
+    var groupName: String {
+        get {
+            return parseObject[ParseGroupModel.groupNameKey] as! String
+        }
+        set {
+            parseObject[ParseGroupModel.groupNameKey] = newValue
+        }
     }
-    func load(){
-        //TODO Write the code for parse loading communication
-        
+    // An array of UserProfileModel's to keep track of the Members of the group.
+    var groupMembers: [UserProfileModel] {
+        get{
+            return parseObject[ParseGroupModel.groupMembersKey] as! [UserProfileModel]
+        }
     }
-    func loadAsync(){
-        //TODO Write the code for parse loading asynchronously
-    }
-    func save(){
-        //TODO Write the code for sending the data to parse
-    }
-    func saveAsync(){
-        //TODO Write the code for sending the data to parse asynchronously
-    }
-
 }
