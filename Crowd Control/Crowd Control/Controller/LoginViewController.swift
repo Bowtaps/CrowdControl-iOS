@@ -6,8 +6,8 @@
 //  Copyright © 2015 Bowtaps. All rights reserved.
 //
 
+import Foundation
 import UIKit
-import Parse
 
 /// Custom view controller class for handling user logins.
 ///
@@ -66,15 +66,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		self.view.endEditing(true)
 		
 		// Attempt to login in background
-		PFUser.logInWithUsernameInBackground(emailField.text!, password:passwordField.text!) {
-			(user: PFUser?, error: NSError?) -> Void in
+		let app = UIApplication.sharedApplication().delegate as! AppDelegate
+		
+		app.modelManager!.logInUserInBackground(emailField.text!, password: passwordField.text!) {
+			(user: UserModel?, error: NSError?) in
 			if user != nil {
-				// Do stuff after successful login.
-				print ("Login was successful")
+				print("Login was successful")
 				self.performSegueWithIdentifier("rewindToEventView", sender: self)
 			} else {
-				// The login failed. Check error to see why.
-				print ("Failed to login")
+				print("Failed to login")
+				let alert = UIAlertController(title: "Login failed", message: "An error occured during login. Please make sure the email and password are correct.", preferredStyle: UIAlertControllerStyle.Alert)
+				alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+				self.presentViewController(alert, animated: true, completion: nil)
 			}
 		}
 	}

@@ -35,29 +35,57 @@ class ParseModelManager: ModelManager {
 	/// - Parameter callback: An optional callback to call once the operation is complete.
 	func logInUserInBackground(username: String, password: String, callback: ((user: UserModel?, error: NSError?) -> Void)?) -> Void {
 		
-		// Attempt the login
-		PFUser.logInWithUsernameInBackground(username, password: password) {
-			(parseUser: PFUser?, error: NSError?) -> Void in
+		// Set up callbacks so we don't have a billion indentations
+		let loadProfileCallback = {
+			(profile: BaseModel?, error: NSError?) in
 			
-			// Attempt to load profile asynchronously
-			if parseUser != nil && error == nil {
-				let user = ParseUserModel(withParseUser: parseUser!)
-				user.profile.loadInBackground() {
-					(model: BaseModel?, error: NSError?) in
-					
-					// Callback if it exists
-					if callback != nil {
-						if model != nil && error == nil {
-							callback!(user: user, error: error)
-						} else {
-							callback!(user: nil, error: error)
-						}
-					}
+			if callback != nil {
+				if profile != nil && error == nil {
+					callback!(user: self.currentUser(), error: error)
+				} else {
+					callback!(user: nil, error: error)
+				}
+			}
+		}
+		
+		let saveProfileCallback = {
+			(profile: BaseModel?, error: NSError?) in
+			
+			if profile != nil && error == nil {
+				profile!.loadInBackground(loadProfileCallback)
+			} else if callback != nil {
+				callback!(user: nil, error: error)
+			}
+		}
+		
+		let refreshUserCallback = {
+			(user: BaseModel?, error: NSError?) in
+			
+			if user != nil && error == nil {
+				if (user! as! UserModel).profile.modified {
+					(user! as! UserModel).profile.saveInBackground(saveProfileCallback)
+				} else {
+					(user! as! UserModel).profile.loadInBackground(loadProfileCallback)
 				}
 			} else if callback != nil {
 				callback!(user: nil, error: error)
 			}
 		}
+		
+		let logInUserCallback = {
+			(parseUser: PFUser?, error: NSError?) in
+			
+			if parseUser != nil && error == nil {
+				let user = ParseUserModel(withParseUser: parseUser!)
+				user.loadInBackground(refreshUserCallback)
+			} else if callback != nil {
+				callback!(user: nil, error: error)
+			}
+		}
+		
+		// Log in user
+		PFUser.logInWithUsernameInBackground(username, password: password, block: logInUserCallback)
+		
 	}
 	
 	/// Attempts to create a new user in the system, ensuring that the given username is unique.

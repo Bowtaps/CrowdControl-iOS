@@ -49,12 +49,29 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	///
 	/// - SeeAlso: PFObject
 	init(withParseUser user: PFUser, profile: UserProfileModel? = nil) {
+		
+		// Attempt to find the profile model if one exists (or create a new one if none exists)
 		if let profile = profile {
 			self.profile = profile
 		} else {
-			self.profile = ParseUserProfileModel(withParseObject: user[ParseUserModel.profileKey] as! PFObject)
+			let profileObject: AnyObject? = user.objectForKey(ParseUserModel.profileKey)
+			
+			// Attempt to unwrap object
+			if user.objectForKey(ParseUserModel.profileKey) != nil {
+				
+				// Profile found, link to current user
+				self.profile = ParseUserProfileModel(withParseObject: profileObject as! PFObject)
+			} else {
+				
+				// No profile found, create new profile
+				let profile = ParseUserProfileModel()
+				self.profile = profile
+				user[ParseUserModel.profileKey] = profile.parseObject
+			}
 		}
+		
 		super.init(withParseObject: user)
+		
 	}
 	
 	
