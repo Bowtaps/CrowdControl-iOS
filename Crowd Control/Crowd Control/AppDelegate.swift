@@ -13,10 +13,17 @@ import Bolts
 import FBSDKCoreKit
 import ParseFacebookUtilsV4
 
+/// The core delegate for the app. Contains pseudo-globa variables and functions that can be
+/// accessed from anywhere in the app.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+	/// Optional reference to the current app window.
 	var window: UIWindow?
+
+	/// Optional reference to the current model manager.
+	var modelManager: ModelManager?
+
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -34,9 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
 		
+		// Once connections to Parse have been initialzied, initialize the Parse model manager
+		modelManager = ParseModelManager()
+		
 		return true
 	}
-	
+
 	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
 			return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
 	}
