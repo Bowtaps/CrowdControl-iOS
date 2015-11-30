@@ -5,120 +5,127 @@
 //  Created by Evan Hammer on 10/28/15.
 //  Copyright © 2015 Bowtaps. All rights reserved.
 //
-import Parse
+
 import Foundation
+import Parse
 
-class ParseUserModel: CCUserModel {
-    //CCUser Table in Parse
-    var status: String?
-    var location = (0.0,0.0)
-    var displayName = ""
-    var objectId = "" //do we really need this?
-    
-    //ParseUser Table in Parse
-    var username = ""
-    var preferences: String?
-    var authData: String //do we really need this?
-    var emailVerified = false
-    var email = ""
-    var createdAt: NSDate
-    var updatedAt: NSDate
-    
-    init(){
-        self.status = nil
-        self.preferences = nil
-        self.authData = ""
-        self.createdAt = NSDate.init()
-        self.updatedAt = NSDate.init()
-    }
-    
-    func load(){
-        //Load data from Parse
-        print("Load from Parse")
-        //Find the object in Parse
-        let query = PFQuery(className: "CCUser")
-        //Look for objectId that matches the one stored
-        query.whereKey("objectId", equalTo: self.objectId)
-        //TODO: Catch errors
-        let resp = try! query.findObjects() as [PFObject]
-        print(resp)
-    }
-    func loadAsync(){
-        print("Load Async from Parse")
-        //create query to find object
-        let query = PFQuery(className: "CCUser")
-        //look for matching objectId
-        query.whereKey("objectId", equalTo: self.objectId)
-        //run the query
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error != nil || objects == nil {
-                print("The request failed.")
-            } else {
-                // The find succeeded.
-                print("Successfully retrieved the object.")
-                //should only return one
-                for object in objects! {
-                    //print(object)
-                    self.objectId = object.objectId!
-                    self.displayName = object["DisplayName"] as! String
-                    print("Display Name: " + self.displayName)
-                    self.save()
-                }
-            }
-        }
-    }
-    func save(){
-        //first have to find the object in parse
-        let query = PFQuery(className:"CCUser")
-        print(self.objectId)
-        print(self.displayName)
-        //get the object with matching objectId
-        let userProfile = try! query.getObjectWithId(self.objectId)
-        //changing the display name to test if it works remove and this is where
-        //we set all of the values for parse
-        userProfile["DisplayName"] = "testingAgain"
-        //save to the object on parse
-        let resp = try! userProfile.save()
-        print(resp)
-    }
-    func saveAsync(){
-        print("Send Async data to Parse")
-        //for testing I am changing the displayName
-        self.displayName = "testing 1,2,3"
-        //find the object in parse
-        let ccuser = PFQuery(className: "CCUser")
-        //get the object from parse with matching objectId
-        ccuser.getObjectInBackgroundWithId(self.objectId) {
-            (userProfile: PFObject?, error: NSError?) -> Void in
-            if error != nil {
-                //display the error if it exists
-                print(error)
-            } else if let userProfile = userProfile {
-                //set the display name for testing
-                //this is where we would set the value
-                userProfile["DisplayName"] = self.displayName
-                //save the object to parse
-                userProfile.saveInBackground()
-            }
-        }
-
-    }
-    func create(){
-        //Not sure if we should have this here but it does seem to make sense to 
-        //have a create function just for the first time a user signs in to actually
-        //create the object in parse
-        //grab the current user information that was created through signing up
-        let user = PFUser.currentUser()
-        //set the fields that pertain to the Parse User object
-        self.email = user!.email!
-        self.username = user!.username!
-        //create the CCUser object locally to save to parse
-        let ccuser = PFObject(className: "CCUser")
-        //set the CCUser fields
-        ccuser["UserID"] = user!
-        ccuser["DisplayName"] = self.displayName
-        //create the object Asynchronously
-        ccuser.saveInBackground()
-    }
+/// This class extends the `ParseBaseModel` class and implements the `UserModel`
+/// protocol and is the class to access the current user's information from
+/// Parse.
+class ParseUserModel: ParseBaseModel, UserModel {
+	
+	/// Parse table name.
+	private static let tableName = "_User"
+	
+	/// Key corresponding to `username` field.
+	private static let usernameKey = "username"
+	
+	/// Key corresponding to `emailVerified` field.
+	private static let emailVerifiedKey = "emailVerified"
+	
+	/// Key corresponding to `email` field.
+	private static let emailKey = "email"
+	
+	/// Key corresponding to `phone` field.
+	private static let phoneKey = "phone"
+	
+	/// Key corrresponding to `profile` field.
+	private static let profileKey = "CCUser"
+	
+	
+	
+	/// The model corresponding to this user's public profile.
+	let profile: UserProfileModel
+	
+	
+	
+	/// Class constructor. Initializes the instance from a `PFObject`.
+	///
+	/// - Parameter withParseUser: The Parse user to tie this model to the
+	///                            Parse database.
+	/// - Parameter profile: An optional user profile model to connect to this user. If no value is
+	///                      or `nil` is provided, this constructor will attempt to get the profile
+	///						 from the `withParseUser` model.
+	///
+	/// - SeeAlso: PFObject
+	init(withParseUser user: PFUser, profile: UserProfileModel? = nil) {
+		if let profile = profile {
+			self.profile = profile
+		} else {
+			self.profile = ParseUserProfileModel(withParseObject: user[ParseUserModel.profileKey] as! PFObject)
+		}
+		super.init(withParseObject: user)
+	}
+	
+	
+	
+    /// String containing the current user's username as defined in the
+	/// `UserModel` protocol.
+    var username: String {
+		get {
+			return (parseObject as! PFUser).username!
+		}
+	}
+	
+    /// Boolean to store if the user has verified their email with parse as
+	/// defined by the `UserModel` protocol.
+	/// 
+    /// - Returns: `true` if their email has been verified, `false` if their
+	///            email has not been verified.
+    var emailVerified: Bool {
+		get {
+			return parseObject[ParseUserModel.emailVerifiedKey] as! Bool
+		}
+	}
+	
+    /// String containing the current users email as defined in the `UserModel`
+	/// protocol.
+    var email: String {
+		get {
+			return (parseObject as! PFUser).email!
+		}
+		set {
+			(parseObject as! PFUser).email = newValue
+		}
+	}
+	
+    /// String containing the current users phone nuber as defined in the
+	/// `UserModel` protocol.
+    var phone: String {
+		get {
+			return parseObject[ParseUserModel.phoneKey] as! String
+		}
+		set {
+			parseObject[ParseUserModel.phoneKey] = newValue
+		}
+	}
+	
+	
+	
+	/// Main function for creating a new user. Automatically creates a corresponding user profile
+	/// and returns both in a tuple.
+	/// 
+	/// - Note: Both returned objects must be saved individually before they are added to the
+	///         database.
+	///
+	/// - Parameter username: The new user's username.
+	/// - Parameter password: The new user's password.
+	///
+	/// - Returns: A tuple containing the newly created user object and its corresponding profile.
+	static func createFromSignUp(username: String, password: String) -> (user: ParseUserModel, profile: ParseUserProfileModel) {
+		
+		// Create new profile object
+		let profile = ParseUserProfileModel()
+		
+		// Create new user object
+		let parseUser = PFUser()
+		parseUser.username = username
+		parseUser.password = password
+		parseUser[profileKey] = profile.parseObject
+		
+		// Now create a UserModel
+		let user = ParseUserModel(withParseUser: parseUser, profile: profile)
+		return (user, profile)
+	}
+	
 }
