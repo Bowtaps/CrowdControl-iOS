@@ -12,6 +12,8 @@ import Parse
 import Bolts
 import FBSDKCoreKit
 import ParseFacebookUtilsV4
+import Fabric
+import Optimizely
 
 /// The core delegate for the app. Contains pseudo-globa variables and functions that can be
 /// accessed from anywhere in the app.

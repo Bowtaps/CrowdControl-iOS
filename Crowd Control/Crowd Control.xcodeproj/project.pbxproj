@@ -53,6 +53,9 @@
 		30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */; };
 		30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A91BE8A78400D03B6A /* MapViewController.swift */; };
 		30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */; };
+		C2A724041C0E133300692EE4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724011C0E133300692EE4 /* MobileCoreServices.framework */; };
+		C2A724051C0E133300692EE4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724021C0E133300692EE4 /* Fabric.framework */; };
+		C2A724061C0E133300692EE4 /* Optimizely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724031C0E133300692EE4 /* Optimizely.framework */; };
 		C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B21BDC361800C27167 /* GroupModel.swift */; };
 		C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C51BE1BBD800C27167 /* CCUserTest.swift */; };
 		C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */; };
@@ -128,6 +131,9 @@
 		30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupInfoViewController.swift; path = Controller/GroupInfoViewController.swift; sourceTree = "<group>"; };
 		30F9F3A91BE8A78400D03B6A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controller/MapViewController.swift; sourceTree = "<group>"; };
 		30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controller/WelcomeViewController.swift; sourceTree = "<group>"; };
+		C2A724011C0E133300692EE4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCoreServices.framework; sourceTree = "<group>"; };
+		C2A724021C0E133300692EE4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		C2A724031C0E133300692EE4 /* Optimizely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Optimizely.framework; sourceTree = "<group>"; };
 		C2D186B21BDC361800C27167 /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupModel.swift; path = Model/GroupModel.swift; sourceTree = "<group>"; };
 		C2D186C51BE1BBD800C27167 /* CCUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserTest.swift; sourceTree = "<group>"; };
 		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseUserModel.swift; path = Model/ParseUserModel.swift; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 				30B1A9181BFC34500021B494 /* Accounts.framework in Frameworks */,
 				30B1A9161BFC344A0021B494 /* Social.framework in Frameworks */,
 				3076F0371BFD43B0002E840D /* Bolts.framework in Frameworks */,
+				C2A724041C0E133300692EE4 /* MobileCoreServices.framework in Frameworks */,
 				3076F0381BFD43B0002E840D /* Parse.framework in Frameworks */,
 				3076F0391BFD43B0002E840D /* ParseCrashReporting.framework in Frameworks */,
 				3076F03B1BFD43B0002E840D /* ParseFacebookUtilsV4.framework in Frameworks */,
@@ -152,6 +159,7 @@
 				30B1A9101BFC1F5C0021B494 /* libz.tbd in Frameworks */,
 				30B1A90E1BFC1F530021B494 /* SystemConfiguration.framework in Frameworks */,
 				30B1A90C1BFC1F4B0021B494 /* StoreKit.framework in Frameworks */,
+				C2A724061C0E133300692EE4 /* Optimizely.framework in Frameworks */,
 				3076F0431BFD45CC002E840D /* FBSDKMessengerShareKit.framework in Frameworks */,
 				30B1A90A1BFC1F450021B494 /* Security.framework in Frameworks */,
 				30B1A9081BFC1F3F0021B494 /* QuartzCore.framework in Frameworks */,
@@ -160,6 +168,7 @@
 				30B1A9041BFC1F1A0021B494 /* CoreGraphics.framework in Frameworks */,
 				30B1A9021BFC1F120021B494 /* CFNetwork.framework in Frameworks */,
 				30B1A9001BFC1EC90021B494 /* AudioToolbox.framework in Frameworks */,
+				C2A724051C0E133300692EE4 /* Fabric.framework in Frameworks */,
 				30B1A8FE1BFC1E1F0021B494 /* libsqlite3.tbd in Frameworks */,
 				30B1A8FB1BFC1C080021B494 /* FBSDKLoginKit.framework in Frameworks */,
 				30B1A8FA1BFC1C080021B494 /* FBSDKCoreKit.framework in Frameworks */,
@@ -327,6 +336,9 @@
 		C2D186B61BDE98BB00C27167 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2A724011C0E133300692EE4 /* MobileCoreServices.framework */,
+				C2A724021C0E133300692EE4 /* Fabric.framework */,
+				C2A724031C0E133300692EE4 /* Optimizely.framework */,
 				30B1A9121BFC1F900021B494 /* Facebook */,
 				3076F03E1BFD43BD002E840D /* Parse */,
 				30B1A9141BFC1FBB0021B494 /*  */,
@@ -344,6 +356,7 @@
 				301234841BD05B38007C3ABB /* Sources */,
 				301234851BD05B38007C3ABB /* Frameworks */,
 				301234861BD05B38007C3ABB /* Resources */,
+				C2A724001C0E12BA00692EE4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -470,6 +483,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C2A724001C0E12BA00692EE4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run d37e019949486238d0e94a3722a1ee4a30afe722 8dda4634b4a52a3a8245d640e949af8fde43020ff0367c4d2981e1a6cec1be9b";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		301234841BD05B38007C3ABB /* Sources */ = {
@@ -649,6 +678,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-20151111",
 					"$(PROJECT_DIR)/parse-library-1.9.1",
+					"$(PROJECT_DIR)",
 				);
 				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = "Crowd Control/Info.plist";
@@ -670,6 +700,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/FacebookSDKs-iOS-20151111",
 					"$(PROJECT_DIR)/parse-library-1.9.1",
+					"$(PROJECT_DIR)",
 				);
 				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = "Crowd Control/Info.plist";
