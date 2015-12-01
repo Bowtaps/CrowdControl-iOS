@@ -72,7 +72,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 				// Do stuff after successful login.
 				print ("Login was successful")
 				self.performSegueWithIdentifier("rewindToEventView", sender: self)
-			} else {
+                } else {
 				// The login failed. Check error to see why.
 				print ("Failed to login")
 			}

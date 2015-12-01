@@ -76,4 +76,18 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
             return parseObject[ParseGroupModel.groupMembersKey] as! [UserProfileModel]
         }
     }
+    /// Function to create a group if there is not one that exists
+    /// - Parameter name: String containing the group name
+    /// - Parameter description: String containing the description of the group
+    ///
+    /// - Returns: Object of type ParseGroupModel that contains the information
+    static func createGroup(name: String, description: String) -> ParseGroupModel{
+        let group = PFObject(className: "Group")
+        group[self.groupNameKey] = name
+        group[self.groupDescriptionKey] = description
+        //group[self.groupMembersKey] = members
+        group.saveInBackground()
+        let newGroup = ParseGroupModel(withParseObject: group)
+        return newGroup
+    }
 }
