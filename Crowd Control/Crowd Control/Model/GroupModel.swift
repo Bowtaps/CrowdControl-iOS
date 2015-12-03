@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Parse
 
 //Structure to hold the waypoint object for location and a message
 struct Waypoint {
@@ -16,24 +17,9 @@ struct Waypoint {
     var message: String
 }
 
-protocol GroupModel {
-    var groupLeader: String {get set}
+protocol GroupModel: BaseModel{
+    var generalLocation: PFGeoPoint {get set}
+    var groupDescription: String {get set}
     var groupName: String {get set}
-    //Itinerary is currently set to string to use as a place holder until we know
-    //what the data type looks like
-    var itinerary: [String]? {get set}
-    var status: String? {get set}
-    var waypoints: [Waypoint]? {get set}
-    var groupMembers: [String] {get set}
-    
-    func addGroupMember(member: String)
-    func addItineraryItem(itineraryItem: String)
-    func addWaypoint(waypoint: Waypoint)
-    func removeGroupMember(member: String)
-    func load()
-    func loadAsync()
-    func save()
-    func saveAsync()
-    //Possible other functions
-    //func bcastLocation
+    var groupMembers: [UserProfileModel] {get}
 }
