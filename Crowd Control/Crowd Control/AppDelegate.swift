@@ -8,15 +8,50 @@
 
 import UIKit
 
+import Parse
+import Bolts
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
+import Fabric
+import Optimizely
+
+/// The core delegate for the app. Contains pseudo-globa variables and functions that can be
+/// accessed from anywhere in the app.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+	/// Optional reference to the current app window.
 	var window: UIWindow?
+
+	/// Optional reference to the current model manager.
+	var modelManager: ModelManager?
+
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios_guide#localdatastore/iOS
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("xJ5uDHyuSDxuMVBhNennSenRo9IRLnHx2g8bfPEv",
+            clientKey: "PuShwUtOWCdhCa9EmEDWjSuJ0AhFkMy9kJhELxHi")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+		
+		PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+		
+		// Once connections to Parse have been initialzied, initialize the Parse model manager
+		modelManager = ParseModelManager()
+		PFUser.logOut()
+		
 		return true
+	}
+
+	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+			return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
 	}
 
 	func applicationWillResignActive(application: UIApplication) {
@@ -34,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func applicationDidBecomeActive(application: UIApplication) {
-		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+		FBSDKAppEvents.activateApp()
 	}
 
 	func applicationWillTerminate(application: UIApplication) {

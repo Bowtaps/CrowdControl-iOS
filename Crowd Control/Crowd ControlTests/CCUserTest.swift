@@ -7,10 +7,24 @@
 //
 
 import XCTest
+import Parse
 @testable import Crowd_Control
-/*
+
 class ParseUserTest: XCTestCase{
     func testLoad(){
-        var testModel = ParseUserModel("test", (0.0,0.0), "test", "test", "test", "test", "test");
+        //create a user
+       /* PFUser.logInWithUsernameInBackground("user3@test.com", password:"testing") {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                // Do stuff after successful login.
+                print ("Login was successful")
+                let newuser = ParseUserModel()
+                newuser.loadAsync()
+            } else {
+                // The login failed. Check error to see why.
+                print ("Failed to login")
+            }
+        }*/
+        //TODO:  Need to rework this
     }
-}*/
+}

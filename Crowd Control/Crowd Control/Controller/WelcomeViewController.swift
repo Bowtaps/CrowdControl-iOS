@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import ParseFacebookUtilsV4
 
 class WelcomeViewController: UIViewController {
 	
@@ -17,6 +19,22 @@ class WelcomeViewController: UIViewController {
 		
 		if goToEventView {
 			performSegueWithIdentifier("segueToMainView", sender: self)
+		}
+	}
+	
+	@IBAction func facebookButtonTapped(sender: AnyObject) {
+		print ("tapped")
+		PFFacebookUtils.logInInBackgroundWithReadPermissions([]) {
+			(user: PFUser?, error: NSError?) -> Void in
+			if let user = user {
+				if user.isNew {
+					print("User signed up and logged in through Facebook!")
+				} else {
+					print("User logged in through Facebook!")
+				}
+			} else {
+				print("Uh oh. The user cancelled the Facebook login.")
+			}
 		}
 	}
 	
