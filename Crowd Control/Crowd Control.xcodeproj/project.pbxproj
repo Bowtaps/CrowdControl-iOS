@@ -58,7 +58,6 @@
 		C2A724061C0E133300692EE4 /* Optimizely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724031C0E133300692EE4 /* Optimizely.framework */; };
 		C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B21BDC361800C27167 /* GroupModel.swift */; };
 		C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C51BE1BBD800C27167 /* CCUserTest.swift */; };
-		C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */; };
 		C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -137,7 +136,6 @@
 		C2D186B21BDC361800C27167 /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupModel.swift; path = Model/GroupModel.swift; sourceTree = "<group>"; };
 		C2D186C51BE1BBD800C27167 /* CCUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserTest.swift; sourceTree = "<group>"; };
 		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseUserModel.swift; path = Model/ParseUserModel.swift; sourceTree = "<group>"; };
-		C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModelTests.swift; sourceTree = "<group>"; };
 		C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseGroupModel.swift; path = Model/ParseGroupModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,7 +231,6 @@
 				301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */,
 				301234A41BD05B39007C3ABB /* Info.plist */,
 				C2D186C51BE1BBD800C27167 /* CCUserTest.swift */,
-				C2D186C91BE1C3F700C27167 /* GroupModelTests.swift */,
 			);
 			path = "Crowd ControlTests";
 			sourceTree = "<group>";
@@ -529,7 +526,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2D186CA1BE1C3F700C27167 /* GroupModelTests.swift in Sources */,
 				C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */,
 				301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */,
 			);

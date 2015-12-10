@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Parse
+//import Parse
 @testable import Crowd_Control
 
 class ParseUserTest: XCTestCase{
