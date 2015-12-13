@@ -52,6 +52,7 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
             parseObject[ParseGroupModel.generalLocationKey] = newValue
         }
     }
+	
     /// String to hold the description of the group.
     var groupDescription: String {
         get {
@@ -61,6 +62,7 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
             parseObject[ParseGroupModel.groupDescriptionKey] = newValue
         }
     }
+	
     /// String to hold the Name of the group.
     var groupName: String {
         get {
@@ -70,18 +72,20 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
             parseObject[ParseGroupModel.groupNameKey] = newValue
         }
     }
+	
     // An array of UserProfileModel's to keep track of the Members of the group.
     var groupMembers: [UserProfileModel] {
         get{
             return parseObject[ParseGroupModel.groupMembersKey] as! [UserProfileModel]
         }
     }
+	
     /// Function to create a group if there is not one that exists
     /// - Parameter name: String containing the group name
     /// - Parameter description: String containing the description of the group
     ///
     /// - Returns: Object of type ParseGroupModel that contains the information
-    static func createGroup(name: String, description: String) -> ParseGroupModel{
+    static func createGroup(name: String, description: String) -> ParseGroupModel {
         let group = PFObject(className: "Group")
         group[self.groupNameKey] = name
         group[self.groupDescriptionKey] = description
@@ -90,4 +94,22 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
         let newGroup = ParseGroupModel(withParseObject: group)
         return newGroup
     }
+	
+	/// Fetches all groups in storage synchronously.
+	///
+	/// This is a blocking function that can take several seconds to complete. If an operation
+	/// fails, then an exception will be thrown.
+	///
+	/// - Returns: Array of group models in storage.
+	static func getAll() throws -> [ParseGroupModel] {
+		var result: [ParseGroupModel] = []
+		let query = PFQuery(className: ParseGroupModel.tableName)
+		
+		let parseObjects = try query.findObjects()
+		for parseObject in parseObjects {
+			result.append(ParseGroupModel(withParseObject: parseObject))
+		}
+		
+		return result
+	}
 }

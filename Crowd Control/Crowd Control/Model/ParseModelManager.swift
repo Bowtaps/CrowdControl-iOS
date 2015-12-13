@@ -181,4 +181,21 @@ class ParseModelManager: ModelManager {
 		}
 	}
 	
+	/// Fetches all groups in storage synchronously.
+	///
+	/// This is a blocking function that can take several seconds to complete. If an operation
+	/// fails, then an exception will be thrown.
+	///
+	/// - Returns: Array of group models in storage.
+	func fetchGroups() throws -> [GroupModel] {
+		var groups: [GroupModel] = []
+		let parseGroups = try ParseGroupModel.getAll()
+		for parseGroup in parseGroups {
+			groups.append(parseGroup as GroupModel)
+		}
+		return groups
+	}
+	
+	
+	
 }
