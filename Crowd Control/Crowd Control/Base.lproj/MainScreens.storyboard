@@ -239,6 +239,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="emw-GS-jRE">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="doRefresh:" destination="yES-wZ-7a1" eventType="valueChanged" id="ahZ-vB-iWD"/>
+                        </connections>
+                    </refreshControl>
                     <connections>
                         <outlet property="groupTable" destination="pYU-jJ-Xvq" id="puM-vi-Ub7"/>
                         <outlet property="searchDisplayController" destination="FKb-kw-pOF" id="CXt-Cf-wu6"/>

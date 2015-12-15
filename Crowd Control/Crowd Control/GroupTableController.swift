@@ -11,21 +11,11 @@ import UIKit
 class GroupTableController: UITableViewController {
 	
 	@IBOutlet weak var groupTable: UITableView!
-	
 	var groups: [GroupModel] = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		let app = UIApplication.sharedApplication().delegate as! AppDelegate
-		
-		app.modelManager!.fetchGroupsInBackground {
-			(results: [GroupModel]?, error: NSError?) -> Void in
-			if results != nil {
-				self.groups = results!
-				self.groupTable.reloadData()
-			}
-		}
+		doRefresh(self)
 	}
 	
 	override func viewDidAppear(animated: Bool) {
@@ -68,4 +58,17 @@ class GroupTableController: UITableViewController {
 		return cell!
 	}
 	
+	@IBAction func doRefresh(sender: AnyObject) {
+		let app = UIApplication.sharedApplication().delegate as! AppDelegate
+		app.modelManager!.fetchGroupsInBackground {
+			(results: [GroupModel]?, error: NSError?) -> Void in
+			if results != nil {
+				self.groups = results!
+				self.groupTable.reloadData()
+			}
+			if let sender = sender as? UIRefreshControl {
+				sender.endRefreshing()
+			}
+		}
+	}
 }
