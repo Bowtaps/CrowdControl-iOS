@@ -70,4 +70,6 @@ protocol ModelManager {
 	/// - Returns: Array of group models in storage.
 	func fetchGroups() throws -> [GroupModel]
 	
+	func fetchGroupsInBackground(callback: ((results: [GroupModel]?, error: NSError?) -> Void)?) -> Void
+	
 }

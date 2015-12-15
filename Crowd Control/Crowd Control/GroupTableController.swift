@@ -10,6 +10,8 @@ import UIKit
 
 class GroupTableController: UITableViewController {
 	
+	@IBOutlet weak var groupTable: UITableView!
+	
 	var groups: [GroupModel] = []
 	
 	override func viewDidLoad() {
@@ -17,7 +19,13 @@ class GroupTableController: UITableViewController {
 		
 		let app = UIApplication.sharedApplication().delegate as! AppDelegate
 		
-		groups = try! app.modelManager!.fetchGroups()
+		app.modelManager!.fetchGroupsInBackground {
+			(results: [GroupModel]?, error: NSError?) -> Void in
+			if results != nil {
+				self.groups = results!
+				self.groupTable.reloadData()
+			}
+		}
 	}
 	
 	override func viewDidAppear(animated: Bool) {

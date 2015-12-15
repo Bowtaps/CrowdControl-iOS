@@ -240,6 +240,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="groupTable" destination="pYU-jJ-Xvq" id="puM-vi-Ub7"/>
                         <outlet property="searchDisplayController" destination="FKb-kw-pOF" id="CXt-Cf-wu6"/>
                     </connections>
                 </tableViewController>

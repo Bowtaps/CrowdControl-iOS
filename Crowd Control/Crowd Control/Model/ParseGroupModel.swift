@@ -112,4 +112,22 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 		
 		return result
 	}
+	
+	static func getAllInBackground(callback: ((results: [ParseGroupModel]?, error: NSError?) -> Void)?) {
+		let query = PFQuery(className: ParseGroupModel.tableName)
+		query.findObjectsInBackgroundWithBlock {
+			(objects: [PFObject]?, error: NSError?) -> Void in
+			if callback != nil {
+				if objects == nil {
+					callback!(results: nil, error: error)
+				} else {
+					var groups: [ParseGroupModel] = []
+					for object in objects! {
+						groups.append(ParseGroupModel(withParseObject: object))
+					}
+					callback!(results: groups, error: error)
+				}
+			}
+		}
+	}
 }

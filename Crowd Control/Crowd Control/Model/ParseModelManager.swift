@@ -205,6 +205,23 @@ class ParseModelManager: ModelManager {
 		return groups
 	}
 	
+	func fetchGroupsInBackground(callback: ((results: [GroupModel]?, error: NSError?) -> Void)?) -> Void {
+		ParseGroupModel.getAllInBackground {
+			(results: [ParseGroupModel]?, error: NSError?) -> Void in
+			if callback != nil {
+				if results == nil {
+					callback!(results: nil, error: error)
+				} else {
+					var groups: [GroupModel] = []
+					for result in results! {
+						groups.append(result as GroupModel)
+					}
+					callback!(results: groups, error: error)
+				}
+			}
+		}
+	}
+	
 	
 	
 }
