@@ -45,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// Once connections to Parse have been initialzied, initialize the Parse model manager
 		modelManager = ParseModelManager()
-		PFUser.logOut()
 		
 		return true
 	}

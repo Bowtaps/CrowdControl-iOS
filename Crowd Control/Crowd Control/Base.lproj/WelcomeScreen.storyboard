@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QKc-yd-LOA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QKc-yd-LOA">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <scenes>
@@ -15,7 +15,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xoq-4I-DD3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="phR-Rl-VSU" kind="relationship" relationship="rootViewController" id="m4A-sl-wGO"/>
@@ -24,14 +23,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cla-nn-WIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="743" y="602"/>
-        </scene>
-        <!--MainScreens-->
-        <scene sceneID="1gN-OS-yaN">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MainScreens" id="WNw-Ix-smx" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eUH-ri-WKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1297.5" y="29"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="ifI-LI-HoF">
@@ -47,14 +38,12 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Crowd Control!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-Sn-Xz0">
                                 <rect key="frame" x="47" y="277" width="321" height="33"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMR-5X-smD">
                                 <rect key="frame" x="227" y="353" width="170" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.47450980390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="0GT-Aa-nTH"/>
@@ -83,7 +72,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKh-L0-fLe" userLabel="Facebook Login Button">
                                 <rect key="frame" x="17" y="353" width="170" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.47450980390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FXc-Zl-Hvg"/>
@@ -109,7 +97,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CMR-5X-smD" firstAttribute="leading" secondItem="ZKh-L0-fLe" secondAttribute="trailing" constant="40" id="0mr-bc-CTz"/>
@@ -142,10 +129,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6cb-cx-54t"/>
                     <connections>
-                        <segue destination="WNw-Ix-smx" kind="show" identifier="segueToMainView" id="yhr-Sd-z48"/>
+                        <segue destination="i3D-iO-To9" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="N8Y-uB-Rwx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9e-1i-4bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="i3D-iO-To9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1297" y="602"/>
         </scene>
@@ -169,7 +157,6 @@
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="johnny.appleseed@icloud.com" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F3C-Kf-UwP" userLabel="Login Email Field">
                                                 <rect key="frame" x="82" y="50" width="250" height="30"/>
-                                                <animations/>
                                                 <accessibility key="accessibilityConfiguration" label="Login Email Field"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="YV9-PW-wDn"/>
@@ -180,21 +167,18 @@
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw9-Nq-vS6">
                                                 <rect key="frame" x="82" y="22" width="39" height="20"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKM-3v-X6m">
                                                 <rect key="frame" x="82" y="102" width="70" height="20"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAZ-DV-SXK">
                                                 <rect key="frame" x="82" y="200" width="70" height="30"/>
-                                                <animations/>
                                                 <color key="backgroundColor" red="0.01176470588" green="0.47450980390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Cs6-kg-0Yx"/>
@@ -209,14 +193,12 @@
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7r-Pb-oTG">
                                                 <rect key="frame" x="162" y="199" width="15" height="32"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="••••••••••••••••" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="liu-EE-WaF" userLabel="Login Password Field">
                                                 <rect key="frame" x="82" y="130" width="250" height="30"/>
-                                                <animations/>
                                                 <accessibility key="accessibilityConfiguration" label="Login Password Field"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="yji-z0-6rP"/>
@@ -226,7 +208,6 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeD-Jl-ceT">
                                                 <rect key="frame" x="185" y="199" width="143" height="32"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="create new account"/>
                                                 <connections>
@@ -234,7 +215,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="KAZ-DV-SXK" firstAttribute="centerY" secondItem="LeD-Jl-ceT" secondAttribute="centerY" id="34f-HJ-ENh"/>
@@ -257,7 +237,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="A9q-8j-Cdm" firstAttribute="top" secondItem="yGd-Th-PvJ" secondAttribute="top" id="Eud-9u-Naf"/>
                                     <constraint firstAttribute="trailing" secondItem="A9q-8j-Cdm" secondAttribute="trailing" id="G0S-pt-16y"/>
@@ -267,7 +246,6 @@
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgg-S3-Vlv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <animations/>
                                 <items>
                                     <navigationItem title="Login" id="UGp-Qg-7gH">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hBZ-S2-Yiu">
@@ -279,7 +257,6 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hnm-Mr-xo1" firstAttribute="top" secondItem="yGd-Th-PvJ" secondAttribute="bottom" id="0gg-gr-ehW"/>
@@ -324,7 +301,6 @@
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Johnny Appleseed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQf-tV-2sB" userLabel="Signup Name Field">
                                                 <rect key="frame" x="82" y="50" width="250" height="30"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="zHu-IN-MGK"/>
                                                 </constraints>
@@ -333,47 +309,40 @@
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsr-5U-uPc">
                                                 <rect key="frame" x="82" y="22" width="100" height="20"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="johnny.appleseed@icloud.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgU-vS-Ya3" userLabel="Signup Email Field">
                                                 <rect key="frame" x="82" y="130" width="250" height="30"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bi7-vD-TZ4">
                                                 <rect key="frame" x="82" y="102" width="39" height="20"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twl-2Q-kYg">
                                                 <rect key="frame" x="82" y="181" width="74" height="21"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="••••••••••••••••" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-Vq-2NA" userLabel="Signup Password Confirm Field">
                                                 <rect key="frame" x="82" y="290" width="250" height="30"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="join" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retype Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auf-LU-BaA">
                                                 <rect key="frame" x="82" y="262" width="125" height="20"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OQ-vk-3ZR" userLabel="Signup Submit Button">
                                                 <rect key="frame" x="82" y="350" width="130" height="30"/>
-                                                <animations/>
                                                 <color key="backgroundColor" red="0.01176470588" green="0.47450980390000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="PaV-cc-5vu"/>
@@ -388,12 +357,10 @@
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="••••••••••••••••" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-fi-KAy" userLabel="Signup Password Field">
                                                 <rect key="frame" x="82" y="210" width="250" height="30"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="TfG-Vq-2NA" firstAttribute="top" secondItem="2YG-fi-KAy" secondAttribute="bottom" constant="50" id="3BJ-CF-RyI"/>
@@ -421,7 +388,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="RVg-tw-A20" firstAttribute="top" secondItem="BhN-be-0Iw" secondAttribute="top" id="K2R-bt-U8C"/>
                                     <constraint firstItem="RVg-tw-A20" firstAttribute="leading" secondItem="BhN-be-0Iw" secondAttribute="leading" id="Ygb-wV-uRO"/>
@@ -431,7 +397,6 @@
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXJ-Qd-SF1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <animations/>
                                 <items>
                                     <navigationItem title="Create Account" id="OtP-fJ-mpa">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ecj-hG-t9Y">
@@ -443,7 +408,6 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BhN-be-0Iw" firstAttribute="top" secondItem="KXJ-Qd-SF1" secondAttribute="bottom" id="1hD-xj-e36"/>

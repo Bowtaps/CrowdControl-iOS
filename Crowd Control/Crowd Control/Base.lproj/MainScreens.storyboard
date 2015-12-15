@@ -79,7 +79,7 @@
         <!--Create Group-->
         <scene sceneID="2jg-bG-Pvk">
             <objects>
-                <viewController id="zze-NR-UB4" sceneMemberID="viewController">
+                <viewController id="zze-NR-UB4" customClass="SettingsViewController" customModule="Crowd_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rWV-yG-E8k"/>
                         <viewControllerLayoutGuide type="bottom" id="3oI-Fh-wLM"/>
@@ -109,6 +109,13 @@
                                                 <rect key="frame" x="248" y="171" width="105" height="30"/>
                                                 <state key="normal" title="Create Group"/>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsH-2K-sCC">
+                                                <rect key="frame" x="274" y="219" width="52" height="30"/>
+                                                <state key="normal" title="Log out"/>
+                                                <connections>
+                                                    <action selector="onLogoutTapped:" destination="zze-NR-UB4" eventType="touchUpInside" id="27g-uk-NBg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="536" id="VIt-Lt-fVy"/>
@@ -135,10 +142,14 @@
                     <navigationItem key="navigationItem" title="Create Group" id="76R-wm-gKC">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Cbg-PM-hhk">
                             <connections>
-                                <segue destination="UQw-oh-LtU" kind="unwind" unwindAction="rewindToGroupList:" id="pcX-JB-v4K"/>
+                                <segue destination="UQw-oh-LtU" kind="unwind" identifier="" unwindAction="rewindToGroupList:" id="pcX-JB-v4K"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="logoutButton" destination="dsH-2K-sCC" id="gjK-UC-npe"/>
+                        <segue destination="UQw-oh-LtU" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="qdW-qe-M57"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDL-SZ-vD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UQw-oh-LtU" userLabel="Exit" sceneMemberID="exit"/>
@@ -207,7 +218,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Mhr-Oo-m0h" kind="show" trigger="accessoryAction" id="cjR-cV-taI"/>
+                                    <segue destination="Mhr-Oo-m0h" kind="presentation" identifier="segueToWelcomeScreen" trigger="accessoryAction" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="cjR-cV-taI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -245,10 +256,10 @@
             </objects>
             <point key="canvasLocation" x="1140" y="561"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--WelcomeScreen-->
         <scene sceneID="dcz-jm-qsO">
             <objects>
-                <viewControllerPlaceholder id="Mhr-Oo-m0h" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="WelcomeScreen" id="Mhr-Oo-m0h" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UrA-Gv-W7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1754.5" y="561"/>

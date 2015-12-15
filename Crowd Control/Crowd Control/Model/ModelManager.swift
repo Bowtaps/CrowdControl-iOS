@@ -60,6 +60,8 @@ protocol ModelManager {
 	/// - Returns: The current user if one is logged in, or `nil` if no user is logged in.
 	func currentUser() -> UserModel?
 	
+	func logOutCurrentUser() -> Bool
+	
 	/// Fetches all groups in storage synchronously.
 	///
 	/// This is a blocking function that can take several seconds to complete. If an operation

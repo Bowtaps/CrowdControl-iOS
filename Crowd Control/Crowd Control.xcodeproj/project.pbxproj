@@ -50,6 +50,7 @@
 		30B1A9101BFC1F5C0021B494 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A90F1BFC1F5C0021B494 /* libz.tbd */; };
 		30B1A9161BFC344A0021B494 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A9151BFC344A0021B494 /* Social.framework */; };
 		30B1A9181BFC34500021B494 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A9171BFC34500021B494 /* Accounts.framework */; };
+		30B894241C1FC452001358A6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B894231C1FC452001358A6 /* SettingsViewController.swift */; };
 		30F9F3A61BE8A76C00D03B6A /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */; };
 		30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */; };
 		30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */; };
@@ -129,6 +130,7 @@
 		30B1A90F1BFC1F5C0021B494 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		30B1A9151BFC344A0021B494 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		30B1A9171BFC34500021B494 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		30B894231C1FC452001358A6 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; };
 		30F9F3A51BE8A76C00D03B6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = Controller/ChatViewController.swift; sourceTree = "<group>"; };
 		30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupInfoViewController.swift; path = Controller/GroupInfoViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				3099A5A11BF6BA5600490571 /* LoginViewController.swift */,
 				3099A5A31BF6BD4900490571 /* SignupViewController.swift */,
 				309C8C961C029EDC00E1F6AA /* GroupTableController.swift */,
+				30B894231C1FC452001358A6 /* SettingsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				309C8C971C029EDC00E1F6AA /* GroupTableController.swift in Sources */,
 				3099A5A41BF6BD4900490571 /* SignupViewController.swift in Sources */,
 				30755E6C1C05752800E2EFBF /* UserProfileModel.swift in Sources */,
+				30B894241C1FC452001358A6 /* SettingsViewController.swift in Sources */,
 				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
 				3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */,
 				300926DD1C092861005F6034 /* ParseBaseModel.swift in Sources */,

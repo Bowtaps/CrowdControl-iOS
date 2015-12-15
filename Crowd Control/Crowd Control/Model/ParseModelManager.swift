@@ -181,6 +181,15 @@ class ParseModelManager: ModelManager {
 		}
 	}
 	
+	func logOutCurrentUser() -> Bool {
+		if currentUser() == nil {
+			return false
+		} else {
+			PFUser.logOut()
+			return true
+		}
+	}
+	
 	/// Fetches all groups in storage synchronously.
 	///
 	/// This is a blocking function that can take several seconds to complete. If an operation

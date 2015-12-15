@@ -18,9 +18,16 @@ class GroupTableController: UITableViewController {
 		let app = UIApplication.sharedApplication().delegate as! AppDelegate
 		
 		groups = try! app.modelManager!.fetchGroups()
+	}
+	
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
 		
-		// TODO: fill table with previously loaded values (if not already in table)
-		// TODO: asynchronously fetch group listing from server
+		let app = UIApplication.sharedApplication().delegate as! AppDelegate
+		
+		if app.modelManager?.currentUser() == nil {
+			performSegueWithIdentifier("segueToWelcomeScreen", sender: self)
+		}
 	}
 	
 	/// Function for rewinding to this view, providing a nice target for screens to rewind to.
