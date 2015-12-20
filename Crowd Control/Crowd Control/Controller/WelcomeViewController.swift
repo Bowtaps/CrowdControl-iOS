@@ -18,7 +18,7 @@ class WelcomeViewController: UIViewController {
 		super.viewDidAppear(animated)
 		
 		if goToEventView {
-			performSegueWithIdentifier("segueToMainView", sender: self)
+			performSegueWithIdentifier("unwindToGroupList", sender: self)
 		}
 	}
 	

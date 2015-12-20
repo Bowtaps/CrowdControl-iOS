@@ -181,4 +181,47 @@ class ParseModelManager: ModelManager {
 		}
 	}
 	
+	func logOutCurrentUser() -> Bool {
+		if currentUser() == nil {
+			return false
+		} else {
+			PFUser.logOut()
+			return true
+		}
+	}
+	
+	/// Fetches all groups in storage synchronously.
+	///
+	/// This is a blocking function that can take several seconds to complete. If an operation
+	/// fails, then an exception will be thrown.
+	///
+	/// - Returns: Array of group models in storage.
+	func fetchGroups() throws -> [GroupModel] {
+		var groups: [GroupModel] = []
+		let parseGroups = try ParseGroupModel.getAll()
+		for parseGroup in parseGroups {
+			groups.append(parseGroup as GroupModel)
+		}
+		return groups
+	}
+	
+	func fetchGroupsInBackground(callback: ((results: [GroupModel]?, error: NSError?) -> Void)?) -> Void {
+		ParseGroupModel.getAllInBackground {
+			(results: [ParseGroupModel]?, error: NSError?) -> Void in
+			if callback != nil {
+				if results == nil {
+					callback!(results: nil, error: error)
+				} else {
+					var groups: [GroupModel] = []
+					for result in results! {
+						groups.append(result as GroupModel)
+					}
+					callback!(results: groups, error: error)
+				}
+			}
+		}
+	}
+	
+	
+	
 }
