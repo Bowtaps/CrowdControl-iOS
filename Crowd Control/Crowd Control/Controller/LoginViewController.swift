@@ -72,7 +72,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 			(user: UserModel?, error: NSError?) in
 			if user != nil {
 				print("Login was successful")
-				self.performSegueWithIdentifier("rewindToEventView", sender: self)
+				self.performSegueWithIdentifier("unwindToWelcomeView", sender: self)
 			} else {
 				print("Failed to login")
 				let alert = UIAlertController(title: "Login failed", message: "An error occured during login. Please make sure the email and password are correct.", preferredStyle: UIAlertControllerStyle.Alert)
