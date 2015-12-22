@@ -55,7 +55,6 @@
 		30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */; };
 		30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */; };
 		30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A91BE8A78400D03B6A /* MapViewController.swift */; };
-		30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */; };
 		C2A724041C0E133300692EE4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724011C0E133300692EE4 /* MobileCoreServices.framework */; };
 		C2A724051C0E133300692EE4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724021C0E133300692EE4 /* Fabric.framework */; };
 		C2A724061C0E133300692EE4 /* Optimizely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724031C0E133300692EE4 /* Optimizely.framework */; };
@@ -135,7 +134,6 @@
 		30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = Controller/ChatViewController.swift; sourceTree = "<group>"; };
 		30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupInfoViewController.swift; path = Controller/GroupInfoViewController.swift; sourceTree = "<group>"; };
 		30F9F3A91BE8A78400D03B6A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controller/MapViewController.swift; sourceTree = "<group>"; };
-		30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controller/WelcomeViewController.swift; sourceTree = "<group>"; };
 		C2A724011C0E133300692EE4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCoreServices.framework; sourceTree = "<group>"; };
 		C2A724021C0E133300692EE4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		C2A724031C0E133300692EE4 /* Optimizely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Optimizely.framework; sourceTree = "<group>"; };
@@ -269,7 +267,6 @@
 				30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */,
 				30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */,
 				30F9F3A91BE8A78400D03B6A /* MapViewController.swift */,
-				30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */,
 				3099A5A11BF6BA5600490571 /* LoginViewController.swift */,
 				3099A5A31BF6BD4900490571 /* SignupViewController.swift */,
 				309C8C961C029EDC00E1F6AA /* GroupTableController.swift */,
@@ -523,7 +520,6 @@
 				300926DD1C092861005F6034 /* ParseBaseModel.swift in Sources */,
 				30755E661C054D8800E2EFBF /* UserModel.swift in Sources */,
 				30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */,
-				30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */,
 				300015761C0A4682005E42A1 /* ModelManager.swift in Sources */,
 				30755E6A1C056D5F00E2EFBF /* BaseModel.swift in Sources */,
 				30B1A8FC1BFC1C5D0021B494 /* ParseUserModel.swift in Sources */,
