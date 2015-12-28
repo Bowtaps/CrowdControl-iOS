@@ -5,41 +5,45 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="ysD-Kx-M7T">
             <objects>
-                <viewController id="jnZ-jD-01S" sceneMemberID="viewController">
+                <viewController id="jnZ-jD-01S" customClass="SettingsViewController" customModule="Crowd_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gTq-B8-yGx"/>
                         <viewControllerLayoutGuide type="bottom" id="Leg-mb-V3S"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dFL-Lm-n5Z">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9O-Oe-5ak">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Settings" id="Tuo-za-RFR">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aK4-C1-Sdw">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="aK4-C1-Sdw">
                                             <connections>
-                                                <segue destination="tAC-Gu-wLF" kind="unwind" unwindAction="rewindToGroupList:" id="dlO-IQ-MVH"/>
+                                                <segue destination="tAC-Gu-wLF" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="dlO-IQ-MVH"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pK7-Fg-Qw0"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="pK7-Fg-Qw0">
+                                            <connections>
+                                                <action selector="onLogoutTapped:" destination="jnZ-jD-01S" id="i6b-4L-HYL"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wO5-Bq-1Ft">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANy-dt-CWL" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="536"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Implemented" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKx-8J-h1T">
-                                                <rect key="frame" x="227" y="257" width="147" height="23"/>
+                                                <rect key="frame" x="134" y="257" width="147" height="23"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -70,6 +74,9 @@
                             <constraint firstAttribute="trailing" secondItem="m9O-Oe-5ak" secondAttribute="trailing" id="cIF-IO-qVf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logoutButton" destination="pK7-Fg-Qw0" id="fCU-DG-3ud"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9j-Bm-wLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tAC-Gu-wLF" userLabel="Exit" sceneMemberID="exit"/>
@@ -79,47 +86,53 @@
         <!--Create Group-->
         <scene sceneID="2jg-bG-Pvk">
             <objects>
-                <viewController id="zze-NR-UB4" customClass="SettingsViewController" customModule="Crowd_Control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zze-NR-UB4" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rWV-yG-E8k"/>
                         <viewControllerLayoutGuide type="bottom" id="3oI-Fh-wLM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vaK-h2-GLp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKs-vc-MS7">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOP-wm-Yui">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOP-wm-Yui" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoy-kq-6dG">
-                                                <rect key="frame" x="23" y="35" width="99" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoy-kq-6dG">
+                                                <rect key="frame" x="20" y="35" width="97" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu3-u7-bbc">
-                                                <rect key="frame" x="23" y="64" width="554" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu3-u7-bbc" userLabel="Group Name Field">
+                                                <rect key="frame" x="20" y="64" width="374" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyP-Cl-eFe">
-                                                <rect key="frame" x="248" y="171" width="105" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyP-Cl-eFe">
+                                                <rect key="frame" x="161" y="126" width="92" height="30"/>
                                                 <state key="normal" title="Create Group"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsH-2K-sCC">
-                                                <rect key="frame" x="274" y="219" width="52" height="30"/>
-                                                <state key="normal" title="Log out"/>
-                                                <connections>
-                                                    <action selector="onLogoutTapped:" destination="zze-NR-UB4" eventType="touchUpInside" id="27g-uk-NBg"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="eu3-u7-bbc" firstAttribute="leading" secondItem="aOP-wm-Yui" secondAttribute="leading" constant="20" symbolic="YES" id="4j3-q0-B6j"/>
+                                            <constraint firstItem="eu3-u7-bbc" firstAttribute="top" secondItem="aOP-wm-Yui" secondAttribute="top" constant="64" id="9xz-sp-FkN"/>
+                                            <constraint firstItem="EyP-Cl-eFe" firstAttribute="centerX" secondItem="aOP-wm-Yui" secondAttribute="centerX" id="Fh7-Kb-itq"/>
+                                            <constraint firstAttribute="bottom" secondItem="EyP-Cl-eFe" secondAttribute="bottom" constant="32" id="LQ1-1T-Jbc"/>
+                                            <constraint firstItem="EyP-Cl-eFe" firstAttribute="top" secondItem="eu3-u7-bbc" secondAttribute="bottom" constant="32" id="QH1-2e-M6x"/>
+                                            <constraint firstAttribute="trailing" secondItem="eu3-u7-bbc" secondAttribute="trailing" constant="20" symbolic="YES" id="Sdv-vD-uwA"/>
                                             <constraint firstAttribute="height" constant="536" id="VIt-Lt-fVy"/>
+                                            <constraint firstItem="eu3-u7-bbc" firstAttribute="leading" secondItem="eoy-kq-6dG" secondAttribute="leading" id="fy4-Qd-o5W"/>
+                                            <constraint firstItem="eu3-u7-bbc" firstAttribute="top" secondItem="eoy-kq-6dG" secondAttribute="bottom" constant="8" symbolic="YES" id="tH5-Ik-b5B"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="VIt-Lt-fVy"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -147,7 +160,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="logoutButton" destination="dsH-2K-sCC" id="gjK-UC-npe"/>
                         <segue destination="UQw-oh-LtU" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="qdW-qe-M57"/>
                     </connections>
                 </viewController>
@@ -161,11 +173,11 @@
             <objects>
                 <tableViewController id="yES-wZ-7a1" customClass="GroupTableController" customModule="Crowd_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pYU-jJ-Xvq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="lOE-WG-18h">
-                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="453" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -173,11 +185,11 @@
                             </connections>
                         </searchBar>
                         <view key="tableFooterView" contentMode="scaleToFill" id="MGE-Xs-54O">
-                            <rect key="frame" x="0.0" y="600" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="736" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-Uo-0Rq">
-                                    <rect key="frame" x="0.0" y="7" width="600" height="30"/>
+                                    <rect key="frame" x="0.0" y="7" width="414" height="30"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <state key="normal" title="Start your own group!"/>
                                     <connections>
@@ -195,10 +207,10 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" textLabel="msm-aV-FDl" detailTextLabel="8Pv-jX-Dzc" style="IBUITableViewCellStyleSubtitle" id="eW0-Ds-FUo">
-                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eW0-Ds-FUo" id="ZuY-FV-s3h">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" tag="100" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="msm-aV-FDl">
@@ -275,6 +287,7 @@
         <scene sceneID="V6y-Wc-OZN">
             <objects>
                 <navigationController id="9nE-98-D8v" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K1O-3h-uyz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
