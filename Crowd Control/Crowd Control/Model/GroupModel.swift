@@ -22,4 +22,5 @@ protocol GroupModel: BaseModel{
     var groupDescription: String {get set}
     var groupName: String {get set}
     var groupMembers: [UserProfileModel] {get}
+	var groupLeader: UserProfileModel? {get set}
 }

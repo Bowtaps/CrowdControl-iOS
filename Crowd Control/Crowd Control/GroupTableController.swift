@@ -83,7 +83,7 @@ class GroupTableController: UITableViewController {
 		if segue.identifier == "segueToGroupOverview" {
 			let svc = segue.destinationViewController as! GroupOverviewController
 			svc.groupToDisplay = selectedGroup
-			svc.groupLeader = nil
+			svc.groupLeader = selectedGroup?.groupLeader
 		}
 	}
 }
