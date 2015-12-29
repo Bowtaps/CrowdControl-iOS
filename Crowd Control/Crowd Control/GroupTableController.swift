@@ -12,9 +12,11 @@ class GroupTableController: UITableViewController {
 	
 	@IBOutlet weak var groupTable: UITableView!
 	var groups: [GroupModel] = []
+	var selectedGroup: GroupModel?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		selectedGroup = nil
 		doRefresh(self)
 	}
 	
@@ -58,6 +60,11 @@ class GroupTableController: UITableViewController {
 		return cell!
 	}
 	
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		selectedGroup = groups[indexPath.row]
+		performSegueWithIdentifier("segueToGroupOverview", sender: self)
+	}
+	
 	@IBAction func doRefresh(sender: AnyObject) {
 		let app = UIApplication.sharedApplication().delegate as! AppDelegate
 		app.modelManager!.fetchGroupsInBackground {
@@ -69,6 +76,14 @@ class GroupTableController: UITableViewController {
 			if let sender = sender as? UIRefreshControl {
 				sender.endRefreshing()
 			}
+		}
+	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+		if segue.identifier == "segueToGroupOverview" {
+			let svc = segue.destinationViewController as! GroupOverviewController
+			svc.groupToDisplay = selectedGroup
+			svc.groupLeader = nil
 		}
 	}
 }
