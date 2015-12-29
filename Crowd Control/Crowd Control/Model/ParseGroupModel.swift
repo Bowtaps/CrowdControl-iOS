@@ -24,6 +24,9 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
     
     /// Key corresponding to `groupMembers` field.
     private static let groupMembersKey = "GroupMembers"
+	
+	/// Key corresponding to `groupLeader` field
+	private static let groupLeaderKey = "GroupLeader"
     
     /// Default class contructor. Creates a new entry in the database if saved.
     init() {
@@ -73,12 +76,30 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
         }
     }
 	
-    // An array of UserProfileModel's to keep track of the Members of the group.
+	/// An array of `UserProfileModel` objects to keep track of the members of the group.
     var groupMembers: [UserProfileModel] {
-        get{
+        get {
             return parseObject[ParseGroupModel.groupMembersKey] as! [UserProfileModel]
         }
     }
+	
+	/// The `UserProfileModel` object who is the designated leader of the group
+	var groupLeader: UserProfileModel? {
+		get {
+			if let parseObject = parseObject[ParseGroupModel.groupLeaderKey] as? PFObject {
+				return ParseUserProfileModel.init(withParseObject: parseObject)
+			} else {
+				return nil
+			}
+		}
+		set {
+			if newValue == nil {
+				parseObject[ParseGroupModel.groupLeaderKey] = nil
+			} else if let newValue = newValue as? ParseUserProfileModel {
+				parseObject[ParseGroupModel.groupLeaderKey] = newValue.parseObject
+			}
+		}
+	}
 	
     /// Function to create a group if there is not one that exists
     /// - Parameter name: String containing the group name

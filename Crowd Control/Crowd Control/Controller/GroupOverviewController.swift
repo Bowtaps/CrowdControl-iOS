@@ -29,7 +29,16 @@ class GroupOverviewController: UIViewController {
 			self.groupDescriptionLabel.text = groupToDisplay.groupDescription
 			
 			if let groupLeader = groupLeader {
-				self.groupLeaderLabel.text = groupLeader.displayName
+				self.groupLeaderLabel.text = ""
+				groupLeader.loadInBackground({ (object, error) -> Void in
+					if object != nil && error == nil {
+						self.groupLeaderLabel.text = groupLeader.displayName
+					} else {
+						self.groupLeaderLabel.text = "ERROR LOL"
+					}
+				})
+			} else {
+				self.groupLeaderLabel.text = "No leader"
 			}
 		}
 	}
