@@ -20,6 +20,8 @@ import ParseFacebookUtilsV4
 /// This class is a stub, with methods to be implemented as needed
 class SignupViewController: UIViewController, UITextFieldDelegate {
 	
+	@IBOutlet weak var scrollView: UIScrollView!
+	
 	@IBOutlet weak var facebookButton: UIButton!
 	@IBOutlet weak var twitterButton: UIButton!
 	@IBOutlet weak var emailButton: UIButton!
@@ -31,6 +33,16 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var submitButton: UIButton!
 	
 	var signupFormFields = [UITextField]()
+	
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		
+		registerForKeyboardNotifications()
+	}
+	
+	deinit {
+		deregisterFromKeyboardNotifications()
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -70,6 +82,37 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
 	
 	@IBAction func submitButtonTapped(sender: AnyObject) {
 		submitForm()
+	}
+	
+	func registerForKeyboardNotifications() {
+		//Adding notifies on keyboard appearing
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "adjustForKeyboard:", name: UIKeyboardWillHideNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "adjustForKeyboard:", name: UIKeyboardWillChangeFrameNotification, object: nil)
+	}
+	
+	func deregisterFromKeyboardNotifications() {
+		//Removing notifies on keyboard appearing
+		NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+		NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillChangeFrameNotification, object: nil)
+	}
+	
+	func adjustForKeyboard(notification: NSNotification) {
+		let userInfo = notification.userInfo!
+		
+		let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+		let keyboardViewEndFrame = view.convertRect(keyboardScreenEndFrame, fromView: view.window)
+		
+		var inset = scrollView.contentInset
+		
+		if notification.name == UIKeyboardWillHideNotification {
+			inset.bottom = 0
+		} else {
+			inset.bottom = keyboardViewEndFrame.height
+		}
+		
+		scrollView.contentInset = inset
+		
+		scrollView.scrollIndicatorInsets = scrollView.contentInset
 	}
 	
 	func textFieldShouldReturn(textField: UITextField) -> Bool {

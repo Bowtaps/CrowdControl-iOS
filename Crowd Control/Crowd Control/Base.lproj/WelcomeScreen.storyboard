@@ -37,14 +37,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6G-KB-rrr">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="n6G-KB-rrr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhB-RD-4SB" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="562"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in with existing account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzQ-mf-oHJ">
-                                                <rect key="frame" x="45" y="16" width="324" height="33"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in with existing account" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzQ-mf-oHJ">
+                                                <rect key="frame" x="8" y="16" width="398" height="33"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -79,8 +79,8 @@
                                                     <segue destination="2Qt-Qm-Wfs" kind="show" id="cUg-We-BX4"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-rm-YsO">
-                                                <rect key="frame" x="80" y="154" width="255" height="33"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new account" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-rm-YsO">
+                                                <rect key="frame" x="8" y="154" width="398" height="33"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -152,6 +152,7 @@
                                             <constraint firstItem="X2U-8t-4yG" firstAttribute="width" secondItem="KhB-RD-4SB" secondAttribute="width" multiplier="0.3" id="2jJ-5n-ug6"/>
                                             <constraint firstItem="go8-bW-aWK" firstAttribute="top" secondItem="dmE-Ne-7Pm" secondAttribute="bottom" constant="42" id="32y-PK-HHF"/>
                                             <constraint firstItem="QE4-MO-xtA" firstAttribute="top" secondItem="u6i-rm-YsO" secondAttribute="bottom" constant="32" id="3nc-Dq-uT9"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="u6i-rm-YsO" secondAttribute="trailing" id="5hE-S3-S6x"/>
                                             <constraint firstItem="GzQ-mf-oHJ" firstAttribute="centerX" secondItem="KhB-RD-4SB" secondAttribute="centerX" id="5nL-1j-s2K"/>
                                             <constraint firstItem="TAD-hb-GPy" firstAttribute="leading" secondItem="KhB-RD-4SB" secondAttribute="trailing" multiplier="0.025" id="66M-ig-PTl"/>
                                             <constraint firstItem="QE4-MO-xtA" firstAttribute="centerX" secondItem="KhB-RD-4SB" secondAttribute="centerX" id="7hh-0V-tD7"/>
@@ -169,15 +170,18 @@
                                             <constraint firstItem="u6i-rm-YsO" firstAttribute="top" secondItem="X2U-8t-4yG" secondAttribute="bottom" constant="64" id="Uis-lO-1o6"/>
                                             <constraint firstItem="ccI-Cc-PxT" firstAttribute="top" secondItem="88c-Od-hdb" secondAttribute="bottom" constant="8" symbolic="YES" id="UyS-h3-38Y"/>
                                             <constraint firstItem="ccI-Cc-PxT" firstAttribute="leading" secondItem="88c-Od-hdb" secondAttribute="leading" id="W5h-Rn-x7I"/>
+                                            <constraint firstItem="GzQ-mf-oHJ" firstAttribute="leading" secondItem="KhB-RD-4SB" secondAttribute="leadingMargin" id="W9v-kL-IZP"/>
                                             <constraint firstItem="go8-bW-aWK" firstAttribute="centerX" secondItem="KhB-RD-4SB" secondAttribute="centerX" id="Ygc-2R-bBB"/>
                                             <constraint firstAttribute="bottom" secondItem="7wH-eb-KWG" secondAttribute="bottom" constant="32" id="ZKf-Xk-6Hf"/>
                                             <constraint firstItem="go8-bW-aWK" firstAttribute="top" secondItem="gzd-b6-sCJ" secondAttribute="bottom" constant="8" symbolic="YES" id="amE-Hv-xvg"/>
                                             <constraint firstItem="dmE-Ne-7Pm" firstAttribute="width" secondItem="ccI-Cc-PxT" secondAttribute="width" id="bKC-aV-3an"/>
                                             <constraint firstItem="dmE-Ne-7Pm" firstAttribute="top" secondItem="Zk7-ML-35J" secondAttribute="bottom" constant="8" symbolic="YES" id="bvz-ky-dfM"/>
                                             <constraint firstAttribute="trailing" secondItem="gFV-lk-IaF" secondAttribute="trailing" multiplier="1.025" id="dQE-Kt-c10"/>
+                                            <constraint firstItem="u6i-rm-YsO" firstAttribute="leading" secondItem="KhB-RD-4SB" secondAttribute="leadingMargin" id="dkR-JA-P4A"/>
                                             <constraint firstItem="gFV-lk-IaF" firstAttribute="top" secondItem="GzQ-mf-oHJ" secondAttribute="bottom" constant="8" symbolic="YES" id="h4e-qA-gxn"/>
                                             <constraint firstItem="ccI-Cc-PxT" firstAttribute="top" secondItem="QE4-MO-xtA" secondAttribute="bottom" constant="42" id="lWp-my-bZN"/>
                                             <constraint firstItem="TAD-hb-GPy" firstAttribute="top" secondItem="GzQ-mf-oHJ" secondAttribute="bottom" constant="8" symbolic="YES" id="n0H-OS-E4v"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="GzQ-mf-oHJ" secondAttribute="trailing" id="nss-mA-UV1"/>
                                             <constraint firstItem="go8-bW-aWK" firstAttribute="width" secondItem="dmE-Ne-7Pm" secondAttribute="width" id="oFu-fq-vBc"/>
                                             <constraint firstItem="ccI-Cc-PxT" firstAttribute="centerX" secondItem="KhB-RD-4SB" secondAttribute="centerX" id="oTg-3g-QP5"/>
                                             <constraint firstItem="7wH-eb-KWG" firstAttribute="trailing" secondItem="go8-bW-aWK" secondAttribute="trailing" id="sJm-Ek-njY"/>
@@ -225,6 +229,7 @@
                         <outlet property="nameField" destination="QE4-MO-xtA" id="al6-Yo-pIM"/>
                         <outlet property="passwordConfirmField" destination="go8-bW-aWK" id="SNZ-2D-SFQ"/>
                         <outlet property="passwordField" destination="dmE-Ne-7Pm" id="2ra-H5-y57"/>
+                        <outlet property="scrollView" destination="n6G-KB-rrr" id="qw2-KM-5NX"/>
                         <outlet property="submitButton" destination="7wH-eb-KWG" id="DpT-23-gEn"/>
                         <outlet property="twitterButton" destination="X2U-8t-4yG" id="bPN-NH-Rvq"/>
                         <segue destination="i3D-iO-To9" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="N8Y-uB-Rwx"/>
@@ -247,7 +252,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGd-Th-PvJ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="yGd-Th-PvJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9q-8j-Cdm" userLabel="Content View">
@@ -359,6 +364,7 @@
                     <connections>
                         <outlet property="emailField" destination="F3C-Kf-UwP" id="Y4D-hD-uEG"/>
                         <outlet property="passwordField" destination="liu-EE-WaF" id="jsc-8A-E1a"/>
+                        <outlet property="scrollView" destination="yGd-Th-PvJ" id="hGq-GR-qZ2"/>
                         <outlet property="submitButton" destination="KAZ-DV-SXK" id="6f8-62-h6l"/>
                         <segue destination="BN2-ZC-ikD" kind="unwind" identifier="unwindToWelcomeView" unwindAction="rewindToWelcomeView:" id="WYi-qH-XDU"/>
                     </connections>
