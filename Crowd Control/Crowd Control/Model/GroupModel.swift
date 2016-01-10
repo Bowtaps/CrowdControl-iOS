@@ -23,4 +23,7 @@ protocol GroupModel: BaseModel{
     var groupName: String {get set}
     var groupMembers: [UserProfileModel] {get}
 	var groupLeader: UserProfileModel? {get set}
+	
+	func addGroupMember(member: UserProfileModel) -> Bool
+	func removeGroupMember(member: UserProfileModel) -> Bool
 }

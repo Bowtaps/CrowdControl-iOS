@@ -79,7 +79,11 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 	/// An array of `UserProfileModel` objects to keep track of the members of the group.
     var groupMembers: [UserProfileModel] {
         get {
-            return parseObject[ParseGroupModel.groupMembersKey] as! [UserProfileModel]
+			var members: [UserProfileModel] = []
+			for cachedMember in cachedGroupMembers {
+				members.append(ParseUserProfileModel.init(withParseObject: cachedMember) as UserProfileModel)
+			}
+            return members
         }
     }
 	
@@ -97,6 +101,101 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 				parseObject[ParseGroupModel.groupLeaderKey] = nil
 			} else if let newValue = newValue as? ParseUserProfileModel {
 				parseObject[ParseGroupModel.groupLeaderKey] = newValue.parseObject
+			}
+		}
+	}
+	
+	private var cachedGroupMembers: [PFObject] = []
+	
+	func addGroupMember(member: UserProfileModel) -> Bool {
+		let member = member as! ParseUserProfileModel
+		
+		// Make sure user isn't already a member of the group
+		for cachedMember in cachedGroupMembers {
+			if cachedMember == member.parseObject {
+				return false
+			}
+		}
+		
+		// Add parse object to relation, making them a member of this group
+		let relation = parseObject.relationForKey(ParseGroupModel.groupMembersKey)
+		relation.addObject(member.parseObject)
+		
+		// Update the cache
+		cachedGroupMembers.append(member.parseObject)
+		
+		return true
+	}
+	
+	func removeGroupMember(member: UserProfileModel) -> Bool {
+		let member = member as! ParseUserProfileModel
+		
+		// Make sure user is already a member of the group
+		var cachedIndex = -1
+		var found = false
+		for (index, cachedMember) in cachedGroupMembers.enumerate() {
+			if cachedMember == member.parseObject {
+				found = true
+				cachedIndex = index
+				break
+			}
+		}
+		if found == false {
+			return false
+		}
+		
+		// Remove parse object from relation, removing them from the group
+		let relation = parseObject.relationForKey(ParseGroupModel.groupMembersKey)
+		relation.removeObject(member.parseObject)
+		
+		// Update the cache
+		cachedGroupMembers.removeAtIndex(cachedIndex)
+		
+		return true
+	}
+	
+	override func load() throws {
+		try super.load()
+		
+		// Fetch objects in relation
+		let query = parseObject.relationForKey(ParseGroupModel.groupMembersKey).query()
+		
+		// Cache objects in relation
+		if let members = try query?.findObjects() {
+			cachedGroupMembers = members
+		}
+	}
+	
+	override func loadInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?) {
+		super.loadInBackground {
+			(object: BaseModel?, error: NSError?) -> Void in
+			
+			if object == nil || error != nil {
+				
+				// Detect and handle errors
+				if let callback = callback {
+					callback(object: self, error: error)
+				}
+				
+			} else {
+				
+				// Fetch group members asynchronously
+				let query = self.parseObject.relationForKey(ParseGroupModel.groupMembersKey).query()
+				query?.findObjectsInBackgroundWithBlock() {
+					(objects: [PFObject]?, error: NSError?) -> Void in
+					
+					// Cache results
+					if objects != nil && error == nil {
+						if let members = objects {
+							self.cachedGroupMembers = members
+						}
+					}
+					
+					// Pass control back to main thread
+					if let callback = callback {
+						callback(object: self, error: error)
+					}
+				}
 			}
 		}
 	}
