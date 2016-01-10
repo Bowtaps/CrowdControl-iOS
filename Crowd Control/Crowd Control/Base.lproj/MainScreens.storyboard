@@ -24,7 +24,7 @@
                                     <navigationItem title="Settings" id="Tuo-za-RFR">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="aK4-C1-Sdw">
                                             <connections>
-                                                <segue destination="tAC-Gu-wLF" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="dlO-IQ-MVH"/>
+                                                <segue destination="tAC-Gu-wLF" kind="unwind" unwindAction="rewindToGroupList:" id="Vzi-PO-VwV"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Logout" id="pK7-Fg-Qw0">
@@ -66,14 +66,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ANy-dt-CWL" firstAttribute="width" secondItem="dFL-Lm-n5Z" secondAttribute="width" id="0DY-if-aa1"/>
-                            <constraint firstItem="wO5-Bq-1Ft" firstAttribute="top" secondItem="m9O-Oe-5ak" secondAttribute="bottom" id="3Oc-g9-XKT"/>
                             <constraint firstItem="m9O-Oe-5ak" firstAttribute="top" secondItem="gTq-B8-yGx" secondAttribute="bottom" id="4EA-Ve-Lam"/>
+                            <constraint firstItem="wO5-Bq-1Ft" firstAttribute="top" secondItem="dFL-Lm-n5Z" secondAttribute="top" id="BxI-hr-8K8"/>
                             <constraint firstItem="Leg-mb-V3S" firstAttribute="top" secondItem="wO5-Bq-1Ft" secondAttribute="bottom" id="NNv-za-cnM"/>
+                            <constraint firstItem="wO5-Bq-1Ft" firstAttribute="top" secondItem="m9O-Oe-5ak" secondAttribute="bottom" id="Qdm-41-FSe"/>
                             <constraint firstItem="m9O-Oe-5ak" firstAttribute="leading" secondItem="dFL-Lm-n5Z" secondAttribute="leading" id="Rbj-CE-LAU"/>
                             <constraint firstAttribute="trailing" secondItem="wO5-Bq-1Ft" secondAttribute="trailing" id="SUJ-1s-Rnm"/>
                             <constraint firstItem="wO5-Bq-1Ft" firstAttribute="leading" secondItem="dFL-Lm-n5Z" secondAttribute="leading" id="U9j-R0-G8v"/>
                             <constraint firstAttribute="trailing" secondItem="m9O-Oe-5ak" secondAttribute="trailing" id="cIF-IO-qVf"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BxI-hr-8K8"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="logoutButton" destination="pK7-Fg-Qw0" id="fCU-DG-3ud"/>
@@ -97,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKs-vc-MS7">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOP-wm-Yui" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
@@ -146,11 +152,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mKs-vc-MS7" firstAttribute="top" secondItem="rWV-yG-E8k" secondAttribute="bottom" id="1MW-Ky-ccv"/>
+                            <constraint firstItem="mKs-vc-MS7" firstAttribute="top" relation="lessThanOrEqual" secondItem="rWV-yG-E8k" secondAttribute="bottom" id="1MW-Ky-ccv"/>
                             <constraint firstAttribute="trailing" secondItem="mKs-vc-MS7" secondAttribute="trailing" id="AyN-2n-TDm"/>
                             <constraint firstItem="3oI-Fh-wLM" firstAttribute="top" secondItem="mKs-vc-MS7" secondAttribute="bottom" id="DMi-XN-wgf"/>
                             <constraint firstItem="aOP-wm-Yui" firstAttribute="width" secondItem="vaK-h2-GLp" secondAttribute="width" id="af9-8M-TFg"/>
                             <constraint firstItem="mKs-vc-MS7" firstAttribute="leading" secondItem="vaK-h2-GLp" secondAttribute="leading" id="c91-3r-eLH"/>
+                            <constraint firstItem="mKs-vc-MS7" firstAttribute="top" secondItem="vaK-h2-GLp" secondAttribute="top" id="g8l-4B-it6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Group" id="76R-wm-gKC">
@@ -178,7 +185,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="lOE-WG-18h">
-                            <rect key="frame" x="0.0" y="64" width="228" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
