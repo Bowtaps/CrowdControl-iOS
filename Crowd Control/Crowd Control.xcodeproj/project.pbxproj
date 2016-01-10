@@ -17,6 +17,7 @@
 		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
 		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
 		3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015026B1BE9B58300B63F7B /* AppDelegate.swift */; };
+		303BD0721C3205BE0069249E /* GroupOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303BD0711C3205BE0069249E /* GroupOverviewController.swift */; };
 		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
 		30755E661C054D8800E2EFBF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30755E651C054D8800E2EFBF /* UserModel.swift */; };
 		30755E6A1C056D5F00E2EFBF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30755E691C056D5F00E2EFBF /* BaseModel.swift */; };
@@ -97,6 +98,7 @@
 		301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlUITests.swift; sourceTree = "<group>"; };
 		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3015026B1BE9B58300B63F7B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		303BD0711C3205BE0069249E /* GroupOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupOverviewController.swift; path = Controller/GroupOverviewController.swift; sourceTree = "<group>"; };
 		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30755E651C054D8800E2EFBF /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Model/UserModel.swift; sourceTree = "<group>"; };
 		30755E691C056D5F00E2EFBF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModel.swift; path = Model/BaseModel.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				3099A5A31BF6BD4900490571 /* SignupViewController.swift */,
 				309C8C961C029EDC00E1F6AA /* GroupTableController.swift */,
 				30B894231C1FC452001358A6 /* SettingsViewController.swift */,
+				303BD0711C3205BE0069249E /* GroupOverviewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				30B1A8FC1BFC1C5D0021B494 /* ParseUserModel.swift in Sources */,
 				30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */,
 				3099A5A21BF6BA5600490571 /* LoginViewController.swift in Sources */,
+				303BD0721C3205BE0069249E /* GroupOverviewController.swift in Sources */,
 				30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */,
 				300926DE1C092861005F6034 /* ParseUserProfileModel.swift in Sources */,
 			);
