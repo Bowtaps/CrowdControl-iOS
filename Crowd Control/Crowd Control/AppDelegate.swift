@@ -21,7 +21,7 @@ import Optimizely
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	/// The main instance of this class for the entire application.
-	var instance: AppDelegate {
+	static var instance: AppDelegate {
 		get {
 			return UIApplication.sharedApplication().delegate as! AppDelegate
 		}
