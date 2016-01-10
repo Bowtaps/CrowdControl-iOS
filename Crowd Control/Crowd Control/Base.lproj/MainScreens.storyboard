@@ -169,12 +169,13 @@
                     </navigationItem>
                     <connections>
                         <segue destination="UQw-oh-LtU" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="qdW-qe-M57"/>
+                        <segue destination="uTS-AQ-55W" kind="show" identifier="segueToGroupScreens" id="j2F-sy-C4v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDL-SZ-vD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UQw-oh-LtU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1421" y="1575"/>
+            <point key="canvasLocation" x="1806" y="182"/>
         </scene>
         <!--Nearby Groups-->
         <scene sceneID="lRz-LN-tqr">
@@ -397,11 +398,20 @@
                         <outlet property="groupDescriptionLabel" destination="6O4-db-s6z" id="C68-9y-WHP"/>
                         <outlet property="groupLeaderLabel" destination="7lw-Nb-CKI" id="1A0-oh-foZ"/>
                         <outlet property="groupNameLabel" destination="imF-ur-mWo" id="cYL-dY-CQE"/>
+                        <segue destination="uTS-AQ-55W" kind="show" identifier="segueToGroupScreens" id="OWP-Mo-KG6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSk-wy-qMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="561"/>
+            <point key="canvasLocation" x="1806" y="967"/>
+        </scene>
+        <!--GroupScreens-->
+        <scene sceneID="Tq5-XW-ZD1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GroupScreens" id="uTS-AQ-55W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Po-A3-nCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2406" y="561"/>
         </scene>
         <!--WelcomeScreen-->
         <scene sceneID="dcz-jm-qsO">
@@ -429,4 +439,7 @@
             <point key="canvasLocation" x="308" y="561"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OWP-Mo-KG6"/>
+    </inferredMetricsTieBreakers>
 </document>
