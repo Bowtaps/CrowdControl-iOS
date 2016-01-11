@@ -169,7 +169,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="UQw-oh-LtU" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="qdW-qe-M57"/>
-                        <segue destination="uTS-AQ-55W" kind="show" identifier="segueToGroupScreens" id="j2F-sy-C4v"/>
+                        <segue destination="uTS-AQ-55W" kind="presentation" identifier="segueToGroupScreens" id="j2F-sy-C4v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDL-SZ-vD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,7 +398,7 @@
                         <outlet property="groupDescriptionLabel" destination="6O4-db-s6z" id="C68-9y-WHP"/>
                         <outlet property="groupLeaderLabel" destination="7lw-Nb-CKI" id="1A0-oh-foZ"/>
                         <outlet property="groupNameLabel" destination="imF-ur-mWo" id="cYL-dY-CQE"/>
-                        <segue destination="uTS-AQ-55W" kind="show" identifier="segueToGroupScreens" id="OWP-Mo-KG6"/>
+                        <segue destination="uTS-AQ-55W" kind="presentation" identifier="segueToGroupScreens" id="OWP-Mo-KG6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSk-wy-qMs" userLabel="First Responder" sceneMemberID="firstResponder"/>

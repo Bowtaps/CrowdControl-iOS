@@ -16,7 +16,8 @@ class SettingsViewController: UIViewController {
 		
 		let refreshAlert = UIAlertController(title: "Logout", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.Alert)
 		
-		refreshAlert.addAction(UIAlertAction(title: "Logout", style: .Destructive, handler: { (action: UIAlertAction!) in
+		refreshAlert.addAction(UIAlertAction(title: "Logout", style: .Destructive, handler: {
+			(action: UIAlertAction!) in
 			let app = UIApplication.sharedApplication().delegate as! AppDelegate
 			app.modelManager?.logOutCurrentUser()
 			self.performSegueWithIdentifier("unwindToGroupList", sender: self)

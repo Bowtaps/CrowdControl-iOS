@@ -32,12 +32,14 @@ class GroupOverviewController: UIViewController {
 				} else {
 					
 					// Join the group
+					AppDelegate.instance.modelManager!.setCurrentGroup(self.groupToDisplay)
 					self.performSegueWithIdentifier("segueToGroupScreens", sender: self)
 				}
 			}
 		} else {
 			
 			// Operation failed because user is already a member of the group
+			AppDelegate.instance.modelManager!.setCurrentGroup(self.groupToDisplay)
 			self.performSegueWithIdentifier("segueToGroupScreens", sender: self)
 		}
 	}

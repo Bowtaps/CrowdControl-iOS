@@ -13,6 +13,8 @@ import Parse
 /// models, including users and groups.
 class ParseModelManager: ModelManager {
 	
+	var activeGroup: GroupModel?
+	
 	/// Compares the submitted username and password to storage and returns a `UserModel` object if
 	/// the user was successfully logged in. Otherewise, it throws an exception.
 	///
@@ -222,6 +224,12 @@ class ParseModelManager: ModelManager {
 		}
 	}
 	
+	func currentGroup() -> GroupModel? {
+		return activeGroup as GroupModel?
+	}
 	
+	func setCurrentGroup(group: GroupModel?) {
+		self.activeGroup = group
+	}
 	
 }
