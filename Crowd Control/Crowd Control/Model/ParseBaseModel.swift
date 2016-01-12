@@ -55,7 +55,7 @@ class ParseBaseModel: BaseModel {
 	/// - SeeAlso: BaseModel.id
 	var id: String {
 		get {
-			return parseObject[ParseBaseModel.idKey] as! String
+			return parseObject.objectId!
 		}
 	}
 	

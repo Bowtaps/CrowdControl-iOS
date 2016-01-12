@@ -88,7 +88,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9j-Bm-wLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tAC-Gu-wLF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="864" y="1575"/>
+            <point key="canvasLocation" x="1140" y="1604"/>
         </scene>
         <!--Create Group-->
         <scene sceneID="2jg-bG-Pvk">
@@ -169,12 +169,13 @@
                     </navigationItem>
                     <connections>
                         <segue destination="UQw-oh-LtU" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="qdW-qe-M57"/>
+                        <segue destination="uTS-AQ-55W" kind="presentation" identifier="segueToGroupScreens" id="j2F-sy-C4v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDL-SZ-vD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UQw-oh-LtU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1421" y="1575"/>
+            <point key="canvasLocation" x="1806" y="43"/>
         </scene>
         <!--Nearby Groups-->
         <scene sceneID="lRz-LN-tqr">
@@ -266,6 +267,7 @@
                         <outlet property="groupTable" destination="pYU-jJ-Xvq" id="puM-vi-Ub7"/>
                         <outlet property="searchDisplayController" destination="FKb-kw-pOF" id="CXt-Cf-wu6"/>
                         <segue destination="a9o-qo-evj" kind="show" identifier="segueToGroupOverview" id="1ad-EE-OZd"/>
+                        <segue destination="uTS-AQ-55W" kind="presentation" identifier="segueToGroupScreens" id="8Oz-FB-iCY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14N-0V-PRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,11 +399,20 @@
                         <outlet property="groupDescriptionLabel" destination="6O4-db-s6z" id="C68-9y-WHP"/>
                         <outlet property="groupLeaderLabel" destination="7lw-Nb-CKI" id="1A0-oh-foZ"/>
                         <outlet property="groupNameLabel" destination="imF-ur-mWo" id="cYL-dY-CQE"/>
+                        <segue destination="uTS-AQ-55W" kind="presentation" identifier="segueToGroupScreens" id="OWP-Mo-KG6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSk-wy-qMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="561"/>
+            <point key="canvasLocation" x="1806" y="1089"/>
+        </scene>
+        <!--GroupScreens-->
+        <scene sceneID="Tq5-XW-ZD1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GroupScreens" id="uTS-AQ-55W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Po-A3-nCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2406" y="561"/>
         </scene>
         <!--WelcomeScreen-->
         <scene sceneID="dcz-jm-qsO">
@@ -409,7 +420,7 @@
                 <viewControllerPlaceholder storyboardName="WelcomeScreen" id="Mhr-Oo-m0h" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UrA-Gv-W7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="1221"/>
+            <point key="canvasLocation" x="678" y="1225"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V6y-Wc-OZN">
@@ -429,4 +440,7 @@
             <point key="canvasLocation" x="308" y="561"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Oz-FB-iCY"/>
+    </inferredMetricsTieBreakers>
 </document>

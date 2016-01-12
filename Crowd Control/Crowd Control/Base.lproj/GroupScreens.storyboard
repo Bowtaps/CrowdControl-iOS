@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hec-fb-xJE" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="487"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="459"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carl's Awesome Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VO-UV-Vtd">
                                                 <rect key="frame" x="20" y="20" width="374" height="33"/>
@@ -56,6 +56,13 @@
                                                     <constraint firstAttribute="height" constant="100" id="Qcf-iq-QeA"/>
                                                 </constraints>
                                             </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhm-ZA-svC">
+                                                <rect key="frame" x="164" y="397" width="87" height="30"/>
+                                                <state key="normal" title="Leave Group"/>
+                                                <connections>
+                                                    <action selector="onLeaveGroupButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nh9-hl-2LE"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -66,15 +73,23 @@
                                             <constraint firstItem="nY1-rd-r32" firstAttribute="top" secondItem="gRg-Fy-Yzy" secondAttribute="bottom" constant="10" id="AEm-gc-kwh"/>
                                             <constraint firstAttribute="height" constant="487" id="B6S-2I-2z1"/>
                                             <constraint firstAttribute="trailing" secondItem="nY1-rd-r32" secondAttribute="trailing" id="Bia-bz-3kM"/>
+                                            <constraint firstItem="Rhm-ZA-svC" firstAttribute="top" secondItem="nY1-rd-r32" secondAttribute="bottom" constant="32" id="KuC-bl-f5I"/>
                                             <constraint firstItem="gRg-Fy-Yzy" firstAttribute="top" secondItem="6Fh-g4-lyr" secondAttribute="bottom" constant="25" id="PKD-X5-PDn"/>
                                             <constraint firstAttribute="trailing" secondItem="6Fh-g4-lyr" secondAttribute="trailing" id="QWc-cp-TtN"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rhm-ZA-svC" secondAttribute="bottom" constant="32" id="RFh-PK-EkC"/>
                                             <constraint firstAttribute="trailing" secondItem="7VO-UV-Vtd" secondAttribute="trailing" constant="20" id="Wkh-dD-FSh"/>
                                             <constraint firstItem="gRg-Fy-Yzy" firstAttribute="leading" secondItem="hec-fb-xJE" secondAttribute="leading" constant="20" id="b6Z-Dr-S3s"/>
                                             <constraint firstItem="7VO-UV-Vtd" firstAttribute="top" secondItem="hec-fb-xJE" secondAttribute="top" constant="20" id="cwV-Ai-JCj"/>
                                             <constraint firstItem="6Fh-g4-lyr" firstAttribute="top" secondItem="ev1-Jc-fzb" secondAttribute="bottom" constant="10" id="hOc-IZ-H7Q"/>
+                                            <constraint firstItem="Rhm-ZA-svC" firstAttribute="centerX" secondItem="hec-fb-xJE" secondAttribute="centerX" id="iry-jD-NWm"/>
                                             <constraint firstItem="ev1-Jc-fzb" firstAttribute="top" secondItem="7VO-UV-Vtd" secondAttribute="bottom" constant="25" id="tzC-aa-556"/>
                                             <constraint firstItem="7VO-UV-Vtd" firstAttribute="leading" secondItem="hec-fb-xJE" secondAttribute="leading" constant="20" id="zv2-Jd-1SR"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="B6S-2I-2z1"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -95,8 +110,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Group Info" id="tx0-j7-03P"/>
+                    <connections>
+                        <segue destination="qZO-K4-B3N" kind="unwind" identifier="rewindToGroupList" unwindAction="rewindToGroupList:" id="lW7-AB-lg5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <exit id="qZO-K4-B3N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1149" y="-873"/>
         </scene>

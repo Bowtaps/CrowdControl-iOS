@@ -18,7 +18,30 @@ class GroupOverviewController: UIViewController {
 	@IBOutlet weak var groupDescriptionLabel: UILabel!
 	
 	@IBAction func onRequestButtonTapped(sender: AnyObject) {
-		print("Helloo! :D")
+		if groupToDisplay!.addGroupMember((AppDelegate.instance.modelManager?.currentUser()?.profile)!) {
+			groupToDisplay?.saveInBackground {
+				(object: BaseModel?, error: NSError?) -> Void in
+				
+				if error != nil {
+					
+					// Display an alert if an error occured
+					let alert = UIAlertController(title: "Failed to join group", message: "Unable to join the desired group. " + error!.description, preferredStyle: UIAlertControllerStyle.Alert)
+					alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+					self.presentViewController(alert, animated: true, completion: nil)
+					
+				} else {
+					
+					// Join the group
+					AppDelegate.instance.modelManager!.setCurrentGroup(self.groupToDisplay)
+					self.performSegueWithIdentifier("segueToGroupScreens", sender: self)
+				}
+			}
+		} else {
+			
+			// Operation failed because user is already a member of the group
+			AppDelegate.instance.modelManager!.setCurrentGroup(self.groupToDisplay)
+			self.performSegueWithIdentifier("segueToGroupScreens", sender: self)
+		}
 	}
 	
 	override func viewDidLoad() {
