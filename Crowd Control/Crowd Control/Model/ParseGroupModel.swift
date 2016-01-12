@@ -9,7 +9,11 @@
 import Foundation
 import Parse
 
+/// The Parse implementation of the `GroupModel` protocol. Extends `ParseBaseModel` class and
+/// implements the `GroupModel` protocol and is designed to allow access to a group's information,
+/// including the group members, gropu name, and group description.
 class ParseGroupModel: ParseBaseModel, GroupModel {
+	
     /// Parse table name.
     private static let tableName = "Group"
     
@@ -87,7 +91,7 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
         }
     }
 	
-	/// The `UserProfileModel` object who is the designated leader of the group
+	/// The `UserProfileModel` object who is the designated leader of the group.
 	var groupLeader: UserProfileModel? {
 		get {
 			if let parseObject = parseObject[ParseGroupModel.groupLeaderKey] as? PFObject {
@@ -105,8 +109,13 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 		}
 	}
 	
+	
+	
+	/// An internal cache of members of this group stored as their base Parse Objects.
 	private var cachedGroupMembers: [PFObject] = []
 	
+	/// Method for adding a user as a member of the group. Model must be saved afterwards, as this
+	/// method does not automatically save the model.
 	func addGroupMember(member: UserProfileModel) -> Bool {
 		let member = member as! ParseUserProfileModel
 		
@@ -127,6 +136,8 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 		return true
 	}
 	
+	/// Method for removing a user from the group. Model must be saved afterwards, as this method
+	/// does not automatically save the model.
 	func removeGroupMember(member: UserProfileModel) -> Bool {
 		let member = member as! ParseUserProfileModel
 		
@@ -154,6 +165,11 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 		return true
 	}
 	
+	/// Loads this object from Parse storage synchronously. In addition to the normal functionality
+	/// inherited from `ParseBaseModel`, this function also fetches and caches the users who are
+	/// members of this group.
+	///
+	/// - SeeAlso: `ParseBaseModel.load()`
 	override func load() throws {
 		try super.load()
 		
@@ -166,6 +182,11 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 		}
 	}
 	
+	/// Loads this object from Parse storage asynchronously. In addition to the normal functionality
+	/// inherited from `ParseBaseModel`, this function also fetches and caches the users who are
+	/// members of this group.
+	///
+	/// - SeeAlso: `ParseBaseModel.loadInBackground(_:)`
 	override func loadInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?) {
 		super.loadInBackground {
 			(object: BaseModel?, error: NSError?) -> Void in
@@ -233,6 +254,11 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 		return result
 	}
 	
+	/// Fetches all groups in Parse storage asynchronously, returning control to the main thread
+	/// through the provided callback (if any).
+	///
+	/// - Parameter callback: Optional closure that will be called on completion or if an error
+	///                       is encountered.
 	static func getAllInBackground(callback: ((results: [ParseGroupModel]?, error: NSError?) -> Void)?) {
 		let query = PFQuery(className: ParseGroupModel.tableName)
 		query.findObjectsInBackgroundWithBlock {
@@ -251,6 +277,20 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 		}
 	}
 	
+	/// Fetches the first group to which the provided user belongs, if any. If no group is found
+	/// that contains the provided user, then `nil` is returned.
+	///
+	/// This is a blocking function and should be executed on a thread separate from the main
+	/// thread. See `getGroupContainingUserInBackground(_:,_:)` for fetching on a separate thread.
+	/// This function will throw an exception if an error occurs.
+	///
+	/// - Parameter user: The user to search for.
+	/// 
+	/// - Returns: Optional `ParseGroupModel` object that has `user` as a member, or `nil` if no
+	///            such group could be found. This object will be fully loaded from storage such
+	///            that a call to `ParseGroupModel.load()` is not necessary.
+	///
+	/// - SeeAlso: `getGroupContainingUserInBackground(_:,_:)`
 	static func getGroupContainingUser(user: ParseUserProfileModel) throws -> ParseGroupModel? {
 		
 		// Make sure user profile object is freshly loaded
@@ -290,6 +330,19 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 		}
 	}
 	
+	/// Fetches the first group to which the provided user belongs, if any. If no group is found
+	/// that contains the provided user, then `nil` is returned.
+	///
+	///	This function spawns a new thread for querying storage. After successful execution or if an
+	/// error occurs, this function passes control back to the main thread by calling the closure
+	/// that was optionally passed as an argument.
+	///
+	/// - Parameter user: The user to search for.
+	/// - Parameter callback: Optional callback function to call after successful execution or if an
+	///                       error occurs. If `nil` is provided, then the callback will not be
+	///                       called.
+	///
+	/// - SeeAlso: `getGroupContainingUser(_:)`
 	static func getGroupContainingUserInBackground(user: ParseUserProfileModel, callback: ((result: ParseGroupModel?, error: NSError?) -> Void)?) {
 		
 		let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
