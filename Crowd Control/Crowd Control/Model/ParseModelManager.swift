@@ -225,11 +225,38 @@ class ParseModelManager: ModelManager {
 	}
 	
 	func currentGroup() -> GroupModel? {
-		return activeGroup as GroupModel?
+		return activeGroup
 	}
 	
 	func setCurrentGroup(group: GroupModel?) {
 		self.activeGroup = group
+	}
+	
+	func fetchCurrentGroup() throws -> GroupModel? {
+		if let user = currentUser(), profile = user.profile as? ParseUserProfileModel {
+			let group = try ParseGroupModel.getGroupContainingUser(profile) as GroupModel?
+			setCurrentGroup(group)
+			return group
+		} else {
+			return nil
+		}
+	}
+	
+	func fetchCurrentGroupInBackground(callback: ((result: GroupModel?, error: NSError?) -> Void)?) -> Void {
+		if let user = currentUser(), profile = user.profile as? ParseUserProfileModel {
+			ParseGroupModel.getGroupContainingUserInBackground(profile) {
+				(result: ParseGroupModel?, error: NSError?) -> Void in
+				let group = result as? GroupModel
+				if error == nil {
+					self.setCurrentGroup(group)
+				}
+				if let callback = callback {
+					callback(result: group, error: error)
+				}
+			}
+		} else if let callback = callback {
+			callback(result: nil, error: nil)
+		}
 	}
 	
 }

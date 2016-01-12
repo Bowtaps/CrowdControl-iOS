@@ -66,7 +66,7 @@ class GroupTableController: UITableViewController {
 	}
 	
 	@IBAction func doRefresh(sender: AnyObject) {
-		let app = UIApplication.sharedApplication().delegate as! AppDelegate
+		let app = AppDelegate.instance
 		app.modelManager!.fetchGroupsInBackground {
 			(results: [GroupModel]?, error: NSError?) -> Void in
 			if results != nil {
@@ -75,6 +75,13 @@ class GroupTableController: UITableViewController {
 			}
 			if let sender = sender as? UIRefreshControl {
 				sender.endRefreshing()
+			}
+		}
+		
+		app.modelManager!.fetchCurrentGroupInBackground {
+			(result: GroupModel?, error: NSError?) -> Void in
+			if error == nil && result != nil {
+				self.performSegueWithIdentifier("segueToGroupScreens", sender: self)
 			}
 		}
 	}

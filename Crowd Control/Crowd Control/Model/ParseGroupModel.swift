@@ -206,7 +206,7 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
     ///
     /// - Returns: Object of type ParseGroupModel that contains the information
     static func createGroup(name: String, description: String) -> ParseGroupModel {
-        let group = PFObject(className: "Group")
+		let group = PFObject(className: ParseGroupModel.tableName)
         group[self.groupNameKey] = name
         group[self.groupDescriptionKey] = description
         //group[self.groupMembersKey] = members
@@ -246,6 +246,67 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 						groups.append(ParseGroupModel(withParseObject: object))
 					}
 					callback!(results: groups, error: error)
+				}
+			}
+		}
+	}
+	
+	static func getGroupContainingUser(user: ParseUserProfileModel) throws -> ParseGroupModel? {
+		
+		// Make sure user profile object is freshly loaded
+		try user.load()
+		
+		// Build query
+		let query = PFQuery(className: ParseGroupModel.tableName)
+		
+		// Placeholder if matching group is found
+		var parseObject: PFObject? = nil
+		
+		// Execute query, process results
+		let parseObjects = try query.findObjects()
+		for pObject in parseObjects {
+			
+			// Search members for match with given user
+			if let subquery = pObject.relationForKey(ParseGroupModel.groupMembersKey).query() {
+				subquery.whereKey("objectId", equalTo: user.id)
+				subquery.limit = 1
+				
+				// Execute subquery and check for match
+				let parseUsers = try subquery.findObjects()
+				if parseUsers.count > 0 {
+					parseObject = pObject
+					break
+				}
+			}
+		}
+		
+		// If a match is found, build GroupModel and return it
+		if let parseObject = parseObject {
+			let group = ParseGroupModel.init(withParseObject: parseObject)
+			try group.load()
+			return group
+		} else {
+			return nil
+		}
+	}
+	
+	static func getGroupContainingUserInBackground(user: ParseUserProfileModel, callback: ((result: ParseGroupModel?, error: NSError?) -> Void)?) {
+		
+		let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+		dispatch_async(dispatch_get_global_queue(priority, 0)) {
+			
+			var err: NSError? = nil
+			var group: ParseGroupModel? = nil
+			
+			do {
+				group = try getGroupContainingUser(user)
+			} catch {
+				err = error as NSError
+			}
+			
+			dispatch_async(dispatch_get_main_queue()) {
+				if let callback = callback {
+					callback(result: group, error: err)
 				}
 			}
 		}

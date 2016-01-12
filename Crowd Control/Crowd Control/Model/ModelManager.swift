@@ -76,4 +76,8 @@ protocol ModelManager {
 	
 	func setCurrentGroup(group: GroupModel?)
 	
+	func fetchCurrentGroup() throws -> GroupModel?
+	
+	func fetchCurrentGroupInBackground(callback: ((result: GroupModel?, error: NSError?) -> Void)?) -> Void
+	
 }
