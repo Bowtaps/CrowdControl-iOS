@@ -62,6 +62,8 @@
 		C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B21BDC361800C27167 /* GroupModel.swift */; };
 		C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C51BE1BBD800C27167 /* CCUserTest.swift */; };
 		C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */; };
+		C2F59A4A1C342C0100882ED1 /* ParseLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F59A491C342C0100882ED1 /* ParseLocationModel.swift */; };
+		C2F59A4C1C342C4800882ED1 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F59A4B1C342C4800882ED1 /* LocationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		C2D186C51BE1BBD800C27167 /* CCUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserTest.swift; sourceTree = "<group>"; };
 		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseUserModel.swift; path = Model/ParseUserModel.swift; sourceTree = "<group>"; };
 		C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseGroupModel.swift; path = Model/ParseGroupModel.swift; sourceTree = "<group>"; };
+		C2F59A491C342C0100882ED1 /* ParseLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseLocationModel.swift; path = Model/ParseLocationModel.swift; sourceTree = "<group>"; };
+		C2F59A4B1C342C4800882ED1 /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationModel.swift; path = Model/LocationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +296,7 @@
 		308ECFA21BD72E25000E4F21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2F59A4B1C342C4800882ED1 /* LocationModel.swift */,
 				30755E691C056D5F00E2EFBF /* BaseModel.swift */,
 				C2D186B21BDC361800C27167 /* GroupModel.swift */,
 				300926DB1C092861005F6034 /* ParseBaseModel.swift */,
@@ -302,6 +307,7 @@
 				30755E6B1C05752800E2EFBF /* UserProfileModel.swift */,
 				300015751C0A4682005E42A1 /* ModelManager.swift */,
 				300015771C0A479D005E42A1 /* ParseModelManager.swift */,
+				C2F59A491C342C0100882ED1 /* ParseLocationModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -520,6 +526,8 @@
 				30B894241C1FC452001358A6 /* SettingsViewController.swift in Sources */,
 				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
 				3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */,
+				C2F59A4C1C342C4800882ED1 /* LocationModel.swift in Sources */,
+				C2F59A4A1C342C0100882ED1 /* ParseLocationModel.swift in Sources */,
 				300926DD1C092861005F6034 /* ParseBaseModel.swift in Sources */,
 				30755E661C054D8800E2EFBF /* UserModel.swift in Sources */,
 				30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */,
