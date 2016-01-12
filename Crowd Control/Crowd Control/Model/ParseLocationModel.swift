@@ -64,7 +64,7 @@ class ParseLocationModel: ParseBaseModel, LocationModel{
     /// to parse so that they can be sent encrypted to the intended recipient
     var recipient: UserProfileModel {
         get {
-            return parseObject[ParseLocationModel.recipientKey] as! UserProfileModel
+            return self.recipient 
         }
     }
     
@@ -72,7 +72,7 @@ class ParseLocationModel: ParseBaseModel, LocationModel{
     /// parse.
     var sender: UserProfileModel {
         get {
-            return parseObject[ParseLocationModel.senderKey] as! UserProfileModel
+            return self.recipient
         }
     }
 }
