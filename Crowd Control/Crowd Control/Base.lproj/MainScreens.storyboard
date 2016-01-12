@@ -24,7 +24,7 @@
                                     <navigationItem title="Settings" id="Tuo-za-RFR">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="aK4-C1-Sdw">
                                             <connections>
-                                                <segue destination="tAC-Gu-wLF" kind="unwind" unwindAction="rewindToGroupList:" id="Vzi-PO-VwV"/>
+                                                <segue destination="tAC-Gu-wLF" kind="unwind" identifier="unwindToGroupList" unwindAction="rewindToGroupList:" id="Vzi-PO-VwV"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Logout" id="pK7-Fg-Qw0">
@@ -441,6 +441,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8Oz-FB-iCY"/>
+        <segue reference="j2F-sy-C4v"/>
     </inferredMetricsTieBreakers>
 </document>
