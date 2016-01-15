@@ -7,8 +7,9 @@
 //
 
 import XCTest
-//import Parse
+
 @testable import Crowd_Control
+import Parse
 
 class ParseUserTest: XCTestCase{
     func testLoad(){
@@ -26,5 +27,10 @@ class ParseUserTest: XCTestCase{
             }
         }*/
         //TODO:  Need to rework this
+        let parseUser = try? PFUser.logInWithUsername("user4", password: "test")
+        let user = ParseUserModel(withParseUser: parseUser!)
+        try? user.profile.load()
+        print(user.profile)
+        XCTAssert(true, "Pass")        
     }
 }
