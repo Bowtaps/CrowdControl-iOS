@@ -20,7 +20,7 @@ protocol LocationModel: BaseModel{
     /// to parse so that they can be sent encrypted to the intended recipient
     var recipient: UserProfileModel {get}
     
-    /// This is the Current users' UserProfileModel holding the reference for the storage on 
+    /// This is the Current users' `UserProfileModel` holding the reference for the storage on 
     /// parse.
     var sender: UserProfileModel {get}
 }

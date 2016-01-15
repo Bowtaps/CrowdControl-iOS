@@ -51,8 +51,8 @@ protocol ModelManager {
 	///
 	/// - Parameter username: The username of the new user. Must be unique from all other users.
 	/// - Parameter password: The password of the new user.
-	/// - Parameter callback: The callback function that will be executed after the operation
-	///                       is complete, either successfully or unsuccessfully.
+	/// - Parameter callback: The callback function that will be executed after the operation is
+	///                       complete, either successfully or unsuccessfully.
 	func createUserInBackground(username: String, email: String, password: String, callback: ((user: UserModel?, error: NSError?) -> Void)?) -> Void
 	
 	/// Retrieves the currently logged-in user. If no user is logged in, returns `nil`.
@@ -90,17 +90,17 @@ protocol ModelManager {
 	///
 	/// This method deals exclusively with cached values. In order to update the cached value,
 	/// either set the cached value directly using `setCurrentGroup(_:)` or allowing it to be set
-	/// automatically using `fetchCurrentGroup()->GroupModel?` and
-	/// `fetchCurrentGroupInBackground(_:)`.
+	/// automatically using `fetchCurrentGroup()` and `fetchCurrentGroupInBackground(_:)`.
 	///
-	/// - Returns: The group of which the logged in user (if any) is a member of, or `nil` if no
-	///            such group exists.
+	/// - Returns: The `GroupModel` of which the logged in user (if any) is a member of, or `nil` if
+	///            no such group exists.
 	func currentGroup() -> GroupModel?
 	
 	/// Sets the current cached value of the active group. Set the value to `nil` to indicate that
 	/// there are no currently active groups. This function does not modify storage in anyway.
 	///
-	/// - Parameter group: The current active group, or `nil` if no groups are currently active.
+	/// - Parameter group: The current active `GroupModel`, or `nil` if no groups are currently
+	///                    active.
 	func setCurrentGroup(group: GroupModel?)
 	
 	/// Gets the current active group from storage. If a user is currently logged in and is member
@@ -111,7 +111,7 @@ protocol ModelManager {
 	/// This is a blocking function that can take several seconds to complete. If an operation
 	/// fails, then an exception will be thrown.
 	///
-	/// - Returns: The active group or nil if no group is active.
+	/// - Returns: The active `GroupModel` or `nil` if no group is active.
 	func fetchCurrentGroup() throws -> GroupModel?
 	
 	/// Gets the current active group from storage asynchronously. If a user is currently logged in

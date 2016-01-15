@@ -43,7 +43,7 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	///
 	/// - Parameter withParseUser: The Parse user to tie this model to the
 	///                            Parse database.
-	/// - Parameter profile: An optional user profile model to connect to this user. If no value is
+	/// - Parameter profile: An optional `UserProfileModel` to connect to this user. If no value is
 	///                      or `nil` is provided, this constructor will attempt to get the profile
 	///						 from the `withParseUser` model.
 	///
@@ -119,8 +119,8 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	
 	
 	
-	/// Main function for creating a new user. Automatically creates a corresponding user profile
-	/// and returns both in a tuple.
+	/// Main function for creating a new user. Automatically creates a corresponding
+	/// `UserProfileModel` and returns both in a tuple.
 	/// 
 	/// - Note: Both returned objects must be saved individually before they are added to the
 	///         database.
@@ -128,7 +128,8 @@ class ParseUserModel: ParseBaseModel, UserModel {
 	/// - Parameter username: The new user's username.
 	/// - Parameter password: The new user's password.
 	///
-	/// - Returns: A tuple containing the newly created user object and its corresponding profile.
+	/// - Returns: A tuple containing the newly created `UserModel` object and its corresponding
+	///            `UserProfileModel`.
 	static func createFromSignUp(username: String, password: String) -> (user: ParseUserModel, profile: ParseUserProfileModel) {
 		
 		// Create new profile object

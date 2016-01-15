@@ -33,7 +33,7 @@ protocol GroupModel: BaseModel{
     var groupName: String {get set}
 	
 	/// List of users who are members of the group. This property can only be modified by the
-	/// `addGroupMember(_:) -> Bool` and `removeGroupMember(_:) -> Bool` methods.
+	/// `addGroupMember(_:)` and `removeGroupMember(_:)` methods.
     var groupMembers: [UserProfileModel] {get}
 	
 	/// The user who is the designated leader of the group, usually the user who created the group.

@@ -101,7 +101,7 @@ class ParseModelManager: ModelManager {
 	/// - Parameter username: The username of the new user. Must be unique from all other users.
 	/// - Parameter password: The password of the new user.
 	///
-	/// - Returns: The newly created user model if the operation is successful.
+	/// - Returns: The newly created `UserModel` if the operation is successful.
 	func createUser(username: String, email: String, password: String) throws -> UserModel {
 		
 		// Create and fill models
@@ -120,7 +120,7 @@ class ParseModelManager: ModelManager {
 	}
 	
 	/// Attempts to create a new user in the system, ensuring that the given username is unique.
-	/// Also creates the corresponding user profile object. Both objects are then stored in the
+	/// Also creates the corresponding `UserProfileObject`. Both objects are then stored in the
 	/// server.
 	///
 	/// This is an asynchronous function that will pass control back to the main thread by executing
@@ -175,7 +175,7 @@ class ParseModelManager: ModelManager {
 
 	/// Retrieves the currently logged-in user. If no user is logged in, returns `nil`.
 	///
-	/// - Returns: The current user if one is logged in, or `nil` if no user is logged in.
+	/// - Returns: The current `UserModel` if one is logged in, or `nil` if no user is logged in.
 	func currentUser() -> UserModel? {
 		if let user = PFUser.currentUser() {
 			return ParseUserModel(withParseUser: user)
@@ -203,7 +203,7 @@ class ParseModelManager: ModelManager {
 	/// This is a blocking function that can take several seconds to complete. If an operation
 	/// fails, then an exception will be thrown.
 	///
-	/// - Returns: Array of group models in storage.
+	/// - Returns: Array of all `GroupModel` objects in storage.
 	func fetchGroups() throws -> [GroupModel] {
 		var groups: [GroupModel] = []
 		let parseGroups = try ParseGroupModel.getAll()
@@ -243,11 +243,10 @@ class ParseModelManager: ModelManager {
 	///
 	/// This method deals exclusively with cached values. In order to update the cached value,
 	/// either set the cached value directly using `setCurrentGroup(_:)` or allowing it to be set
-	/// automatically using `fetchCurrentGroup()->GroupModel?` and
-	/// `fetchCurrentGroupInBackground(_:)`.
+	/// automatically using `fetchCurrentGroup()` and `fetchCurrentGroupInBackground(_:)`.
 	///
-	/// - Returns: The group of which the logged in user (if any) is a member of, or `nil` if no
-	///            such group exists.
+	/// - Returns: The `GroupModel` of which the logged in user (if any) is a member of, or `nil` if
+	///            no such group exists.
 	func currentGroup() -> GroupModel? {
 		return activeGroup
 	}
@@ -255,7 +254,8 @@ class ParseModelManager: ModelManager {
 	/// Sets the current cached value of the active group. Set the value to `nil` to indicate that
 	/// there are no currently active groups. This function does not modify storage in anyway.
 	///
-	/// - Parameter group: The current active group, or `nil` if no groups are currently active.
+	/// - Parameter group: The current active `GroupModel`, or `nil` if no groups are currently
+	///                    active.
 	func setCurrentGroup(group: GroupModel?) {
 		self.activeGroup = group
 	}
@@ -268,7 +268,9 @@ class ParseModelManager: ModelManager {
 	/// This is a blocking function that can take several seconds to complete. If an operation
 	/// fails, then an exception will be thrown.
 	///
-	/// - Returns: The active group or nil if no group is active.
+	/// - Returns: The active `GroupModel` or `nil` if no group is active.
+	///
+	/// - SeeAlso: fetchCurrentGroupInBackground(_:)
 	func fetchCurrentGroup() throws -> GroupModel? {
 		if let user = currentUser(), profile = user.profile as? ParseUserProfileModel {
 			let group = try ParseGroupModel.getGroupContainingUser(profile) as GroupModel?
@@ -289,6 +291,8 @@ class ParseModelManager: ModelManager {
 	///
 	/// - Parameter callback: The callback function that will be executed after the operation is
 	///                       complete, either successfully or unsuccessfully.
+	///
+	/// - SeeAlso: fetchCurrentGroup()
 	func fetchCurrentGroupInBackground(callback: ((result: GroupModel?, error: NSError?) -> Void)?) -> Void {
 		if let user = currentUser(), profile = user.profile as? ParseUserProfileModel {
 			ParseGroupModel.getGroupContainingUserInBackground(profile) {

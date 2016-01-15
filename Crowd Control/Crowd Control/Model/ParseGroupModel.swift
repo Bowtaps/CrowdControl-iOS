@@ -11,7 +11,7 @@ import Parse
 
 /// The Parse implementation of the `GroupModel` protocol. Extends `ParseBaseModel` class and
 /// implements the `GroupModel` protocol and is designed to allow access to a group's information,
-/// including the group members, gropu name, and group description.
+/// including the group members, group name, and group description.
 class ParseGroupModel: ParseBaseModel, GroupModel {
 	
     /// Parse table name.
@@ -222,6 +222,7 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 	}
 	
     /// Function to create a group if there is not one that exists
+	///
     /// - Parameter name: String containing the group name
     /// - Parameter description: String containing the description of the group
     ///
@@ -281,8 +282,8 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 	/// that contains the provided user, then `nil` is returned.
 	///
 	/// This is a blocking function and should be executed on a thread separate from the main
-	/// thread. See `getGroupContainingUserInBackground(_:,_:)` for fetching on a separate thread.
-	/// This function will throw an exception if an error occurs.
+	/// thread. See `getGroupContainingUserInBackground(_:callback:)` for fetching on a separate
+	/// thread. This function will throw an exception if an error occurs.
 	///
 	/// - Parameter user: The user to search for.
 	/// 
@@ -290,7 +291,7 @@ class ParseGroupModel: ParseBaseModel, GroupModel {
 	///            such group could be found. This object will be fully loaded from storage such
 	///            that a call to `ParseGroupModel.load()` is not necessary.
 	///
-	/// - SeeAlso: `getGroupContainingUserInBackground(_:,_:)`
+	/// - SeeAlso: `getGroupContainingUserInBackground(_:callback:)`
 	static func getGroupContainingUser(user: ParseUserProfileModel) throws -> ParseGroupModel? {
 		
 		// Make sure user profile object is freshly loaded

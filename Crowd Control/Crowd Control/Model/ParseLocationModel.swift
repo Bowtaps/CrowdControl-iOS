@@ -9,7 +9,9 @@
 import Foundation
 import Parse
 
-class ParseLocationModel: ParseBaseModel, LocationModel{
+/// Parse implementation of the `LocationModel` protocol. Extends the `ParseBaseModel` class.
+class ParseLocationModel: ParseBaseModel, LocationModel {
+	
     /// Parse table name.
     private static let tableName = "Group"
     
@@ -32,8 +34,7 @@ class ParseLocationModel: ParseBaseModel, LocationModel{
     
     /// Class constructor. Initializes the isntance from a `PFObject`.
     ///
-    /// - Parameter withParseObject: The Parse object to tie this model to the
-    ///                              Parse database.
+    /// - Parameter withParseObject: The Parse object to tie this model to the Parse database.
     ///
     /// - SeeAlso: PFObject
     override init(withParseObject object: PFObject) {
@@ -60,23 +61,36 @@ class ParseLocationModel: ParseBaseModel, LocationModel{
         }
     }
     
-    /// UserProfileModel holding the recipient information when the locations are being sent
-    /// to parse so that they can be sent encrypted to the intended recipient
+    /// `UserProfileModel` holding the recipient information when the locations are being sent to
+	/// parse so that they can be sent encrypted to the intended recipient
     var recipient: UserProfileModel {
         get {
             return self.recipient 
         }
     }
     
-    /// This is the Current users' UserProfileModel holding the reference for the storage on
-    /// parse.
+    /// This is the Current users' `UserProfileModel` holding the reference for the storage on
+	/// parse.
     var sender: UserProfileModel {
         get {
             return self.recipient
         }
     }
-    
-    static func fetchLocationsForUser(user: ParseUserProfileModel) throws -> [ParseLocationModel]?{
+	
+	/// Fetches all locations sent from storage that were sent to the given user.
+	/// 
+	/// This is a blocking function that can take a while to complete. This function should not be
+	/// called on the UI thread.
+	///
+	/// - Parameter user: The `ParseUserProfileModel` object for which to fetch `ParseLocationModel`
+	///                   objects from storage.
+	///
+	/// - Returns: An array of `ParseLocationModel` objects if the operation was successful, or
+	///            `nil` if the operation was unsuccessful. It is possible for the returned array to
+	///            be empty if no matching `ParseLocationModel` objects are found.
+	///
+	/// - SeeAlso: fetchLocationsForUserInBackground(_:callback:)
+    static func fetchLocationsForUser(user: ParseUserProfileModel) throws -> [ParseLocationModel]? {
         // Make sure user profile object is freshly loaded
         try user.load()
         
@@ -95,8 +109,18 @@ class ParseLocationModel: ParseBaseModel, LocationModel{
         return locations
     }
     
-    /// Fetches all locations for the user
-    static func fetchLocationsForUserInBackground(user: ParseUserProfileModel, callback: ((result: ParseLocationModel?, error: NSError?) -> Void)?){
+	/// Fetches all locations sent from storage that were sent to the given user asynchronously.
+	///
+	/// This function spawns a new thread before executing and returns control to the calling thread
+	/// via a call to the optionally provided callback function.
+	///
+	/// - Parameter user: The `ParseUserProfileModel` object for which to fetch `ParseLocationModel`
+	///                   objects from storage.
+	/// - Parameter callback: The callback method that will be used to return control to the calling
+	///                       thread.
+	///
+	/// - SeeAlso: fetchLocationsForUser(_:)
+    static func fetchLocationsForUserInBackground(user: ParseUserProfileModel, callback: ((result: ParseLocationModel?, error: NSError?) -> Void)?) {
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
             let error: NSError? = nil

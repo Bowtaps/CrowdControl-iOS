@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-/// This class extends the `ParseBaseModel` class and implements the `UserModel`
+/// This class extends the `ParseBaseModel` class and implements the `UserProfileModel`
 /// protocol and is the class to access a user's public profile information
 /// from Parse.
 class ParseUserProfileModel: ParseBaseModel, UserProfileModel {
