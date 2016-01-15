@@ -272,12 +272,12 @@
 			children = (
 				30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */,
 				30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */,
-				30F9F3A91BE8A78400D03B6A /* MapViewController.swift */,
-				3099A5A11BF6BA5600490571 /* LoginViewController.swift */,
-				3099A5A31BF6BD4900490571 /* SignupViewController.swift */,
-				309C8C961C029EDC00E1F6AA /* GroupTableController.swift */,
-				30B894231C1FC452001358A6 /* SettingsViewController.swift */,
 				303BD0711C3205BE0069249E /* GroupOverviewController.swift */,
+				309C8C961C029EDC00E1F6AA /* GroupTableController.swift */,
+				3099A5A11BF6BA5600490571 /* LoginViewController.swift */,
+				30F9F3A91BE8A78400D03B6A /* MapViewController.swift */,
+				30B894231C1FC452001358A6 /* SettingsViewController.swift */,
+				3099A5A31BF6BD4900490571 /* SignupViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -285,10 +285,10 @@
 		308ECFA11BD72E20000E4F21 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
 				301234911BD05B39007C3ABB /* GroupScreens.storyboard */,
-				30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */,
+				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
 				309C8C931C027FF500E1F6AA /* MainScreens.storyboard */,
+				30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -296,18 +296,18 @@
 		308ECFA21BD72E25000E4F21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C2F59A4B1C342C4800882ED1 /* LocationModel.swift */,
 				30755E691C056D5F00E2EFBF /* BaseModel.swift */,
 				C2D186B21BDC361800C27167 /* GroupModel.swift */,
+				C2F59A4B1C342C4800882ED1 /* LocationModel.swift */,
+				300015751C0A4682005E42A1 /* ModelManager.swift */,
 				300926DB1C092861005F6034 /* ParseBaseModel.swift */,
 				C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */,
+				C2F59A491C342C0100882ED1 /* ParseLocationModel.swift */,
+				300015771C0A479D005E42A1 /* ParseModelManager.swift */,
 				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
 				300926DC1C092861005F6034 /* ParseUserProfileModel.swift */,
 				30755E651C054D8800E2EFBF /* UserModel.swift */,
 				30755E6B1C05752800E2EFBF /* UserProfileModel.swift */,
-				300015751C0A4682005E42A1 /* ModelManager.swift */,
-				300015771C0A479D005E42A1 /* ParseModelManager.swift */,
-				C2F59A491C342C0100882ED1 /* ParseLocationModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
