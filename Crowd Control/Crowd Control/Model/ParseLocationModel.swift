@@ -75,4 +75,35 @@ class ParseLocationModel: ParseBaseModel, LocationModel{
             return self.recipient
         }
     }
+    
+    static func fetchLocationsForUser(user: ParseUserProfileModel) throws -> [ParseLocationModel]?{
+        // Make sure user profile object is freshly loaded
+        try user.load()
+        
+        // Build query
+        let query = PFQuery(className: ParseLocationModel.tableName)
+        
+        // Execute query, process results
+        query.whereKey("To", equalTo: user)
+        let parseObjects = try query.findObjects()
+        var locations: [ParseLocationModel] = []
+        for obj in parseObjects{
+            let newLoc = ParseLocationModel(withParseObject: obj)
+            locations.append(newLoc)
+        }
+        
+        return locations
+    }
+    
+    /// Fetches all locations for the user
+    static func fetchLocationsForUserInBackground(user: ParseUserProfileModel, callback: ((result: ParseLocationModel?, error: NSError?) -> Void)?){
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            let error: NSError? = nil
+            let result: ParseLocationModel? = nil
+            if let callback = callback {
+                callback(result: result, error: error)
+            }
+        }
+    }
 }
