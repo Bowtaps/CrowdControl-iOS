@@ -19,7 +19,14 @@ import Optimizely
 /// accessed from anywhere in the app.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+	
+	/// The main instance of this class for the entire application.
+	static var instance: AppDelegate {
+		get {
+			return UIApplication.sharedApplication().delegate as! AppDelegate
+		}
+	}
+	
 	/// Optional reference to the current app window.
 	var window: UIWindow?
 
@@ -45,7 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// Once connections to Parse have been initialzied, initialize the Parse model manager
 		modelManager = ParseModelManager()
-		PFUser.logOut()
 		
 		return true
 	}
@@ -75,7 +81,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-
 
 }
 

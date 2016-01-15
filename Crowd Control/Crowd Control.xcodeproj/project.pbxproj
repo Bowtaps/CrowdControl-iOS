@@ -17,6 +17,7 @@
 		301234A31BD05B39007C3ABB /* Crowd_ControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234A21BD05B39007C3ABB /* Crowd_ControlTests.swift */; };
 		301234AE1BD05B39007C3ABB /* Crowd_ControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */; };
 		3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015026B1BE9B58300B63F7B /* AppDelegate.swift */; };
+		303BD0721C3205BE0069249E /* GroupOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303BD0711C3205BE0069249E /* GroupOverviewController.swift */; };
 		306628311BD8A11600524739 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306628301BD8A11600524739 /* MapKit.framework */; };
 		30755E661C054D8800E2EFBF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30755E651C054D8800E2EFBF /* UserModel.swift */; };
 		30755E6A1C056D5F00E2EFBF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30755E691C056D5F00E2EFBF /* BaseModel.swift */; };
@@ -32,6 +33,8 @@
 		3076F0441BFD45CC002E840D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3076F0411BFD45CC002E840D /* FBSDKShareKit.framework */; };
 		3099A5A21BF6BA5600490571 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A5A11BF6BA5600490571 /* LoginViewController.swift */; };
 		3099A5A41BF6BD4900490571 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099A5A31BF6BD4900490571 /* SignupViewController.swift */; };
+		309C8C951C027FF500E1F6AA /* MainScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309C8C931C027FF500E1F6AA /* MainScreens.storyboard */; };
+		309C8C971C029EDC00E1F6AA /* GroupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309C8C961C029EDC00E1F6AA /* GroupTableController.swift */; };
 		30B1A8F91BFC1C080021B494 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30B1A8F61BFC1C080021B494 /* FacebookSDKStrings.bundle */; };
 		30B1A8FA1BFC1C080021B494 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A8F71BFC1C080021B494 /* FBSDKCoreKit.framework */; };
 		30B1A8FB1BFC1C080021B494 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A8F81BFC1C080021B494 /* FBSDKLoginKit.framework */; };
@@ -48,17 +51,19 @@
 		30B1A9101BFC1F5C0021B494 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A90F1BFC1F5C0021B494 /* libz.tbd */; };
 		30B1A9161BFC344A0021B494 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A9151BFC344A0021B494 /* Social.framework */; };
 		30B1A9181BFC34500021B494 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1A9171BFC34500021B494 /* Accounts.framework */; };
+		30B894241C1FC452001358A6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B894231C1FC452001358A6 /* SettingsViewController.swift */; };
 		30F9F3A61BE8A76C00D03B6A /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */; };
 		30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */; };
 		30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */; };
 		30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3A91BE8A78400D03B6A /* MapViewController.swift */; };
-		30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */; };
 		C2A724041C0E133300692EE4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724011C0E133300692EE4 /* MobileCoreServices.framework */; };
 		C2A724051C0E133300692EE4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724021C0E133300692EE4 /* Fabric.framework */; };
 		C2A724061C0E133300692EE4 /* Optimizely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A724031C0E133300692EE4 /* Optimizely.framework */; };
 		C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186B21BDC361800C27167 /* GroupModel.swift */; };
 		C2D186C61BE1BBD800C27167 /* CCUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186C51BE1BBD800C27167 /* CCUserTest.swift */; };
 		C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */; };
+		C2F59A4A1C342C0100882ED1 /* ParseLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F59A491C342C0100882ED1 /* ParseLocationModel.swift */; };
+		C2F59A4C1C342C4800882ED1 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F59A4B1C342C4800882ED1 /* LocationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,7 @@
 		301234AD1BD05B39007C3ABB /* Crowd_ControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crowd_ControlUITests.swift; sourceTree = "<group>"; };
 		301234AF1BD05B39007C3ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3015026B1BE9B58300B63F7B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		303BD0711C3205BE0069249E /* GroupOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupOverviewController.swift; path = Controller/GroupOverviewController.swift; sourceTree = "<group>"; };
 		306628301BD8A11600524739 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30755E651C054D8800E2EFBF /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Model/UserModel.swift; sourceTree = "<group>"; };
 		30755E691C056D5F00E2EFBF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseModel.swift; path = Model/BaseModel.swift; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 		3076F0411BFD45CC002E840D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		3099A5A11BF6BA5600490571 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		3099A5A31BF6BD4900490571 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = Controller/SignupViewController.swift; sourceTree = "<group>"; };
+		309C8C941C027FF500E1F6AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainScreens.storyboard; sourceTree = "<group>"; };
+		309C8C961C029EDC00E1F6AA /* GroupTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableController.swift; sourceTree = "<group>"; };
 		30B1A8F61BFC1C080021B494 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = "FacebookSDKs-iOS-20151111/FacebookSDKStrings.bundle"; sourceTree = "<group>"; };
 		30B1A8F71BFC1C080021B494 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		30B1A8F81BFC1C080021B494 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
@@ -125,11 +133,11 @@
 		30B1A90F1BFC1F5C0021B494 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		30B1A9151BFC344A0021B494 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		30B1A9171BFC34500021B494 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		30B894231C1FC452001358A6 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; };
 		30F9F3A51BE8A76C00D03B6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WelcomeScreen.storyboard; sourceTree = "<group>"; };
 		30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = Controller/ChatViewController.swift; sourceTree = "<group>"; };
 		30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupInfoViewController.swift; path = Controller/GroupInfoViewController.swift; sourceTree = "<group>"; };
 		30F9F3A91BE8A78400D03B6A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controller/MapViewController.swift; sourceTree = "<group>"; };
-		30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controller/WelcomeViewController.swift; sourceTree = "<group>"; };
 		C2A724011C0E133300692EE4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCoreServices.framework; sourceTree = "<group>"; };
 		C2A724021C0E133300692EE4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		C2A724031C0E133300692EE4 /* Optimizely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Optimizely.framework; sourceTree = "<group>"; };
@@ -137,6 +145,8 @@
 		C2D186C51BE1BBD800C27167 /* CCUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCUserTest.swift; sourceTree = "<group>"; };
 		C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseUserModel.swift; path = Model/ParseUserModel.swift; sourceTree = "<group>"; };
 		C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseGroupModel.swift; path = Model/ParseGroupModel.swift; sourceTree = "<group>"; };
+		C2F59A491C342C0100882ED1 /* ParseLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseLocationModel.swift; path = Model/ParseLocationModel.swift; sourceTree = "<group>"; };
+		C2F59A4B1C342C4800882ED1 /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationModel.swift; path = Model/LocationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,9 +272,11 @@
 			children = (
 				30F9F3A71BE8A78400D03B6A /* ChatViewController.swift */,
 				30F9F3A81BE8A78400D03B6A /* GroupInfoViewController.swift */,
-				30F9F3A91BE8A78400D03B6A /* MapViewController.swift */,
-				30F9F3AA1BE8A78400D03B6A /* WelcomeViewController.swift */,
+				303BD0711C3205BE0069249E /* GroupOverviewController.swift */,
+				309C8C961C029EDC00E1F6AA /* GroupTableController.swift */,
 				3099A5A11BF6BA5600490571 /* LoginViewController.swift */,
+				30F9F3A91BE8A78400D03B6A /* MapViewController.swift */,
+				30B894231C1FC452001358A6 /* SettingsViewController.swift */,
 				3099A5A31BF6BD4900490571 /* SignupViewController.swift */,
 			);
 			name = Controller;
@@ -273,8 +285,9 @@
 		308ECFA11BD72E20000E4F21 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
 				301234911BD05B39007C3ABB /* GroupScreens.storyboard */,
+				301234961BD05B39007C3ABB /* LaunchScreen.storyboard */,
+				309C8C931C027FF500E1F6AA /* MainScreens.storyboard */,
 				30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */,
 			);
 			name = View;
@@ -285,14 +298,16 @@
 			children = (
 				30755E691C056D5F00E2EFBF /* BaseModel.swift */,
 				C2D186B21BDC361800C27167 /* GroupModel.swift */,
+				C2F59A4B1C342C4800882ED1 /* LocationModel.swift */,
+				300015751C0A4682005E42A1 /* ModelManager.swift */,
 				300926DB1C092861005F6034 /* ParseBaseModel.swift */,
 				C2D186CB1BE58EA500C27167 /* ParseGroupModel.swift */,
+				C2F59A491C342C0100882ED1 /* ParseLocationModel.swift */,
+				300015771C0A479D005E42A1 /* ParseModelManager.swift */,
 				C2D186C71BE1BC5400C27167 /* ParseUserModel.swift */,
 				300926DC1C092861005F6034 /* ParseUserProfileModel.swift */,
 				30755E651C054D8800E2EFBF /* UserModel.swift */,
 				30755E6B1C05752800E2EFBF /* UserProfileModel.swift */,
-				300015751C0A4682005E42A1 /* ModelManager.swift */,
-				300015771C0A479D005E42A1 /* ParseModelManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -462,6 +477,7 @@
 				301234951BD05B39007C3ABB /* Assets.xcassets in Resources */,
 				30F9F3A61BE8A76C00D03B6A /* WelcomeScreen.storyboard in Resources */,
 				301234931BD05B39007C3ABB /* GroupScreens.storyboard in Resources */,
+				309C8C951C027FF500E1F6AA /* MainScreens.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,19 +520,23 @@
 			files = (
 				300015781C0A479D005E42A1 /* ParseModelManager.swift in Sources */,
 				C2D186B31BDC361800C27167 /* GroupModel.swift in Sources */,
+				309C8C971C029EDC00E1F6AA /* GroupTableController.swift in Sources */,
 				3099A5A41BF6BD4900490571 /* SignupViewController.swift in Sources */,
 				30755E6C1C05752800E2EFBF /* UserProfileModel.swift in Sources */,
+				30B894241C1FC452001358A6 /* SettingsViewController.swift in Sources */,
 				C2D186CC1BE58EA500C27167 /* ParseGroupModel.swift in Sources */,
 				3015026C1BE9B58300B63F7B /* AppDelegate.swift in Sources */,
+				C2F59A4C1C342C4800882ED1 /* LocationModel.swift in Sources */,
+				C2F59A4A1C342C0100882ED1 /* ParseLocationModel.swift in Sources */,
 				300926DD1C092861005F6034 /* ParseBaseModel.swift in Sources */,
 				30755E661C054D8800E2EFBF /* UserModel.swift in Sources */,
 				30F9F3AB1BE8A78400D03B6A /* ChatViewController.swift in Sources */,
-				30F9F3AE1BE8A78400D03B6A /* WelcomeViewController.swift in Sources */,
 				300015761C0A4682005E42A1 /* ModelManager.swift in Sources */,
 				30755E6A1C056D5F00E2EFBF /* BaseModel.swift in Sources */,
 				30B1A8FC1BFC1C5D0021B494 /* ParseUserModel.swift in Sources */,
 				30F9F3AC1BE8A78400D03B6A /* GroupInfoViewController.swift in Sources */,
 				3099A5A21BF6BA5600490571 /* LoginViewController.swift in Sources */,
+				303BD0721C3205BE0069249E /* GroupOverviewController.swift in Sources */,
 				30F9F3AD1BE8A78400D03B6A /* MapViewController.swift in Sources */,
 				300926DE1C092861005F6034 /* ParseUserProfileModel.swift in Sources */,
 			);
@@ -569,6 +589,14 @@
 				301234971BD05B39007C3ABB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		309C8C931C027FF500E1F6AA /* MainScreens.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				309C8C941C027FF500E1F6AA /* Base */,
+			);
+			name = MainScreens.storyboard;
 			sourceTree = "<group>";
 		};
 		30F9F3A41BE8A76C00D03B6A /* WelcomeScreen.storyboard */ = {
@@ -669,6 +697,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -691,6 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

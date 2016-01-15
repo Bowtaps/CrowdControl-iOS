@@ -38,8 +38,8 @@ protocol BaseModel {
 	/// Loads this object from storage, either local or remote as determined by the implementation.
 	///
 	/// This is a blocking function and should be executed on a thread separate from the main
-	/// thread. See `loadInBackground()` for loading this object on a separate thread. This function
-	/// will throw an exception if an error occurs.
+	/// thread. See `loadInBackground(_:)` for loading this object on a separate thread. This
+	/// function will throw an exception if an error occurs.
 	///
 	/// - SeeAlso: `loadInBackground(_:)`
 	func load() throws
@@ -60,8 +60,8 @@ protocol BaseModel {
 	/// Saves this object storage, either local or remote as determined by the implementation.
 	///
 	/// This is a blocking function and should be executed on a thread separate from the main
-	/// thread. See `saveInBackground()` for saving this object on a separate thread. This function
-	/// will throw an exception if an error occurs.
+	/// thread. See `saveInBackground(_:)` for saving this object on a separate thread. This
+	/// function will throw an exception if an error occurs.
 	///
 	/// - SeeAlso: `saveInBackground(_:)`
 	func save() throws

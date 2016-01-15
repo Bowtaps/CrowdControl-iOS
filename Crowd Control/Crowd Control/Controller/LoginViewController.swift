@@ -19,11 +19,22 @@ import UIKit
 /// This class is a stub, with methods to be implemented as needed
 class LoginViewController: UIViewController, UITextFieldDelegate {
 	
+	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var emailField: UITextField!
 	@IBOutlet weak var passwordField: UITextField!
 	@IBOutlet weak var submitButton: UIButton!
 	
 	var loginFormFields = [UITextField]()
+	
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		
+		registerForKeyboardNotifications()
+	}
+	
+	deinit {
+		deregisterFromKeyboardNotifications()
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -33,6 +44,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		for field in loginFormFields {
 			field.delegate = self
 		}
+	}
+	
+	func registerForKeyboardNotifications() {
+		//Adding notifies on keyboard appearing
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "adjustForKeyboard:", name: UIKeyboardWillHideNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "adjustForKeyboard:", name: UIKeyboardWillChangeFrameNotification, object: nil)
+	}
+	
+	func deregisterFromKeyboardNotifications() {
+		//Removing notifies on keyboard appearing
+		NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+		NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillChangeFrameNotification, object: nil)
+	}
+	
+	func adjustForKeyboard(notification: NSNotification) {
+		let userInfo = notification.userInfo!
+		
+		let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+		let keyboardViewEndFrame = view.convertRect(keyboardScreenEndFrame, fromView: view.window)
+		
+		var inset = scrollView.contentInset
+		
+		if notification.name == UIKeyboardWillHideNotification {
+			inset.bottom = 0
+		} else {
+			inset.bottom = keyboardViewEndFrame.height
+		}
+		
+		scrollView.contentInset = inset
+		
+		scrollView.scrollIndicatorInsets = scrollView.contentInset
 	}
 	
 	/// Callback executed when the submit button has been tapped.
@@ -72,7 +114,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 			(user: UserModel?, error: NSError?) in
 			if user != nil {
 				print("Login was successful")
-				self.performSegueWithIdentifier("rewindToEventView", sender: self)
+				self.performSegueWithIdentifier("unwindToWelcomeView", sender: self)
 			} else {
 				print("Failed to login")
 				let alert = UIAlertController(title: "Login failed", message: "An error occured during login. Please make sure the email and password are correct.", preferredStyle: UIAlertControllerStyle.Alert)

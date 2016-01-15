@@ -39,6 +39,8 @@ class ChatViewController: UITableViewController {
 	]
 	
 	override func viewDidLoad() {
+		super.viewDidLoad()
+		
 		var frame = tableView.frame
 		frame.size.height = tableView.contentSize.height
 		tableView.frame = frame
