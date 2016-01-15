@@ -96,15 +96,14 @@ class ParseLocationModel: ParseBaseModel, LocationModel{
     }
     
     /// Fetches all locations for the user
-    static func fetchLocationsForUserInBackground(user: ParseUserProfileModel, callback: ((result: ParseGroupModel?, error: NSError?) -> Void)?){
-//        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-//        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-//            var err: NSError? = nil
-//            dispatch_async(dispatch_get_main_queue()) {
-//                if let callback = callback {
-//                    callback(result: user, error: err)
-//                }
-//            }
-//        }
+    static func fetchLocationsForUserInBackground(user: ParseUserProfileModel, callback: ((result: ParseLocationModel?, error: NSError?) -> Void)?){
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            let error: NSError? = nil
+            let result: ParseLocationModel? = nil
+            if let callback = callback {
+                callback(result: result, error: error)
+            }
+        }
     }
 }
