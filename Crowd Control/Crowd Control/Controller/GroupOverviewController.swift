@@ -7,16 +7,21 @@
 //
 
 import UIKit
-
+/// Group Overview Controller contains the logic for the Group Overiew page.
+/// - SeeAlso: 'UIViewController'
 class GroupOverviewController: UIViewController {
-	
+	/// Group to display in current view
 	var groupToDisplay: GroupModel?
+    /// User display name of the Group Leader
 	var groupLeader: UserProfileModel?
-	
+	/// UILabel for group name
 	@IBOutlet weak var groupNameLabel: UILabel!
+    /// UILabel for group leader name
 	@IBOutlet weak var groupLeaderLabel: UILabel!
+    /// UILable for group description text
 	@IBOutlet weak var groupDescriptionLabel: UILabel!
-	
+	/// When user clicks on the group to join
+    /// - Parameter sender: Caller of button
 	@IBAction func onRequestButtonTapped(sender: AnyObject) {
 		if groupToDisplay!.addGroupMember((AppDelegate.instance.modelManager?.currentUser()?.profile)!) {
 			groupToDisplay?.saveInBackground {
@@ -43,7 +48,7 @@ class GroupOverviewController: UIViewController {
 			self.performSegueWithIdentifier("segueToGroupScreens", sender: self)
 		}
 	}
-	
+	/// Overrides superclass then loads data from group object into view.
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		

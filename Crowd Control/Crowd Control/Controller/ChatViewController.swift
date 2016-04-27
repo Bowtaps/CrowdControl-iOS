@@ -10,8 +10,11 @@ import UIKit
 
 /// Provides a simple model to be used as placeholder content for the UITableView.
 class ConversationModel {
+    /// Name of conversation
 	let name: String
+    /// Contents of the message
 	let message: String
+    /// Conversation timestamp
 	let time: String
 	
 	/// Main constructor for the class. Initializes values using provided parameters.

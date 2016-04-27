@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Contains the logic for the Group table view
 class GroupTableController: UITableViewController {
 	
 	@IBOutlet weak var groupTable: UITableView!

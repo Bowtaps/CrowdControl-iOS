@@ -34,7 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var modelManager: ModelManager?
 
 
-
+    /// Application after launch.  This function initializes Parse Local Datastore, remote connection, analytics, facebook connection
+    /// and the model manager.
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
         // [Optional] Power your app with Local Datastore. For more info, go to

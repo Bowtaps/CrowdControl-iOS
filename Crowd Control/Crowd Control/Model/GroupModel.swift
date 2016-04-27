@@ -9,11 +9,15 @@
 import Foundation
 import Parse
 
-//Structure to hold the waypoint object for location and a message
+/// Object to store group waypoints location and message
 struct Waypoint {
+    /// Waypoint's unique id to be generated on creation
     var waypointId: Int
+    /// Waypoint longitude
     var longitude: Double
+    /// Waypoint latitude
     var latitude: Double
+    /// Message to display at location
     var message: String
 }
 
